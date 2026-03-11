@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hub Osteogênese Imperfeita — Centro de Conhecimento sobre OI">
+    <meta name="description" content="Lista completa de exames pré-dose obrigatórios para administração do Ácido Zoledrônico na Osteogênese Imperfeita. Inclui checklist imprimível para profissionais de saúde.">
     <meta name="robots" content="index, follow">
-    <title>Lista de Exames - Ácido Zoledrônico na OI</title>
+    <title>Lista de Exames Pré-Dose — Ácido Zoledrônico | Hub Osteogênese Imperfeita</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
-    <!-- Classes específicas desta página foram migradas para assets/css/global.css -->
+    <style>
+        @media print {
+            .site-header, .site-sidebar, .sidebar-overlay, .breadcrumb,
+            .a11y-widget, .back-to-top, .no-print { display: none !important; }
+            .main-content { margin-top: 0 !important; }
+            body { font-size: 12pt; }
+            h1, h2, h3 { page-break-after: avoid; }
+            section { page-break-inside: avoid; }
+        }
+    </style>
 </head>
 <body class="page-wrapper">
     <!-- SKIP LINK -->
@@ -110,12 +119,171 @@
     </nav>
 
     <main class="main-content" id="main-content" tabindex="-1">
-<!-- Conteúdo não pôde ser extraído automaticamente -->
-    </main>
+        <div class="container">
 
-    <script>
-    document.write(new Date().toLocaleDateString('pt-BR'))
-    </script>
+            <!-- Cabeçalho da página -->
+            <div class="page-header" style="text-align:center; border-bottom:3px solid var(--color-primary,#2c3e50); padding-bottom:1.5rem; margin-bottom:2rem;">
+                <h1 style="color:var(--color-primary,#2c3e50); margin-bottom:.5rem;">
+                    <i class="fas fa-clipboard-list" aria-hidden="true"></i> Lista de Exames Pré-Dose
+                </h1>
+                <p><strong>Ácido Zoledrônico para Osteogênese Imperfeita</strong></p>
+                <p>Hub Osteogênese Imperfeita — Material de Referência Médica</p>
+                <button class="btn btn-primary no-print" onclick="window.print()" style="margin-top:1rem;">
+                    <i class="fas fa-print" aria-hidden="true"></i> Imprimir esta Lista
+                </button>
+            </div>
+
+            <!-- Informações do Paciente -->
+            <section class="content-section" style="background:#f8f9fa; border-radius:8px; padding:1.5rem; margin-bottom:2rem;">
+                <h2 style="color:var(--color-primary,#2c3e50); margin-top:0;">
+                    <i class="fas fa-user" aria-hidden="true"></i> Informações do Paciente
+                </h2>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem;">
+                    <div><label style="font-weight:600; display:block; margin-bottom:.25rem;">Nome:</label><div style="border-bottom:1px solid #ccc; min-height:1.5rem;"></div></div>
+                    <div><label style="font-weight:600; display:block; margin-bottom:.25rem;">Data de Nascimento:</label><div style="border-bottom:1px solid #ccc; min-height:1.5rem;"></div></div>
+                    <div><label style="font-weight:600; display:block; margin-bottom:.25rem;">Peso:</label><div style="border-bottom:1px solid #ccc; min-height:1.5rem;"></div></div>
+                    <div><label style="font-weight:600; display:block; margin-bottom:.25rem;">Data da Consulta:</label><div style="border-bottom:1px solid #ccc; min-height:1.5rem;"></div></div>
+                    <div><label style="font-weight:600; display:block; margin-bottom:.25rem;">Médico Solicitante:</label><div style="border-bottom:1px solid #ccc; min-height:1.5rem;"></div></div>
+                </div>
+            </section>
+
+            <!-- Alerta principal -->
+            <div class="warning-box" role="alert" style="margin-bottom:2rem;">
+                <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                <div>
+                    <strong>⚠️ ATENÇÃO:</strong> Estes exames são <strong>OBRIGATÓRIOS</strong> antes da administração do Ácido Zoledrônico.
+                    A ausência de qualquer um deles pode contraindicar o procedimento ou resultar em efeitos adversos graves.
+                </div>
+            </div>
+
+            <!-- Seção 1: Função Renal -->
+            <section class="content-section exam-category" style="background:#fff; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,.08); overflow:hidden; margin-bottom:2rem;">
+                <div class="category-header renal" style="background:linear-gradient(135deg,#e74c3c,#c0392b); color:#fff; padding:1.5rem; display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-kidneys" style="font-size:2rem;" aria-hidden="true"></i>
+                    <h2 style="color:#fff; margin:0;">🩺 1. Avaliação da Função Renal (OBRIGATÓRIOS)</h2>
+                </div>
+                <p style="padding:1rem 1.5rem 0; color:#555; font-style:italic;">O ácido zoledrônico é excretado exclusivamente pelos rins.</p>
+                <ul style="list-style:none; padding:1rem 1.5rem 1.5rem;">
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#f8f9fa; border-radius:8px; margin-bottom:.75rem;">
+                        <span style="font-size:1.5rem;">☐</span>
+                        <div><strong>Creatinina Sérica</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">Mede a saúde e função renal básica.</p></div>
+                    </li>
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#f8f9fa; border-radius:8px; margin-bottom:.75rem;">
+                        <span style="font-size:1.5rem;">☐</span>
+                        <div><strong>Ureia</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">Complementa a avaliação da filtragem renal.</p></div>
+                    </li>
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#fff3cd; border-radius:8px; border-left:4px solid #f39c12; margin-bottom:.75rem;">
+                        <span style="font-size:1.5rem;">☐</span>
+                        <div><strong>Taxa de Filtração Glomerular (TFG) ou Clearance de Creatinina</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">⚠️ <strong>CRÍTICO:</strong> Deve ser ≥ 35 ml/min para autorizar a dose. Abaixo disso, o procedimento é <strong>CONTRAINDICADO</strong>.</p></div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Seção 2: Metabolismo Mineral -->
+            <section class="content-section exam-category" style="background:#fff; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,.08); overflow:hidden; margin-bottom:2rem;">
+                <div class="category-header metabolic" style="background:linear-gradient(135deg,#f39c12,#e67e22); color:#fff; padding:1.5rem; display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-flask" style="font-size:2rem;" aria-hidden="true"></i>
+                    <h2 style="color:#fff; margin:0;">🧪 2. Metabolismo Mineral (Prevenção de Hipocalcemia)</h2>
+                </div>
+                <p style="padding:1rem 1.5rem 0; color:#555; font-style:italic;">O ácido zoledrônico "sequestra" cálcio do sangue para o osso rapidamente.</p>
+                <ul style="list-style:none; padding:1rem 1.5rem 1.5rem;">
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#f8f9fa; border-radius:8px; margin-bottom:.75rem;"><span style="font-size:1.5rem;">☐</span><div><strong>Cálcio Sérico Total</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">Nível total de cálcio no sangue.</p></div></li>
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#f8f9fa; border-radius:8px; margin-bottom:.75rem;"><span style="font-size:1.5rem;">☐</span><div><strong>Cálcio Iônico</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">⚠️ Forma "ativa" do cálcio — a mais precisa para avaliação.</p></div></li>
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#fff3cd; border-radius:8px; border-left:4px solid #f39c12; margin-bottom:.75rem;"><span style="font-size:1.5rem;">☐</span><div><strong>Vitamina D (25-hidroxivitamina D)</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">⚠️ <strong>CRÍTICO:</strong> Deve estar acima de 30 ng/mL. Níveis baixos aumentam risco de hipocalcemia severa.</p></div></li>
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#f8f9fa; border-radius:8px; margin-bottom:.75rem;"><span style="font-size:1.5rem;">☐</span><div><strong>Fósforo (Fosfatemia)</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">Importante para o equilíbrio mineral ósseo.</p></div></li>
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#f8f9fa; border-radius:8px; margin-bottom:.75rem;"><span style="font-size:1.5rem;">☐</span><div><strong>Magnésio</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">Níveis baixos podem dificultar a correção do cálcio após a infusão.</p></div></li>
+                </ul>
+            </section>
+
+            <!-- Seção 3: Marcadores Ósseos -->
+            <section class="content-section exam-category" style="background:#fff; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,.08); overflow:hidden; margin-bottom:2rem;">
+                <div class="category-header markers" style="background:linear-gradient(135deg,#3498db,#2980b9); color:#fff; padding:1.5rem; display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-chart-bar" style="font-size:2rem;" aria-hidden="true"></i>
+                    <h2 style="color:#fff; margin:0;">📊 3. Marcadores de Remodelação Óssea (Recomendados)</h2>
+                </div>
+                <p style="padding:1rem 1.5rem 0; color:#555; font-style:italic;">Para comparar "antes e depois" e monitorar a eficácia.</p>
+                <ul style="list-style:none; padding:1rem 1.5rem 1.5rem;">
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#f8f9fa; border-radius:8px; margin-bottom:.75rem;"><span style="font-size:1.5rem;">☐</span><div><strong>Fosfatase Alcalina Óssea</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">Indica a atividade das células formadoras de osso.</p></div></li>
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#f8f9fa; border-radius:8px; margin-bottom:.75rem;"><span style="font-size:1.5rem;">☐</span><div><strong>PTH (Paratormônio)</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">Ajuda a entender como o corpo está regulando o cálcio.</p></div></li>
+                </ul>
+            </section>
+
+            <!-- Seção 4: Avaliação Geral -->
+            <section class="content-section exam-category" style="background:#fff; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,.08); overflow:hidden; margin-bottom:2rem;">
+                <div class="category-header general" style="background:linear-gradient(135deg,#95a5a6,#7f8c8d); color:#fff; padding:1.5rem; display:flex; align-items:center; gap:1rem;">
+                    <i class="fas fa-microscope" style="font-size:2rem;" aria-hidden="true"></i>
+                    <h2 style="color:#fff; margin:0;">🔬 4. Avaliação Geral</h2>
+                </div>
+                <ul style="list-style:none; padding:1rem 1.5rem 1.5rem;">
+                    <li style="display:flex; gap:1rem; padding:1rem; background:#f8f9fa; border-radius:8px; margin-bottom:.75rem;"><span style="font-size:1.5rem;">☐</span><div><strong>Hemograma Completo</strong><p style="margin:.25rem 0 0; font-size:.95rem; color:#555;">Verifica sinais de inflamação ou anemia, garantindo boas condições gerais.</p></div></li>
+                </ul>
+            </section>
+
+            <!-- Checklist do Dia -->
+            <section class="content-section" style="background:#e8f8f0; border-radius:12px; padding:1.5rem; margin-bottom:2rem; border-left:5px solid #27ae60;">
+                <h2 style="color:#1e8449; margin-top:0;">
+                    <i class="fas fa-check-square" aria-hidden="true"></i> ✅ Checklist do Dia da Infusão
+                </h2>
+                <ul style="list-style:none; padding:0;">
+                    <li style="display:flex; gap:1rem; padding:.75rem 0; border-bottom:1px solid rgba(0,0,0,.06);"><span style="font-size:1.5rem;">☐</span><div><strong>Hidratação:</strong> Paciente bebeu 500ml a 1 litro de água nas 2h anteriores?</div></li>
+                    <li style="display:flex; gap:1rem; padding:.75rem 0; border-bottom:1px solid rgba(0,0,0,.06);"><span style="font-size:1.5rem;">☐</span><div><strong>Suplementação:</strong> Paciente tomou cálcio e vitamina D conforme prescrição?</div></li>
+                    <li style="display:flex; gap:1rem; padding:.75rem 0; border-bottom:1px solid rgba(0,0,0,.06);"><span style="font-size:1.5rem;">☐</span><div><strong>Medicação preventiva:</strong> Antitérmicos disponíveis para as próximas 48h?</div></li>
+                    <li style="display:flex; gap:1rem; padding:.75rem 0; border-bottom:1px solid rgba(0,0,0,.06);"><span style="font-size:1.5rem;">☐</span><div><strong>Todos os exames:</strong> Resultados dentro dos parâmetros de segurança?</div></li>
+                    <li style="display:flex; gap:1rem; padding:.75rem 0;"><span style="font-size:1.5rem;">☐</span><div><strong>Dose calculada:</strong> Dose mg/kg calculada pelo especialista? (NÃO usar dose padrão de 5mg)</div></li>
+                </ul>
+            </section>
+
+            <!-- Contraindicações absolutas -->
+            <div class="warning-box" role="alert" style="background:#fdeaea; border-left:5px solid #e74c3c; margin-bottom:2rem;">
+                <i class="fas fa-ban" style="color:#e74c3c;" aria-hidden="true"></i>
+                <div>
+                    <strong>🚫 CONTRAINDICAÇÕES ABSOLUTAS:</strong>
+                    <ul style="margin:.75rem 0 0 1.25rem;">
+                        <li>TFG &lt; 35 ml/min (insuficiência renal)</li>
+                        <li>Hipocalcemia não corrigida</li>
+                        <li>Deficiência grave de Vitamina D não corrigida</li>
+                        <li>Cirurgia ortopédica nas próximas 2–4 semanas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Dose Pediátrica -->
+            <div class="highlight-box" style="border-left:5px solid #e67e22; background:#fff8f0; margin-bottom:2rem;">
+                <i class="fas fa-exclamation-circle" style="color:#e67e22;" aria-hidden="true"></i>
+                <div>
+                    <h3 style="color:#e67e22; margin-top:0;">⚠️ IMPORTANTE — Dose Pediátrica</h3>
+                    <p style="margin:0;"><strong>A dose para Osteogênese Imperfeita NÃO é a dose padrão de 5mg usada em osteoporose senil.</strong>
+                    A dose deve ser calculada rigorosamente por <strong>mg/kg</strong> pelo médico especialista,
+                    geralmente <strong>0,05 mg/kg</strong> em crianças.</p>
+                </div>
+            </div>
+
+            <!-- Observações -->
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2><i class="fas fa-pencil-alt" aria-hidden="true"></i> 📝 Observações e Anotações Médicas</h2>
+                <div style="border:1px solid #dfe6e9; padding:1rem; min-height:100px; border-radius:8px; background:#fafafa;" aria-label="Espaço para anotações médicas"></div>
+            </section>
+
+            <!-- Agendamento -->
+            <section class="content-section" style="background:#f0f8ff; border-radius:8px; padding:1.5rem; margin-bottom:2rem; border:2px solid #3498db;">
+                <h2 style="margin-top:0;"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 📅 Agendamento da Infusão</h2>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem;">
+                    <div><label style="font-weight:600; display:block; margin-bottom:.25rem;">Data agendada:</label><div style="border-bottom:1px solid #3498db; min-height:1.5rem;"></div></div>
+                    <div><label style="font-weight:600; display:block; margin-bottom:.25rem;">Horário:</label><div style="border-bottom:1px solid #3498db; min-height:1.5rem;"></div></div>
+                    <div><label style="font-weight:600; display:block; margin-bottom:.25rem;">Local/Setor:</label><div style="border-bottom:1px solid #3498db; min-height:1.5rem;"></div></div>
+                    <div><label style="font-weight:600; display:block; margin-bottom:.25rem;">Responsável técnico:</label><div style="border-bottom:1px solid #3498db; min-height:1.5rem;"></div></div>
+                </div>
+            </section>
+
+            <!-- Botão imprimir -->
+            <div style="text-align:center; margin-bottom:2rem;" class="no-print">
+                <button class="btn btn-primary" onclick="window.print()">
+                    <i class="fas fa-print" aria-hidden="true"></i> Imprimir esta Lista
+                </button>
+            </div>
+
+        </div><!-- /.container -->
+    </main>
     <!-- FOOTER GLOBAL -->
     <footer class="site-footer" role="contentinfo">
         <div class="container">
