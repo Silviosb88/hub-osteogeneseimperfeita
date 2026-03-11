@@ -1,0 +1,227 @@
+<!--
+  COMPONENTE: header.html
+  Hub Osteogênese Imperfeita — Header Global Reutilizável
+  Inclua este bloco em TODAS as páginas, logo após <body>
+  Substitua [TITULO_PAGINA] e [DESCRICAO_PAGINA] por valores específicos de cada página
+-->
+
+<!-- SKIP LINK (acessibilidade WCAG 2.1 AA) -->
+<a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+<!-- HEADER GLOBAL -->
+<header class="site-header" role="banner">
+    <div class="site-header__inner">
+
+        <!-- Botão Menu Mobile -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-controls="hubSidebar"
+            aria-expanded="false"
+            aria-label="Abrir menu de navegação"
+        >
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <!-- Logo Institucional -->
+        <a class="site-logo" href="index.html" aria-label="Hub Osteogênese Imperfeita — Página inicial">
+            <i class="fas fa-bone site-logo__icon" aria-hidden="true"></i>
+            <span class="site-logo__text">
+                Hub Osteogênese Imperfeita
+                <span>Centro de Conhecimento Técnico-Científico</span>
+            </span>
+        </a>
+
+        <!-- Busca no Header -->
+        <div class="header-search" role="search">
+            <form class="header-search__form" id="headerSearchForm" action="busca.html" method="get">
+                <label for="headerSearchInput" class="sr-only">Buscar no site</label>
+                <input
+                    type="search"
+                    class="header-search__input"
+                    id="headerSearchInput"
+                    name="q"
+                    placeholder="Buscar..."
+                    autocomplete="off"
+                    aria-label="Buscar no Hub OI"
+                >
+                <button type="submit" class="header-search__btn" aria-label="Executar busca">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Controles de Acessibilidade no Header -->
+        <div class="header-a11y" role="group" aria-label="Configurações de acessibilidade">
+            <button
+                class="header-a11y__btn"
+                id="headerA11yContrast"
+                title="Alternar alto contraste"
+                aria-label="Alternar modo de alto contraste"
+                aria-pressed="false"
+            >
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+                <span class="sr-only">Contraste</span>
+            </button>
+            <button
+                class="header-a11y__btn"
+                id="headerA11yLargeText"
+                title="Aumentar tamanho da fonte"
+                aria-label="Alternar texto grande"
+                aria-pressed="false"
+            >
+                <i class="fas fa-text-height" aria-hidden="true"></i>
+                <span class="sr-only">Fonte</span>
+            </button>
+            <button
+                class="header-a11y__btn"
+                id="headerA11yDark"
+                title="Alternar modo escuro"
+                aria-label="Alternar modo escuro"
+                aria-pressed="false"
+            >
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <span class="sr-only">Escuro</span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- SIDEBAR NAVIGATION -->
+<nav
+    class="site-sidebar"
+    id="hubSidebar"
+    aria-label="Menu de navegação principal"
+    aria-hidden="true"
+>
+    <div class="sidebar-header">
+        <span class="sidebar-header__title">
+            <i class="fas fa-sitemap" aria-hidden="true"></i> Navegação
+        </span>
+        <button
+            class="sidebar-close"
+            id="sidebarClose"
+            aria-label="Fechar menu de navegação"
+        >
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <nav class="sidebar-nav" role="navigation" aria-label="Menu principal">
+
+        <!-- Início -->
+        <div class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="index.html">
+                <i class="fas fa-home sidebar-nav__icon" aria-hidden="true"></i>
+                <span class="sidebar-nav__text">Início</span>
+            </a>
+        </div>
+
+        <!-- Medicações de Uso -->
+        <div class="sidebar-nav__item">
+            <div class="sidebar-nav__link" role="button" tabindex="0"
+                aria-expanded="false"
+                onkeydown="if(event.key==='Enter'||event.key===' '){this.querySelector('button').click()}"
+            >
+                <i class="fas fa-pills sidebar-nav__icon" aria-hidden="true"></i>
+                <span class="sidebar-nav__text">Medicações de Uso</span>
+                <button
+                    class="sidebar-submenu-toggle"
+                    id="toggle-medicacoes"
+                    data-submenu-toggle="submenu-medicacoes"
+                    aria-expanded="false"
+                    aria-controls="submenu-medicacoes"
+                    aria-label="Expandir Medicações de Uso"
+                >
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+            </div>
+            <ul class="sidebar-submenu" id="submenu-medicacoes" role="list">
+                <li class="sidebar-submenu__item">
+                    <a class="sidebar-submenu__link" href="pamidronato.html">
+                        <i class="fas fa-star" aria-hidden="true" style="color:#f39c12;font-size:.8em;margin-right:4px"></i>
+                        Pamidronato
+                    </a>
+                </li>
+                <li class="sidebar-submenu__item">
+                    <a class="sidebar-submenu__link" href="acido-zoledronico.html">Ácido Zoledrônico</a>
+                </li>
+                <li class="sidebar-submenu__item">
+                    <a class="sidebar-submenu__link" href="alendronato.html">Alendronato</a>
+                </li>
+                <li class="sidebar-submenu__item">
+                    <a class="sidebar-submenu__link" href="setrusumabe-resumo.html">Setrusumabe <span class="badge badge-warning" style="font-size:.65em">Experimental</span></a>
+                </li>
+                <li class="sidebar-submenu__item">
+                    <a class="sidebar-submenu__link" href="denosumabe-resumo.html">Denosumabe <span class="badge badge-warning" style="font-size:.65em">Experimental</span></a>
+                </li>
+                <li class="sidebar-submenu__item">
+                    <a class="sidebar-submenu__link" href="bibliografia-medicacoes.html">
+                        <i class="fas fa-book" aria-hidden="true"></i> Ver Todas
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tratamentos Convencionais -->
+        <div class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="tratamentos-convencionais.html">
+                <i class="fas fa-user-md sidebar-nav__icon" aria-hidden="true"></i>
+                <span class="sidebar-nav__text">Tratamentos Convencionais</span>
+            </a>
+        </div>
+
+        <!-- Terapias -->
+        <div class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="terapias.html">
+                <i class="fas fa-heartbeat sidebar-nav__icon" aria-hidden="true"></i>
+                <span class="sidebar-nav__text">Terapias</span>
+            </a>
+        </div>
+
+        <!-- Centros de Referência -->
+        <div class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="centros-referencia.html">
+                <i class="fas fa-hospital sidebar-nav__icon" aria-hidden="true"></i>
+                <span class="sidebar-nav__text">Centros de Referência</span>
+            </a>
+        </div>
+
+        <!-- OI no Brasil -->
+        <div class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="oi-brasil.html">
+                <i class="fas fa-map-marked-alt sidebar-nav__icon" aria-hidden="true"></i>
+                <span class="sidebar-nav__text">OI no Brasil</span>
+            </a>
+        </div>
+
+        <!-- OI no Mundo -->
+        <div class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="oi-mundo.html">
+                <i class="fas fa-globe-americas sidebar-nav__icon" aria-hidden="true"></i>
+                <span class="sidebar-nav__text">OI no Mundo</span>
+            </a>
+        </div>
+
+        <!-- Recursos / Exames -->
+        <div class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="lista-exames-impressao.html">
+                <i class="fas fa-book-medical sidebar-nav__icon" aria-hidden="true"></i>
+                <span class="sidebar-nav__text">Recursos e Exames</span>
+            </a>
+        </div>
+
+        <!-- Referências Bibliográficas -->
+        <div class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="referencias.html">
+                <i class="fas fa-bookmark sidebar-nav__icon" aria-hidden="true"></i>
+                <span class="sidebar-nav__text">Referências Bibliográficas</span>
+            </a>
+        </div>
+
+    </nav>
+</nav>
+
+<!-- OVERLAY Sidebar -->
+<div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
