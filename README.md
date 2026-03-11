@@ -324,7 +324,7 @@ Este é um projeto educacional. Para sugestões ou correções:
 
 Para dúvidas médicas específicas, consulte:
 - Centros de referência listados no site
-- Associações de pacientes (ANOI)
+- Associações de pacientes 
 - Seu médico assistente
 
 ## 🙏 Agradecimentos
