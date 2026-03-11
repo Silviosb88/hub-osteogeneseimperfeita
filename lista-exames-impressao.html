@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exames - Ácido Zoledrônico na OI</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            margin: 5px 0;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+        
+        .section h2 {
+            background: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .exam-list {
+            background: #f4f7f6;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .exam-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #dfe6e9;
+        }
+        
+        .exam-item:last-child {
+            border-bottom: none;
+        }
+        
+        .exam-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .exam-description {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-top: 3px;
+        }
+        
+        .checkbox {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #3498db;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .alert strong {
+            color: #e67e22;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #dfe6e9;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        
+        .patient-info {
+            background: white;
+            border: 2px solid #3498db;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .info-field {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            min-width: 150px;
+            color: #2c3e50;
+        }
+        
+        .info-line {
+            flex: 1;
+            border-bottom: 1px solid #2c3e50;
+            height: 20px;
+        }
+        
+        .print-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        
+        .print-button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">🖨️ Imprimir esta Lista</button>
+    
+    <div class="header">
+        <h1>📋 Lista de Exames Pré-Dose</h1>
+        <p><strong>Ácido Zoledrônico para Osteogênese Imperfeita</strong></p>
+        <p>Hub Osteogênese Imperfeita - Material de Referência Médica</p>
+    </div>
+    
+    <div class="patient-info">
+        <h3 style="margin-top: 0; color: #2c3e50;">Informações do Paciente</h3>
+        <div class="info-field">
+            <span class="info-label">Nome:</span>
+            <div class="info-line"></div>
+        </div>
+        <div class="info-field">
+            <span class="info-label">Data de Nascimento:</span>
+            <div class="info-line"></div>
+        </div>
+        <div class="info-field">
+            <span class="info-label">Peso:</span>
+            <div class="info-line"></div>
+        </div>
+        <div class="info-field">
+            <span class="info-label">Data da Consulta:</span>
+            <div class="info-line"></div>
+        </div>
+        <div class="info-field">
+            <span class="info-label">Médico Solicitante:</span>
+            <div class="info-line"></div>
+        </div>
+    </div>
+    
+    <div class="alert">
+        <strong>⚠️ ATENÇÃO:</strong> Estes exames são OBRIGATÓRIOS antes da administração do Ácido Zoledrônico. 
+        A ausência de qualquer um deles pode contraindicar o procedimento ou resultar em efeitos adversos graves.
+    </div>
+    
+    <div class="section">
+        <h2>🩺 1. Avaliação da Função Renal (OBRIGATÓRIOS)</h2>
+        <p style="margin-bottom: 15px;"><em>O ácido zoledrônico é excretado exclusivamente pelos rins.</em></p>
+        
+        <div class="exam-list">
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">Creatinina Sérica</span>
+                <div class="exam-description">Mede a saúde e função renal básica.</div>
+            </div>
+            
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">Ureia</span>
+                <div class="exam-description">Complementa a avaliação da filtragem renal.</div>
+            </div>
+            
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">Taxa de Filtração Glomerular (TFG) ou Clearance de Creatinina</span>
+                <div class="exam-description">⚠️ CRÍTICO: Deve ser ≥ 35 ml/min para autorizar a dose. Abaixo disso, o procedimento é CONTRAINDICADO.</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>🧪 2. Metabolismo Mineral (Prevenção de Hipocalcemia)</h2>
+        <p style="margin-bottom: 15px;"><em>O ácido zoledrônico "sequestra" cálcio do sangue para o osso rapidamente.</em></p>
+        
+        <div class="exam-list">
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">Cálcio Sérico Total</span>
+                <div class="exam-description">Nível total de cálcio no sangue.</div>
+            </div>
+            
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">Cálcio Iônico</span>
+                <div class="exam-description">⚠️ Forma "ativa" do cálcio - a mais precisa para avaliação.</div>
+            </div>
+            
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">Vitamina D (25-hidroxivitamina D)</span>
+                <div class="exam-description">⚠️ CRÍTICO: Deve estar acima de 30 ng/mL. Níveis baixos aumentam risco de hipocalcemia severa.</div>
+            </div>
+            
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">Fósforo (Fosfatemia)</span>
+                <div class="exam-description">Importante para o equilíbrio mineral ósseo.</div>
+            </div>
+            
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">Magnésio</span>
+                <div class="exam-description">Níveis baixos podem dificultar a correção do cálcio após a infusão.</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>📊 3. Marcadores de Remodelação Óssea (Recomendados)</h2>
+        <p style="margin-bottom: 15px;"><em>Para comparar "antes e depois" e monitorar a eficácia.</em></p>
+        
+        <div class="exam-list">
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">Fosfatase Alcalina Óssea</span>
+                <div class="exam-description">Indica a atividade das células formadoras de osso.</div>
+            </div>
+            
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">PTH (Paratormônio)</span>
+                <div class="exam-description">Ajuda a entender como o corpo está regulando o cálcio.</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>🔬 4. Avaliação Geral</h2>
+        
+        <div class="exam-list">
+            <div class="exam-item">
+                <span class="checkbox">☐</span>
+                <span class="exam-name">Hemograma Completo</span>
+                <div class="exam-description">Verifica sinais de inflamação ou anemia, garantindo boas condições gerais.</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 5px solid #3498db;">
+        <h3 style="color: #2c3e50; margin-top: 0;">✅ Checklist do Dia da Infusão</h3>
+        
+        <div style="margin: 15px 0;">
+            <span class="checkbox">☐</span>
+            <strong>Hidratação:</strong> Paciente bebeu 500ml a 1 litro de água nas 2h anteriores?
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <span class="checkbox">☐</span>
+            <strong>Suplementação:</strong> Paciente tomou cálcio e vitamina D conforme prescrição?
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <span class="checkbox">☐</span>
+            <strong>Medicação preventiva:</strong> Antitérmicos disponíveis para as próximas 48h?
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <span class="checkbox">☐</span>
+            <strong>Todos os exames:</strong> Resultados dentro dos parâmetros de segurança?
+        </div>
+        
+        <div style="margin: 15px 0;">
+            <span class="checkbox">☐</span>
+            <strong>Dose calculada:</strong> Dose mg/kg calculada pelo especialista? (NÃO usar dose padrão de 5mg)
+        </div>
+    </div>
+    
+    <div class="alert" style="background: #fdeaea; border-left-color: #e74c3c;">
+        <strong>🚫 CONTRAINDICAÇÕES ABSOLUTAS:</strong>
+        <ul style="margin: 10px 0 0 20px;">
+            <li>TFG < 35 ml/min (insuficiência renal)</li>
+            <li>Hipocalcemia não corrigida</li>
+            <li>Deficiência grave de Vitamina D não corrigida</li>
+            <li>Cirurgia ortopédica nas próximas 2-4 semanas</li>
+        </ul>
+    </div>
+    
+    <div class="section" style="background: #fff; border: 2px solid #e67e22; padding: 20px; border-radius: 8px;">
+        <h3 style="color: #e67e22; margin-top: 0;">⚠️ IMPORTANTE - Dose Pediátrica</h3>
+        <p style="margin: 0;">
+            <strong>A dose para Osteogênese Imperfeita NÃO é a dose padrão de 5mg usada em osteoporose senil.</strong>
+            A dose deve ser calculada rigorosamente por <strong>mg/kg</strong> pelo médico especialista, 
+            geralmente <strong>0,05 mg/kg</strong> em crianças.
+        </p>
+    </div>
+    
+    <div class="section">
+        <h3 style="color: #2c3e50;">📝 Observações e Anotações Médicas</h3>
+        <div style="border: 1px solid #dfe6e9; padding: 15px; min-height: 100px; border-radius: 5px; background: #f9f9f9;">
+            <!-- Espaço para anotações -->
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3 style="color: #2c3e50;">📅 Agendamento da Infusão</h3>
+        <div style="border: 2px solid #3498db; padding: 20px; border-radius: 8px; background: #f4f7f6;">
+            <div class="info-field">
+                <span class="info-label">Data agendada:</span>
+                <div class="info-line"></div>
+            </div>
+            <div class="info-field">
+                <span class="info-label">Horário:</span>
+                <div class="info-line"></div>
+            </div>
+            <div class="info-field">
+                <span class="info-label">Local/Setor:</span>
+                <div class="info-line"></div>
+            </div>
+            <div class="info-field">
+                <span class="info-label">Responsável técnico:</span>
+                <div class="info-line"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p><strong>Hub Osteogênese Imperfeita</strong></p>
+        <p>Material de referência técnica para profissionais de saúde</p>
+        <p>Este documento não substitui a avaliação médica individualizada</p>
+        <p style="margin-top: 15px; font-size: 0.85em;">
+            Data de impressão: <script>document.write(new Date().toLocaleDateString('pt-BR'))</script>
+        </p>
+    </div>
+    
+    <button class="print-button no-print" onclick="window.print()" style="margin-top: 30px;">
+        🖨️ Imprimir esta Lista
+    </button>
+</body>
+</html>
