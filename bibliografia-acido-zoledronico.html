@@ -4,52 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bibliografia completa: Ácido Zoledrônico na Osteogênese Imperfeita - Estudos internacionais, protocolos e evidências científicas">
+    <meta name="robots" content="index, follow">
     <title>Bibliografia: Ácido Zoledrônico na OI | Hub Osteogênese Imperfeita</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
 </head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-bone"></i>
-                    <span>Hub Osteogênese Imperfeita</span>
-                </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<body class="page-wrapper">
+    <!-- SKIP LINK -->
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+    <!-- HEADER GLOBAL -->
+    <header class="site-header" role="banner">
+        <div class="site-header__inner">
+            <button class="menu-toggle" id="menuToggle"
+                aria-controls="hubSidebar" aria-expanded="false"
+                aria-label="Abrir menu de navegação">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="site-logo" href="index.html" aria-label="Hub Osteogênese Imperfeita — Página inicial">
+                <i class="fas fa-bone site-logo__icon" aria-hidden="true"></i>
+                <span class="site-logo__text">
+                    Hub Osteogênese Imperfeita
+                    <span>Centro de Conhecimento Técnico-Científico</span>
+                </span>
+            </a>
+            <div class="header-search" role="search">
+                <form class="header-search__form" id="headerSearchForm" action="busca.html" method="get">
+                    <label for="headerSearchInput" class="sr-only">Buscar no site</label>
+                    <input type="search" class="header-search__input" id="headerSearchInput"
+                        name="q" placeholder="Buscar..." autocomplete="off" aria-label="Buscar no Hub OI">
+                    <button type="submit" class="header-search__btn" aria-label="Buscar">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="header-a11y" role="group" aria-label="Acessibilidade">
+                <button class="header-a11y__btn" id="headerA11yContrast" title="Alto contraste" aria-label="Alternar alto contraste" aria-pressed="false">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </button>
+                <button class="header-a11y__btn" id="headerA11yLargeText" title="Texto grande" aria-label="Alternar texto grande" aria-pressed="false">
+                    <i class="fas fa-text-height" aria-hidden="true"></i>
+                </button>
+                <button class="header-a11y__btn" id="headerA11yDark" title="Modo escuro" aria-label="Alternar modo escuro" aria-pressed="false">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <aside class="sidebar" id="sidebar">
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-        <nav class="sidebar-content">
-            <ul class="sidebar-menu">
-                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
-                <li><a href="bibliografia-medicacoes.html"><i class="fas fa-book-medical"></i> Bibliografia Completa</a></li>
-                <li><a href="referencias.html"><i class="fas fa-bookmark"></i> Referências</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="index.html">Início</a>
-            <i class="fas fa-chevron-right"></i>
-            <a href="bibliografia-medicacoes.html">Bibliografia</a>
-            <i class="fas fa-chevron-right"></i>
-            <span>Ácido Zoledrônico</span>
+    <!-- SIDEBAR NAVIGATION -->
+    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
+        <div class="sidebar-header">
+            <span class="sidebar-header__title"><i class="fas fa-sitemap" aria-hidden="true"></i> Navegação</span>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
         </div>
-    </div>
+        <nav class="sidebar-nav" role="navigation" aria-label="Menu principal">
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="index.html">
+                    <i class="fas fa-home sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Início</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item">
+                <div class="sidebar-nav__link">
+                    <i class="fas fa-pills sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Medicações de Uso</span>
+                    <button class="sidebar-submenu-toggle" id="toggle-medicacoes"
+                        data-submenu-toggle="submenu-medicacoes"
+                        aria-expanded="false" aria-controls="submenu-medicacoes"
+                        aria-label="Expandir Medicações">
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="sidebar-submenu" id="submenu-medicacoes" role="list">
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="pamidronato.html"><i class="fas fa-star" style="color:#f39c12;font-size:.8em" aria-hidden="true"></i> Pamidronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="acido-zoledronico.html">Ácido Zoledrônico</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="alendronato.html">Alendronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="setrusumabe-resumo.html">Setrusumabe</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="denosumabe-resumo.html">Denosumabe</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="bibliografia-medicacoes.html"><i class="fas fa-book" aria-hidden="true"></i> Ver Todas</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="centros-referencia.html"><i class="fas fa-hospital sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Centros de Referência</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-brasil.html"><i class="fas fa-map-marked-alt sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Brasil</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-mundo.html"><i class="fas fa-globe-americas sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Mundo</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="lista-exames-impressao.html"><i class="fas fa-book-medical sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Recursos e Exames</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="referencias.html"><i class="fas fa-bookmark sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Referências Bibliográficas</span></a></div>
+        </nav>
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item"><a class="breadcrumb__link" href="index.html">Início</a><span class="breadcrumb__separator" aria-hidden="true"><i class="fas fa-chevron-right"></i></span></li>
+                <li class="breadcrumb__item"><a class="breadcrumb__link" href="None">Bibliografias</a><span class="breadcrumb__separator" aria-hidden="true"><i class="fas fa-chevron-right"></i></span></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">Ácido Zoledrônico</span></li>
+            </ol>
+        </div>
+    </nav>
 
-    <main class="main-content">
-        <div class="container" style="max-width: 1000px;">
+    <main class="main-content" id="main-content" tabindex="-1">
+<div class="container" style="max-width: 1000px;">
             
             <div class="bibliography-header">
                 <h1><i class="fas fa-book-medical"></i> Bibliografia Completa: Ácido Zoledrônico na Osteogênese Imperfeita</h1>
@@ -207,14 +268,78 @@
         </div>
     </main>
 
-    <footer class="footer">
+    <!-- FOOTER GLOBAL -->
+    <footer class="site-footer" role="contentinfo">
         <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-bone" aria-hidden="true"></i> Hub Osteogênese Imperfeita</h2>
+                    <p class="footer-section__text">Centro de conhecimento técnico-científico sobre OI para profissionais de saúde, pacientes e familiares.</p>
+                    <div class="footer-badges" role="list" aria-label="Selos de conformidade">
+                        <span class="footer-badge" role="listitem"><i class="fas fa-universal-access" aria-hidden="true"></i> WCAG 2.1 AA</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-shield-alt" aria-hidden="true"></i> LGPD</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-check-circle" aria-hidden="true"></i> e-MAG</span>
+                    </div>
+                </div>
+                <nav aria-label="Medicações">
+                    <h2 class="footer-section__title"><i class="fas fa-pills" aria-hidden="true"></i> Medicações</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="pamidronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Pamidronato</a></li>
+                        <li><a href="acido-zoledronico.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Ácido Zoledrônico</a></li>
+                        <li><a href="alendronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Alendronato</a></li>
+                        <li><a href="setrusumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Setrusumabe</a></li>
+                        <li><a href="denosumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Denosumabe</a></li>
+                        <li><a href="bibliografia-medicacoes.html"><i class="fas fa-book" aria-hidden="true"></i> Ver Todas</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Recursos">
+                    <h2 class="footer-section__title"><i class="fas fa-book-medical" aria-hidden="true"></i> Recursos</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="centros-referencia.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Centros de Referência</a></li>
+                        <li><a href="lista-exames-impressao.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Lista de Exames</a></li>
+                        <li><a href="referencias.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Referências</a></li>
+                        <li><a href="oi-brasil.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Brasil</a></li>
+                        <li><a href="oi-mundo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Mundo</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-info-circle" aria-hidden="true"></i> Internacional</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="https://www.gov.br/conitec" target="_blank" rel="noopener noreferrer" aria-label="CONITEC — nova aba">CONITEC — Min. Saúde</a></li>
+                        <li><a href="https://oif.org" target="_blank" rel="noopener noreferrer" aria-label="OI Foundation — nova aba">OI Foundation (EUA)</a></li>
+                        <li><a href="https://oife.org" target="_blank" rel="noopener noreferrer" aria-label="OIFE — nova aba">OIFE (Europa)</a></li>
+                        <li><a href="https://www.brittlebone.org" target="_blank" rel="noopener noreferrer" aria-label="Brittle Bone Society — nova aba">Brittle Bone Society</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Hub Osteogênese Imperfeita. Última atualização: Março 2026</p>
+                <p class="footer-bottom__copy">&copy; <span id="footerYear">2026</span> Hub Osteogênese Imperfeita. Conteúdo educacional e técnico.</p>
+                <p class="footer-bottom__disclaimer"><strong>Aviso Legal:</strong> Conteúdo informativo e educacional. Não substitui consulta médica profissional.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- WIDGET ACESSIBILIDADE -->
+    <div class="a11y-widget" id="a11yWidget" role="region" aria-label="Widget de acessibilidade">
+        <div class="a11y-widget__panel" id="a11yWidgetPanel" role="group">
+            <div class="a11y-widget__title"><i class="fas fa-universal-access" aria-hidden="true"></i> Acessibilidade</div>
+            <button class="a11y-widget__btn" id="a11yBtnContrast" aria-pressed="false"><i class="fas fa-adjust" aria-hidden="true"></i> Alto Contraste</button>
+            <button class="a11y-widget__btn" id="a11yBtnLargeText" aria-pressed="false"><i class="fas fa-text-height" aria-hidden="true"></i> Texto Grande</button>
+            <button class="a11y-widget__btn" id="a11yBtnDark" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i> Modo Escuro</button>
+            <hr class="divider" style="margin:.5rem 0">
+            <button class="a11y-widget__btn" id="a11yBtnReset"><i class="fas fa-undo" aria-hidden="true"></i> Restaurar Padrão</button>
+        </div>
+        <button class="a11y-widget__toggle" id="a11yWidgetToggle" aria-expanded="false" aria-controls="a11yWidgetPanel" aria-label="Abrir opções de acessibilidade">
+            <i class="fas fa-universal-access" aria-hidden="true"></i> Acessibilidade
+        </button>
+    </div>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <script>const footerYear=document.getElementById('footerYear');if(footerYear)footerYear.textContent=new Date().getFullYear();</script>
+    <script src="assets/js/global.js"></script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+# Hub Osteogênese Imperfeita — .gitignore
+
+# Backups de migração
+*.bak
+*.backup
+
+# Scripts de migração/utilitários (não fazem parte do deploy)
+migrate_pages.py
+refactor_pages.py
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node/npm (se usado futuramente)
+node_modules/
+.npm/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.env
+venv/
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
