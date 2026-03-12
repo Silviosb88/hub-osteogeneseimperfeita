@@ -573,6 +573,28 @@ p {
     padding: var(--space-2) 0;
 }
 
+/* Badge de data de atualização — aparece entre breadcrumb e main */
+.update-badge {
+    background: #f0f8ff;
+    border-bottom: 1px solid #dce8f5;
+    padding: .35rem 0;
+    font-size: .78rem;
+    color: #5a7a9a;
+    text-align: right;
+}
+.update-badge .container,
+.update-badge {
+    max-width: 100%;
+    padding-right: 1.5rem;
+}
+.update-badge i {
+    margin-right: .3rem;
+    color: #3498db;
+}
+@media (max-width: 768px) {
+    .update-badge { text-align: center; padding-right: 0; }
+}
+
 .breadcrumb__list {
     display: flex;
     align-items: center;
@@ -1302,6 +1324,12 @@ tbody tr:hover {
     font-style: italic;
     max-width: 600px;
     margin: 0;
+}
+
+.footer-bottom__visitors {
+    font-size: var(--font-size-xs);
+    color: rgba(255,255,255,0.45);
+    margin: 0.25rem 0 0;
 }
 
 /* =========================================================

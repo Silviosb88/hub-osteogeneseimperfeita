@@ -395,8 +395,8 @@ const HubVisitorCount = {
 
             localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
 
-            /* Exibe com formatação de milhar */
-            el.textContent = total.toLocaleString('pt-BR');
+            /* Exibe com formatação de milhar — contagem local neste dispositivo */
+            el.textContent = total.toLocaleString('pt-BR') + ' visualizações (neste dispositivo)';
         } catch {
             el.textContent = '—';
         }
