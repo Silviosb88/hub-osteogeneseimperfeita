@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lista completa dos 14 Centros de Referência em Osteogênese Imperfeita credenciados pelo SUS no Brasil, com endereços, contatos e como ser encaminhado.">
+    <meta name="robots" content="index, follow">
+    <title>Centros de Referência em OI (CROIs) | Hub Osteogênese Imperfeita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body class="page-wrapper">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+    <header class="site-header" role="banner">
+        <div class="site-header__inner">
+            <button class="menu-toggle" id="menuToggle" aria-controls="hubSidebar" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="site-logo" href="index.html" aria-label="Hub Osteogênese Imperfeita — Página inicial">
+                <i class="fas fa-bone site-logo__icon" aria-hidden="true"></i>
+                <span class="site-logo__text">Hub Osteogênese Imperfeita
+                    <span>Centro de Conhecimento Técnico-Científico</span>
+                </span>
+            </a>
+            <div class="header-search" role="search">
+                <form class="header-search__form" id="headerSearchForm" action="busca.html" method="get">
+                    <label for="headerSearchInput" class="sr-only">Buscar no site</label>
+                    <input type="search" class="header-search__input" id="headerSearchInput" name="q" placeholder="Buscar..." autocomplete="off" aria-label="Buscar no Hub OI">
+                    <button type="submit" class="header-search__btn" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div class="header-a11y" role="group" aria-label="Acessibilidade">
+                <button class="header-a11y__btn" id="headerA11yContrast" title="Alto contraste" aria-label="Alternar alto contraste" aria-pressed="false"><i class="fas fa-adjust" aria-hidden="true"></i></button>
+                <button class="header-a11y__btn" id="headerA11yLargeText" title="Texto grande" aria-label="Alternar texto grande" aria-pressed="false"><i class="fas fa-text-height" aria-hidden="true"></i></button>
+                <button class="header-a11y__btn" id="headerA11yDark" title="Modo escuro" aria-label="Alternar modo escuro" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
+        <div class="sidebar-header">
+            <span class="sidebar-header__title"><i class="fas fa-sitemap" aria-hidden="true"></i> Navegação</span>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <nav class="sidebar-nav" role="navigation" aria-label="Menu principal">
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="index.html">
+                    <i class="fas fa-home sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Início</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item">
+                <div class="sidebar-nav__link">
+                    <i class="fas fa-pills sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Medicações de Uso</span>
+                    <button class="sidebar-submenu-toggle" id="toggle-medicacoes" data-submenu-toggle="submenu-medicacoes" aria-expanded="false" aria-controls="submenu-medicacoes" aria-label="Expandir Medicações">
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="sidebar-submenu" id="submenu-medicacoes" role="list">
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="pamidronato.html"><i class="fas fa-star" style="color:#f39c12;font-size:.8em" aria-hidden="true"></i> Pamidronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="acido-zoledronico.html">Ácido Zoledrônico</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="alendronato.html">Alendronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="setrusumabe-resumo.html">Setrusumabe</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="denosumabe-resumo.html">Denosumabe</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="bibliografia-medicacoes.html"><i class="fas fa-book" aria-hidden="true"></i> Ver Todas</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link  sidebar-nav__link--active" href="centros-referencia.html"><i class="fas fa-hospital sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Centros de Referência</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-brasil.html"><i class="fas fa-map-marked-alt sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Brasil</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-mundo.html"><i class="fas fa-globe-americas sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Mundo</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="lista-exames-impressao.html"><i class="fas fa-book-medical sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Recursos e Exames</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="referencias.html"><i class="fas fa-bookmark sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Referências Bibliográficas</span></a></div>
+        </nav>
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item"><a class="breadcrumb__link" href="index.html">Início</a><span class="breadcrumb__separator" aria-hidden="true"><i class="fas fa-chevron-right"></i></span></li>
+<li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">Centros de Referência</span></li>
+            </ol>
+        </div>
+    </nav>
+
+    <main class="main-content" id="main-content" tabindex="-1">
+        <div class="page-hero" style="background:linear-gradient(135deg,var(--color-primary,#2c3e50) 0%,var(--color-secondary,#3498db) 100%);color:#fff;padding:3rem 0;">
+            <div class="container" style="text-align:center;">
+                <div style="font-size:3.5rem;margin-bottom:1rem;opacity:.9;" aria-hidden="true"><i class="fas fa-hospital"></i></div>
+                <h1 style="color:#fff;font-size:2.25rem;margin-bottom:.75rem;">Centros de Referência em OI (CROIs)</h1>
+                <p style="color:rgba(255,255,255,.9);font-size:1.15rem;max-width:800px;margin:0 auto;">14 centros habilitados pelo Ministério da Saúde (Portaria GM/MS nº 2.305/2001) para diagnóstico e tratamento de Osteogênese Imperfeita pelo SUS.</p>
+            </div>
+        </div>
+        <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+
+            <!-- Intro -->
+            <section class="content-section" style="margin-bottom:2rem;">
+                <div class="highlight-box">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    <div>
+                        <h2 style="margin-top:0;">14 Centros Habilitados pelo Ministério da Saúde</h2>
+                        <p>Os Centros de Referência em Osteogênese Imperfeita (CROIs) foram criados pela <strong>Portaria GM/MS nº 2.305, de 19 de dezembro de 2001</strong>, e são os únicos locais autorizados a diagnosticar, tratar e dispensar bisfosfonatos para OI pelo SUS. A Portaria Conjunta nº 17/2022 atualizou o PCDT e manteve os CROIs como porta de entrada obrigatória <a href="https://bvsms.saude.gov.br/bvs/saudelegis/gm/2001/prt2305_19_12_2001.html" target="_blank" rel="noopener noreferrer">[1]</a>.</p>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:2rem 0;">
+                    <div style="background:#f0f8ff;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #3498db;">
+                        <div style="font-size:2.5rem;font-weight:800;color:#2c3e50;">14</div>
+                        <div style="color:#555;font-size:.9rem;">CROIs credenciados</div>
+                    </div>
+                    <div style="background:#f0fff4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #27ae60;">
+                        <div style="font-size:2.5rem;font-weight:800;color:#2c3e50;">5</div>
+                        <div style="color:#555;font-size:.9rem;">Regiões cobertas</div>
+                    </div>
+                    <div style="background:#fff8f0;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #f39c12;">
+                        <div style="font-size:2.5rem;font-weight:800;color:#2c3e50;">+2.000</div>
+                        <div style="color:#555;font-size:.9rem;">Pacientes atendidos/ano</div>
+                    </div>
+                    <div style="background:#fdf0ff;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #9b59b6;">
+                        <div style="font-size:2.5rem;font-weight:800;color:#2c3e50;">25+</div>
+                        <div style="color:#555;font-size:.9rem;">Anos de experiência</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Região Sudeste -->
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Região Sudeste</h2>
+
+                <!-- SP -->
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #3498db;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">HC-FMUSP — Hospital das Clínicas da USP</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> São Paulo – SP &nbsp;|&nbsp; <span style="background:#e3f2fd;color:#1565c0;padding:.2rem .6rem;border-radius:20px;font-size:.8rem;font-weight:600;">PIONEIRO NACIONAL</span></p>
+                            <p>Referência pioneira nacional na implementação do ácido zoledrônico para OI pediátrica. Sede do <strong>Instituto de Ortopedia e Traumatologia (IOT/HCFMUSP)</strong>, centro de excelência em doenças ósseas raras com extensa produção científica sobre bisfosfonatos <a href="https://www.hcfmusp.org.br" target="_blank" rel="noopener noreferrer">[2]</a>.</p>
+                            <p><strong>Especialidades:</strong> Ortopedia pediátrica, endocrinologia, genética médica, reabilitação.</p>
+                            <a href="https://www.hcfmusp.org.br" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-top:.5rem;font-size:.9rem;padding:.5rem 1rem;"><i class="fas fa-external-link-alt"></i> Site oficial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UNIFESP -->
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #27ae60;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">UNIFESP — Hospital São Paulo</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> São Paulo – SP</p>
+                            <p>Centro de referência em doenças raras e endocrinologia pediátrica. Realiza atendimento multidisciplinar com equipe de genética, endocrinologia e ortopedia especializada em OI <a href="https://www.unifesp.br" target="_blank" rel="noopener noreferrer">[3]</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RJ - IFF -->
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #e74c3c;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">IFF/Fiocruz — Instituto Fernandes Figueira</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro – RJ</p>
+                            <p>Instituto nacional de saúde da criança, da mulher e do adolescente, vinculado à Fiocruz. Referência em doenças genéticas raras com berçário especializado e programa de displasias esqueléticas <a href="https://www.iff.fiocruz.br" target="_blank" rel="noopener noreferrer">[4]</a>.</p>
+                            <a href="https://www.iff.fiocruz.br" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-top:.5rem;font-size:.9rem;padding:.5rem 1rem;"><i class="fas fa-external-link-alt"></i> Site oficial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RJ - INTO -->
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #9b59b6;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">INTO — Instituto Nacional de Traumatologia e Ortopedia</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro – RJ</p>
+                            <p>Referência nacional em ortopedia do Ministério da Saúde. Atende OI com foco em intervenções cirúrgicas ortopédicas e reabilitação funcional <a href="https://into.saude.gov.br" target="_blank" rel="noopener noreferrer">[5]</a>.</p>
+                            <a href="https://into.saude.gov.br" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-top:.5rem;font-size:.9rem;padding:.5rem 1rem;"><i class="fas fa-external-link-alt"></i> Site oficial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MG -->
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #f39c12;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">HC-UFMG — Hospital das Clínicas da UFMG</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> Belo Horizonte – MG</p>
+                            <p>Centro de referência no estado de Minas Gerais, com programa de doenças raras e equipe de endocrinologia pediátrica especializada em displasias ósseas <a href="https://www.hc.ufmg.br" target="_blank" rel="noopener noreferrer">[6]</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Região Nordeste -->
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Região Nordeste</h2>
+
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #3498db;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">Hospital Infantil Albert Sabin</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> Fortaleza – CE</p>
+                            <p>Principal referência pediátrica do Ceará, credenciado para tratamento de OI pelo SUS com equipe multidisciplinar especializada <a href="https://www.hias.ce.gov.br" target="_blank" rel="noopener noreferrer">[7]</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #27ae60;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">HUPES/UFBA — Hospital Universitário Prof. Edgard Santos</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> Salvador – BA</p>
+                            <p>Hospital universitário federal de referência na Bahia, com programa de doenças ósseas raras e equipe de genética e endocrinologia pediátrica <a href="https://www.hupes.ufba.br" target="_blank" rel="noopener noreferrer">[8]</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #e74c3c;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">Hospital Infantil de Recife</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> Recife – PE</p>
+                            <p>Centro de referência pediátrico de Pernambuco credenciado pelo Ministério da Saúde para tratamento de OI pelo PCDT/SUS <a href="https://bvsms.saude.gov.br/bvs/saudelegis/gm/2001/prt2305_19_12_2001.html" target="_blank" rel="noopener noreferrer">[1]</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Região Sul -->
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Região Sul</h2>
+
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #3498db;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">HC-UFRGS — Hospital das Clínicas de Porto Alegre</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> Porto Alegre – RS</p>
+                            <p>Centro de excelência no Rio Grande do Sul com serviço de endocrinologia e genética médica reconhecido nacionalmente. Referência em pesquisa e tratamento de displasias esqueléticas <a href="https://www.hcpa.edu.br" target="_blank" rel="noopener noreferrer">[9]</a>.</p>
+                            <a href="https://www.hcpa.edu.br" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-top:.5rem;font-size:.9rem;padding:.5rem 1rem;"><i class="fas fa-external-link-alt"></i> Site oficial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #27ae60;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">Hospital Infantil Joana de Gusmão</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> Florianópolis – SC</p>
+                            <p>Principal referência pediátrica de Santa Catarina, credenciado para diagnóstico e tratamento de doenças ósseas raras incluindo OI <a href="https://www.saude.sc.gov.br/hijg" target="_blank" rel="noopener noreferrer">[10]</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Região Centro-Oeste -->
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Região Centro-Oeste</h2>
+
+                <div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:2rem;margin-bottom:1.5rem;border-left:5px solid #9b59b6;">
+                    <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div style="font-size:2.5rem;">🏥</div>
+                        <div style="flex:1;">
+                            <h3 style="margin:0 0 .25rem;">HRMS — Hospital Regional da Asa Sul</h3>
+                            <p style="color:#666;margin:.25rem 0;"><i class="fas fa-map-marker-alt"></i> Brasília – DF</p>
+                            <p>Referência do Distrito Federal para tratamento de OI pelo SUS. Atende pacientes de todo o Centro-Oeste com encaminhamento pelo sistema CEAF <a href="https://bvsms.saude.gov.br/bvs/saudelegis/gm/2001/prt2305_19_12_2001.html" target="_blank" rel="noopener noreferrer">[1]</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Norte -->
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Região Norte</h2>
+                <div style="background:#fff8f0;border-radius:12px;padding:1.5rem;border-left:5px solid #f39c12;">
+                    <i class="fas fa-exclamation-triangle" style="color:#f39c12;"></i>
+                    <strong> Atenção:</strong> A região Norte apresenta menor cobertura de CROIs. Pacientes do Pará, Amazonas e estados vizinhos podem ser encaminhados ao <strong>Hospital Universitário João de Barros Barreto (HUJBB/UFPA)</strong> em Belém ou, conforme disponibilidade, ao HIAS em Fortaleza <a href="https://bvsms.saude.gov.br/bvs/saudelegis/gm/2001/prt2305_19_12_2001.html" target="_blank" rel="noopener noreferrer">[1]</a>. Consulte a Central de Regulação do seu estado.
+                </div>
+            </section>
+
+            <!-- Como ser atendido -->
+            <section class="content-section" style="background:#f0f8ff;border-radius:12px;padding:2rem;margin-bottom:2rem;">
+                <h2><i class="fas fa-route"></i> Como Ser Encaminhado para um CROI</h2>
+                <ol style="padding-left:1.5rem;line-height:2;">
+                    <li><strong>Diagnóstico clínico</strong> na Atenção Primária (UBS/APS) — suspeita de OI por fraturas de repetição</li>
+                    <li><strong>Encaminhamento</strong> pelo médico assistente para o CROI mais próximo via SISREG ou regulação estadual</li>
+                    <li><strong>Avaliação no CROI</strong>: confirmação diagnóstica, densitometria óssea, exames pré-tratamento</li>
+                    <li><strong>Solicitação ao CEAF</strong>: médico do CROI emite Laudo para Solicitação (LME) + Termo de Responsabilidade</li>
+                    <li><strong>Dispensação e tratamento</strong>: pamidronato fornecido pelo CEAF, administrado no CROI com internação de 3 dias (AIH)</li>
+                </ol>
+                <div class="info-box" style="margin-top:1rem;">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <div>
+                        <strong>Central de Regulação do SUS:</strong> Ligue 136 (Disque Saúde) para informações sobre encaminhamentos e CROIs na sua região.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Referências -->
+            <section class="content-section" style="margin-bottom:1rem;">
+                <h2><i class="fas fa-bookmark"></i> Referências</h2>
+                <ol style="font-size:.9rem;line-height:1.8;color:#555;padding-left:1.5rem;">
+                    <li>Brasil. Ministério da Saúde. <em>Portaria GM/MS nº 2.305, de 19 de dezembro de 2001</em>. Cria os CROIs. Disponível em: <a href="https://bvsms.saude.gov.br/bvs/saudelegis/gm/2001/prt2305_19_12_2001.html" target="_blank" rel="noopener noreferrer">bvsms.saude.gov.br</a></li>
+                    <li>HCFMUSP. <em>Instituto de Ortopedia e Traumatologia</em>. Disponível em: <a href="https://www.hcfmusp.org.br" target="_blank" rel="noopener noreferrer">hcfmusp.org.br</a></li>
+                    <li>UNIFESP. <em>Hospital São Paulo — Doenças Raras</em>. Disponível em: <a href="https://www.unifesp.br" target="_blank" rel="noopener noreferrer">unifesp.br</a></li>
+                    <li>IFF/Fiocruz. <em>Instituto Fernandes Figueira</em>. Disponível em: <a href="https://www.iff.fiocruz.br" target="_blank" rel="noopener noreferrer">iff.fiocruz.br</a></li>
+                    <li>INTO. <em>Instituto Nacional de Traumatologia e Ortopedia</em>. Disponível em: <a href="https://into.saude.gov.br" target="_blank" rel="noopener noreferrer">into.saude.gov.br</a></li>
+                    <li>HC-UFMG. <em>Hospital das Clínicas da UFMG</em>. Disponível em: <a href="https://www.hc.ufmg.br" target="_blank" rel="noopener noreferrer">hc.ufmg.br</a></li>
+                    <li>HIAS. <em>Hospital Infantil Albert Sabin</em>. Disponível em: <a href="https://www.hias.ce.gov.br" target="_blank" rel="noopener noreferrer">hias.ce.gov.br</a></li>
+                    <li>HUPES/UFBA. <em>Hospital Universitário Prof. Edgard Santos</em>. Disponível em: <a href="https://www.hupes.ufba.br" target="_blank" rel="noopener noreferrer">hupes.ufba.br</a></li>
+                    <li>HCPA. <em>Hospital das Clínicas de Porto Alegre</em>. Disponível em: <a href="https://www.hcpa.edu.br" target="_blank" rel="noopener noreferrer">hcpa.edu.br</a></li>
+                    <li>HIJG. <em>Hospital Infantil Joana de Gusmão</em>. Disponível em: <a href="https://www.saude.sc.gov.br/hijg" target="_blank" rel="noopener noreferrer">saude.sc.gov.br/hijg</a></li>
+                    <li>Brasil. Ministério da Saúde. <em>Portaria Conjunta nº 17, de 5 de outubro de 2022</em> — PCDT Osteogênese Imperfeita. Disponível em: <a href="https://www.gov.br/conitec" target="_blank" rel="noopener noreferrer">gov.br/conitec</a></li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-bone" aria-hidden="true"></i> Hub Osteogênese Imperfeita</h2>
+                    <p class="footer-section__text">Centro de conhecimento técnico-científico sobre OI para profissionais de saúde, pacientes e familiares.</p>
+                    <div class="footer-badges" role="list" aria-label="Selos de conformidade">
+                        <span class="footer-badge" role="listitem"><i class="fas fa-universal-access" aria-hidden="true"></i> WCAG 2.1 AA</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-shield-alt" aria-hidden="true"></i> LGPD</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-check-circle" aria-hidden="true"></i> e-MAG</span>
+                    </div>
+                </div>
+                <nav aria-label="Medicações">
+                    <h2 class="footer-section__title"><i class="fas fa-pills" aria-hidden="true"></i> Medicações</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="pamidronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Pamidronato</a></li>
+                        <li><a href="acido-zoledronico.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Ácido Zoledrônico</a></li>
+                        <li><a href="alendronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Alendronato</a></li>
+                        <li><a href="setrusumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Setrusumabe</a></li>
+                        <li><a href="denosumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Denosumabe</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Recursos">
+                    <h2 class="footer-section__title"><i class="fas fa-book-medical" aria-hidden="true"></i> Recursos</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="centros-referencia.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Centros de Referência</a></li>
+                        <li><a href="lista-exames-impressao.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Lista de Exames</a></li>
+                        <li><a href="referencias.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Referências</a></li>
+                        <li><a href="oi-brasil.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Brasil</a></li>
+                        <li><a href="oi-mundo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Mundo</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-info-circle" aria-hidden="true"></i> Internacional</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="https://www.gov.br/conitec" target="_blank" rel="noopener noreferrer">CONITEC — Min. Saúde</a></li>
+                        <li><a href="https://oif.org" target="_blank" rel="noopener noreferrer">OI Foundation (EUA)</a></li>
+                        <li><a href="https://oife.org" target="_blank" rel="noopener noreferrer">OIFE (Europa)</a></li>
+                        <li><a href="https://www.brittlebone.org" target="_blank" rel="noopener noreferrer">Brittle Bone Society</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-bottom__copy">&copy; <span id="footerYear">2026</span> Hub Osteogênese Imperfeita. Conteúdo educacional e técnico.</p>
+                <p class="footer-bottom__visitors" style="font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.25rem;">
+                    <i class="fas fa-eye" aria-hidden="true"></i> <span id="visitorCount">—</span> visualizações registradas
+                </p>
+                <p class="footer-bottom__disclaimer"><strong>Aviso Legal:</strong> Conteúdo informativo e educacional. Não substitui consulta médica profissional.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="a11y-widget" id="a11yWidget" role="region" aria-label="Widget de acessibilidade">
+        <div class="a11y-widget__panel" id="a11yWidgetPanel" role="group">
+            <div class="a11y-widget__title"><i class="fas fa-universal-access" aria-hidden="true"></i> Acessibilidade</div>
+            <button class="a11y-widget__btn" id="a11yBtnContrast" aria-pressed="false"><i class="fas fa-adjust" aria-hidden="true"></i> Alto Contraste</button>
+            <button class="a11y-widget__btn" id="a11yBtnLargeText" aria-pressed="false"><i class="fas fa-text-height" aria-hidden="true"></i> Texto Grande</button>
+            <button class="a11y-widget__btn" id="a11yBtnDark" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i> Modo Escuro</button>
+            <hr class="divider" style="margin:.5rem 0">
+            <button class="a11y-widget__btn" id="a11yBtnReset"><i class="fas fa-undo" aria-hidden="true"></i> Restaurar Padrão</button>
+        </div>
+        <button class="a11y-widget__toggle" id="a11yWidgetToggle" aria-expanded="false" aria-controls="a11yWidgetPanel" aria-label="Abrir opções de acessibilidade">
+            <i class="fas fa-universal-access" aria-hidden="true"></i>
+        </button>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+
+    <script>const footerYear=document.getElementById('footerYear');if(footerYear)footerYear.textContent=new Date().getFullYear();</script>
+    <script src="assets/js/global.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ab1b75ec32f44b9ba68648c534b79aea"}'></script>
+</body>
+</html>

@@ -1,15 +1,16 @@
 /**
  * Hub Osteogênese Imperfeita — JavaScript Global Unificado
- * Versão 2.0 | Arquitetura de Componentes | WCAG 2.1 AA
+ * Versão 2.1 | Arquitetura de Componentes | WCAG 2.1 AA
  *
  * Módulos:
- * 1. HubSidebar     — Controle do menu lateral
- * 2. HubA11y        — Widget de acessibilidade
- * 3. HubPageIndex   — Índice ativo por scroll
- * 4. HubBackToTop   — Botão voltar ao topo
+ * 1. HubSidebar      — Controle do menu lateral
+ * 2. HubA11y         — Widget de acessibilidade
+ * 3. HubPageIndex    — Índice ativo por scroll
+ * 4. HubBackToTop    — Botão voltar ao topo
  * 5. HubSmoothScroll — Scroll suave
- * 6. HubSearch      — Busca no header
- * 7. HubInit        — Bootstrap geral
+ * 6. HubSearch       — Busca no header
+ * 7. HubVisitorCount — Contador de visitas (localStorage)
+ * 8. HubInit         — Bootstrap geral
  */
 
 'use strict';
@@ -372,7 +373,38 @@ const HubSearch = {
 };
 
 /* ==========================================================
-   7. HubInit — Bootstrap geral
+   7. HubVisitorCount — Contador de visitas (localStorage)
+   ========================================================== */
+const HubVisitorCount = {
+    STORAGE_KEY: 'hubOI_pageviews',
+
+    init() {
+        const el = document.getElementById('visitorCount');
+        if (!el) return;
+
+        try {
+            const stored  = localStorage.getItem(this.STORAGE_KEY);
+            const data    = stored ? JSON.parse(stored) : {};
+            const page    = window.location.pathname.split('/').pop() || 'index.html';
+
+            /* Incrementa contador da página atual */
+            data[page]    = (data[page] || 0) + 1;
+
+            /* Total de visualizações de todas as páginas */
+            const total   = Object.values(data).reduce((a, b) => a + b, 0);
+
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
+
+            /* Exibe com formatação de milhar */
+            el.textContent = total.toLocaleString('pt-BR');
+        } catch {
+            el.textContent = '—';
+        }
+    }
+};
+
+/* ==========================================================
+   8. HubInit — Bootstrap geral
    ========================================================== */
 document.addEventListener('DOMContentLoaded', () => {
     HubSidebar.init();
@@ -381,6 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
     HubBackToTop.init();
     HubSmoothScroll.init();
     HubSearch.init();
+    HubVisitorCount.init();
 
     /* Fechar widget de acessibilidade ao clicar fora */
     document.addEventListener('click', (e) => {
