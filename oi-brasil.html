@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panorama da Osteogênese Imperfeita no Brasil: epidemiologia, políticas públicas, legislação, centros de referência, associações de pacientes e pesquisa científica.">
+    <meta name="robots" content="index, follow">
+    <title>OI no Brasil | Hub Osteogênese Imperfeita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body class="page-wrapper">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+    <header class="site-header" role="banner">
+        <div class="site-header__inner">
+            <button class="menu-toggle" id="menuToggle" aria-controls="hubSidebar" aria-expanded="false" aria-label="Abrir menu de navegação"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <a class="site-logo" href="index.html" aria-label="Hub Osteogênese Imperfeita — Página inicial">
+                <i class="fas fa-bone site-logo__icon" aria-hidden="true"></i>
+                <span class="site-logo__text">Hub Osteogênese Imperfeita<span>Centro de Conhecimento Técnico-Científico</span></span>
+            </a>
+            <div class="header-search" role="search">
+                <form class="header-search__form" id="headerSearchForm" action="busca.html" method="get">
+                    <label for="headerSearchInput" class="sr-only">Buscar no site</label>
+                    <input type="search" class="header-search__input" id="headerSearchInput" name="q" placeholder="Buscar..." autocomplete="off" aria-label="Buscar no Hub OI">
+                    <button type="submit" class="header-search__btn" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div class="header-a11y" role="group" aria-label="Acessibilidade">
+                <button class="header-a11y__btn" id="headerA11yContrast" aria-label="Alternar alto contraste" aria-pressed="false"><i class="fas fa-adjust" aria-hidden="true"></i></button>
+                <button class="header-a11y__btn" id="headerA11yLargeText" aria-label="Alternar texto grande" aria-pressed="false"><i class="fas fa-text-height" aria-hidden="true"></i></button>
+                <button class="header-a11y__btn" id="headerA11yDark" aria-label="Alternar modo escuro" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
+        <div class="sidebar-header">
+            <span class="sidebar-header__title"><i class="fas fa-sitemap" aria-hidden="true"></i> Navegação</span>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <nav class="sidebar-nav" role="navigation" aria-label="Menu principal">
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="index.html"><i class="fas fa-home sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Início</span></a></div>
+            <div class="sidebar-nav__item">
+                <div class="sidebar-nav__link"><i class="fas fa-pills sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Medicações de Uso</span>
+                    <button class="sidebar-submenu-toggle" id="toggle-medicacoes" data-submenu-toggle="submenu-medicacoes" aria-expanded="false" aria-controls="submenu-medicacoes" aria-label="Expandir Medicações"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                </div>
+                <ul class="sidebar-submenu" id="submenu-medicacoes" role="list">
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="pamidronato.html"><i class="fas fa-star" style="color:#f39c12;font-size:.8em" aria-hidden="true"></i> Pamidronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="acido-zoledronico.html">Ácido Zoledrônico</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="alendronato.html">Alendronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="setrusumabe-resumo.html">Setrusumabe</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="denosumabe-resumo.html">Denosumabe</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="bibliografia-medicacoes.html"><i class="fas fa-book" aria-hidden="true"></i> Ver Todas</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="centros-referencia.html"><i class="fas fa-hospital sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Centros de Referência</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link sidebar-nav__link--active" href="oi-brasil.html"><i class="fas fa-map-marked-alt sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Brasil</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-mundo.html"><i class="fas fa-globe-americas sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Mundo</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="lista-exames-impressao.html"><i class="fas fa-book-medical sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Recursos e Exames</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="referencias.html"><i class="fas fa-bookmark sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Referências Bibliográficas</span></a></div>
+        </nav>
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+        <div class="container"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a class="breadcrumb__link" href="index.html">Início</a><span class="breadcrumb__separator" aria-hidden="true"><i class="fas fa-chevron-right"></i></span></li>
+<li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">OI no Brasil</span></li></ol></div>
+    </nav>
+    <main class="main-content" id="main-content" tabindex="-1">
+        <div class="page-hero" style="background:linear-gradient(135deg,var(--color-primary,#2c3e50) 0%,var(--color-secondary,#3498db) 100%);color:#fff;padding:3rem 0;">
+            <div class="container" style="text-align:center;">
+                <div style="font-size:3.5rem;margin-bottom:1rem;opacity:.9;" aria-hidden="true"><i class="fas fa-map-marked-alt"></i></div>
+                <h1 style="color:#fff;font-size:2.25rem;margin-bottom:.75rem;">Osteogênese Imperfeita no Brasil</h1>
+                <p style="color:rgba(255,255,255,.9);font-size:1.15rem;max-width:800px;margin:0 auto;">Epidemiologia, políticas públicas, legislação, associações de pacientes e pesquisa científica nacional.</p>
+            </div>
+        </div>
+        <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+
+            <section class="content-section" style="margin-bottom:2rem;">
+                <div class="highlight-box"><i class="fas fa-info-circle"></i>
+                    <div><h2 style="margin-top:0;">Panorama Epidemiológico</h2>
+                    <p>A Osteogênese Imperfeita afeta aproximadamente <strong>1 em cada 15.000 a 20.000 nascidos vivos</strong> no Brasil, estimando-se entre <strong>10.000 e 15.000 pessoas</strong> vivendo com a condição no país. É classificada como doença rara pelo Ministério da Saúde (prevalência &lt; 65/100.000 habitantes) e integra a Política Nacional de Atenção Integral às Pessoas com Doenças Raras <a href="https://www.gov.br/saude/pt-br/composicao/sas/doenras-raras" target="_blank" rel="noopener noreferrer">[1]</a>.</p>
+                    </div>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin:2rem 0;">
+                    <div style="background:#f0f8ff;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #3498db;">
+                        <div style="font-size:2rem;font-weight:800;color:#2c3e50;">~15.000</div>
+                        <div style="font-size:.85rem;color:#555;">pessoas no Brasil</div>
+                    </div>
+                    <div style="background:#f0fff4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #27ae60;">
+                        <div style="font-size:2rem;font-weight:800;color:#2c3e50;">1:15.000</div>
+                        <div style="font-size:.85rem;color:#555;">nascidos vivos</div>
+                    </div>
+                    <div style="background:#fff8f0;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #f39c12;">
+                        <div style="font-size:2rem;font-weight:800;color:#2c3e50;">14</div>
+                        <div style="font-size:.85rem;color:#555;">CROIs ativos no SUS</div>
+                    </div>
+                    <div style="background:#fdf0ff;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #9b59b6;">
+                        <div style="font-size:2rem;font-weight:800;color:#2c3e50;">2001</div>
+                        <div style="font-size:.85rem;color:#555;">1ª política pública OI</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-gavel"></i> Marco Legal e Políticas Públicas</h2>
+                <div style="display:flex;flex-direction:column;gap:1rem;">
+                    <div style="background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid #3498db;">
+                        <h3 style="margin:0 0 .5rem;color:#2c3e50;">📋 Portaria GM/MS nº 2.305/2001</h3>
+                        <p style="margin:0;color:#555;">Primeira política específica para OI no Brasil. Criou os Centros de Referência em Osteogênese Imperfeita (CROIs) e aprovou o pamidronato dissódico IV como tratamento oficial pelo SUS. <a href="https://bvsms.saude.gov.br/bvs/saudelegis/gm/2001/prt2305_19_12_2001.html" target="_blank" rel="noopener noreferrer">Ver documento oficial →</a></p>
+                    </div>
+                    <div style="background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid #27ae60;">
+                        <h3 style="margin:0 0 .5rem;color:#2c3e50;">📋 Portaria Conjunta nº 17/2022 — PCDT Atualizado</h3>
+                        <p style="margin:0;color:#555;">Atualiza o Protocolo Clínico e Diretrizes Terapêuticas (PCDT) para OI. Mantém pamidronato IV como padrão-ouro, inclui alendronato oral para adultos leves/moderados e estabelece critérios de elegibilidade rigorosos. <a href="https://www.gov.br/conitec/pt-br/assuntos/protocolos-e-diretrizes" target="_blank" rel="noopener noreferrer">Ver PCDT →</a></p>
+                    </div>
+                    <div style="background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid #9b59b6;">
+                        <h3 style="margin:0 0 .5rem;color:#2c3e50;">📋 Política Nacional de Doenças Raras (2014)</h3>
+                        <p style="margin:0;color:#555;">Portaria GM/MS nº 199/2014 institui a Política Nacional de Atenção Integral às Pessoas com Doenças Raras. A OI está incluída no eixo de doenças ósseas raras e displasias esqueléticas. <a href="https://bvsms.saude.gov.br/bvs/saudelegis/gm/2014/prt0199_30_01_2014.html" target="_blank" rel="noopener noreferrer">Ver portaria →</a></p>
+                    </div>
+                    <div style="background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid #e74c3c;">
+                        <h3 style="margin:0 0 .5rem;color:#2c3e50;">📋 Lei Brasileira de Inclusão — Lei nº 13.146/2015</h3>
+                        <p style="margin:0;color:#555;">Estatuto da Pessoa com Deficiência. Pessoas com OI grave têm direito aos benefícios e proteções desta lei, incluindo acesso prioritário a serviços de saúde, benefícios previdenciários e acessibilidade. <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">Ver lei →</a></p>
+                    </div>
+                    <div style="background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid #f39c12;">
+                        <h3 style="margin:0 0 .5rem;color:#2c3e50;">📋 Decreto nº 5.296/2004</h3>
+                        <p style="margin:0;color:#555;">Regulamenta as Leis nº 10.048/2000 e 10.098/2000, estabelecendo normas gerais e critérios básicos para acessibilidade de pessoas com deficiência. Aplica-se diretamente a portadores de OI grave. <a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/decreto/d5296.htm" target="_blank" rel="noopener noreferrer">Ver decreto →</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-dna"></i> Classificação Utilizada no Brasil</h2>
+                <p>O Brasil adota predominantemente a <strong>classificação de Sillence (1979)</strong>, revisada por Glorieux et al. (2000), reconhecendo atualmente <strong>21 tipos moleculares</strong> descritos na literatura. O PCDT/SUS 2022 classifica a OI em três categorias para fins terapêuticos <a href="https://www.gov.br/conitec" target="_blank" rel="noopener noreferrer">[2]</a>:</p>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1rem;">
+                    <div style="background:#e8f5e9;border-radius:10px;padding:1.5rem;border-top:4px solid #27ae60;">
+                        <h3 style="color:#1b5e20;margin:0 0 .5rem;">Tipo Leve (Tipo I)</h3>
+                        <p style="margin:0;font-size:.95rem;">Fraturas moderadas, estatura normal ou levemente reduzida, escleróticas azuis. Tratamento: alendronato oral (adultos) ou observação clínica.</p>
+                    </div>
+                    <div style="background:#fff3e0;border-radius:10px;padding:1.5rem;border-top:4px solid #f39c12;">
+                        <h3 style="color:#e65100;margin:0 0 .5rem;">Tipo Moderado (Tipos III e IV parciais)</h3>
+                        <p style="margin:0;font-size:.95rem;">Deformidades progressivas, baixa estatura, múltiplas fraturas. Tratamento: pamidronato IV nos CROIs ou alendronato oral.</p>
+                    </div>
+                    <div style="background:#fce4ec;border-radius:10px;padding:1.5rem;border-top:4px solid #e74c3c;">
+                        <h3 style="color:#b71c1c;margin:0 0 .5rem;">Tipo Grave (Tipo III e variantes)</h3>
+                        <p style="margin:0;font-size:.95rem;">Deformidades graves, dependência de cadeira de rodas, insuficiência respiratória em casos extremos. Tratamento obrigatório: pamidronato IV + cirurgias ortopédicas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-users"></i> Associações de Pacientes no Brasil</h2>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+                    <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+                        <h3 style="color:#2c3e50;margin:0 0 .5rem;"><i class="fas fa-heart" style="color:#e74c3c;"></i> ABRAOI</h3>
+                        <p style="font-size:.9rem;color:#555;margin-bottom:1rem;">Associação Brasileira de Osteogênese Imperfeita. Principal organização de pacientes e familiares no Brasil, promove apoio mútuo, defesa de direitos e acesso a tratamento. <a href="https://abraoi.org.br" target="_blank" rel="noopener noreferrer">[3]</a></p>
+                        <a href="https://abraoi.org.br" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size:.85rem;padding:.4rem .9rem;"><i class="fas fa-external-link-alt"></i> abraoi.org.br</a>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+                        <h3 style="color:#2c3e50;margin:0 0 .5rem;"><i class="fas fa-hands-helping" style="color:#3498db;"></i> AORI</h3>
+                        <p style="font-size:.9rem;color:#555;margin-bottom:1rem;">Associação de Osteogênese Imperfeita — atuante em estados do Sudeste. Realiza campanhas de conscientização e apoio a famílias recém-diagnosticadas.</p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+                        <h3 style="color:#2c3e50;margin:0 0 .5rem;"><i class="fas fa-star" style="color:#f39c12;"></i> AMIGOS DO OI</h3>
+                        <p style="font-size:.9rem;color:#555;margin-bottom:1rem;">Grupo de apoio a crianças e adolescentes com OI e seus familiares, com foco em inclusão escolar e qualidade de vida.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-microscope"></i> Pesquisa Científica no Brasil</h2>
+                <p>O Brasil tem produção científica relevante sobre OI, com grupos de pesquisa ativos nos principais CROIs. Destacam-se <a href="https://pubmed.ncbi.nlm.nih.gov/?term=osteogenesis+imperfecta+brazil" target="_blank" rel="noopener noreferrer">[4]</a>:</p>
+                <ul style="line-height:2.2;padding-left:1.5rem;">
+                    <li><strong>Grupo IOT/HCFMUSP (SP)</strong> — estudos sobre transição do pamidronato para ácido zoledrônico em crianças</li>
+                    <li><strong>Grupo IFF/Fiocruz (RJ)</strong> — epidemiologia de OI e displasias esqueléticas no Brasil</li>
+                    <li><strong>Grupo HCPA/UFRGS (RS)</strong> — genética molecular e novos tipos de OI</li>
+                    <li><strong>INCT de Genética Médica Populacional (INAGEMP)</strong> — sequenciamento genético de doenças raras ósseas</li>
+                    <li><strong>Pesquisa em Setrusumabe (BPS-804)</strong> — participação de centros brasileiros em ensaios clínicos internacionais de fase III</li>
+                </ul>
+            </section>
+
+            <section class="content-section" style="background:#f0f8ff;border-radius:12px;padding:2rem;margin-bottom:2rem;">
+                <h2><i class="fas fa-balance-scale"></i> Direitos do Paciente com OI no Brasil</h2>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+                    <div style="background:#fff;padding:1rem;border-radius:8px;"><i class="fas fa-pills" style="color:#3498db;"></i> <strong>Medicamento gratuito</strong><br><small>Pamidronato e alendronato pelo CEAF/SUS</small></div>
+                    <div style="background:#fff;padding:1rem;border-radius:8px;"><i class="fas fa-wheelchair" style="color:#27ae60;"></i> <strong>BPC/LOAS</strong><br><small>Benefício de Prestação Continuada para OI grave</small></div>
+                    <div style="background:#fff;padding:1rem;border-radius:8px;"><i class="fas fa-car" style="color:#9b59b6;"></i> <strong>IPVA e IPI isentos</strong><br><small>Para veículos adaptados às necessidades</small></div>
+                    <div style="background:#fff;padding:1rem;border-radius:8px;"><i class="fas fa-school" style="color:#e74c3c;"></i> <strong>Inclusão escolar</strong><br><small>AEE e adaptações curriculares garantidas por lei</small></div>
+                    <div style="background:#fff;padding:1rem;border-radius:8px;"><i class="fas fa-building" style="color:#f39c12;"></i> <strong>Acessibilidade</strong><br><small>Decreto 5.296/2004 — ambientes adaptados</small></div>
+                    <div style="background:#fff;padding:1rem;border-radius:8px;"><i class="fas fa-heartbeat" style="color:#e74c3c;"></i> <strong>Prioridade no SUS</strong><br><small>Atendimento prioritário em doenças raras</small></div>
+                </div>
+            </section>
+
+            <section class="content-section" style="margin-bottom:1rem;">
+                <h2><i class="fas fa-bookmark"></i> Referências</h2>
+                <ol style="font-size:.9rem;line-height:1.8;color:#555;padding-left:1.5rem;">
+                    <li>Brasil. Ministério da Saúde. <em>Política Nacional de Atenção Integral às Pessoas com Doenças Raras</em>. Portaria GM/MS nº 199/2014. Disponível em: <a href="https://www.gov.br/saude/pt-br/composicao/sas/doenras-raras" target="_blank" rel="noopener noreferrer">gov.br/saude</a></li>
+                    <li>Brasil. Ministério da Saúde / CONITEC. <em>Protocolo Clínico e Diretrizes Terapêuticas da Osteogênese Imperfeita</em>. Portaria Conjunta nº 17/2022. Disponível em: <a href="https://www.gov.br/conitec" target="_blank" rel="noopener noreferrer">gov.br/conitec</a></li>
+                    <li>ABRAOI. <em>Associação Brasileira de Osteogênese Imperfeita</em>. Disponível em: <a href="https://abraoi.org.br" target="_blank" rel="noopener noreferrer">abraoi.org.br</a></li>
+                    <li>PubMed. <em>Osteogenesis Imperfecta — Brazil</em>. Disponível em: <a href="https://pubmed.ncbi.nlm.nih.gov/?term=osteogenesis+imperfecta+brazil" target="_blank" rel="noopener noreferrer">pubmed.ncbi.nlm.nih.gov</a></li>
+                    <li>Brasil. <em>Lei nº 13.146/2015 — Lei Brasileira de Inclusão</em>. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">planalto.gov.br</a></li>
+                    <li>Brasil. <em>Decreto nº 5.296/2004</em>. Disponível em: <a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/decreto/d5296.htm" target="_blank" rel="noopener noreferrer">planalto.gov.br</a></li>
+                </ol>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-bone" aria-hidden="true"></i> Hub Osteogênese Imperfeita</h2>
+                    <p class="footer-section__text">Centro de conhecimento técnico-científico sobre OI para profissionais de saúde, pacientes e familiares.</p>
+                    <div class="footer-badges" role="list" aria-label="Selos de conformidade">
+                        <span class="footer-badge" role="listitem"><i class="fas fa-universal-access" aria-hidden="true"></i> WCAG 2.1 AA</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-shield-alt" aria-hidden="true"></i> LGPD</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-check-circle" aria-hidden="true"></i> e-MAG</span>
+                    </div>
+                </div>
+                <nav aria-label="Medicações">
+                    <h2 class="footer-section__title"><i class="fas fa-pills" aria-hidden="true"></i> Medicações</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="pamidronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Pamidronato</a></li>
+                        <li><a href="acido-zoledronico.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Ácido Zoledrônico</a></li>
+                        <li><a href="alendronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Alendronato</a></li>
+                        <li><a href="setrusumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Setrusumabe</a></li>
+                        <li><a href="denosumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Denosumabe</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Recursos">
+                    <h2 class="footer-section__title"><i class="fas fa-book-medical" aria-hidden="true"></i> Recursos</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="centros-referencia.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Centros de Referência</a></li>
+                        <li><a href="lista-exames-impressao.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Lista de Exames</a></li>
+                        <li><a href="referencias.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Referências</a></li>
+                        <li><a href="oi-brasil.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Brasil</a></li>
+                        <li><a href="oi-mundo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Mundo</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-info-circle" aria-hidden="true"></i> Internacional</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="https://www.gov.br/conitec" target="_blank" rel="noopener noreferrer">CONITEC — Min. Saúde</a></li>
+                        <li><a href="https://oif.org" target="_blank" rel="noopener noreferrer">OI Foundation (EUA)</a></li>
+                        <li><a href="https://oife.org" target="_blank" rel="noopener noreferrer">OIFE (Europa)</a></li>
+                        <li><a href="https://www.brittlebone.org" target="_blank" rel="noopener noreferrer">Brittle Bone Society</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-bottom__copy">&copy; <span id="footerYear">2026</span> Hub Osteogênese Imperfeita. Conteúdo educacional e técnico.</p>
+                <p style="font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.25rem;"><i class="fas fa-eye" aria-hidden="true"></i> <span id="visitorCount">—</span> visualizações registradas</p>
+                <p class="footer-bottom__disclaimer"><strong>Aviso Legal:</strong> Conteúdo informativo e educacional. Não substitui consulta médica profissional.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="a11y-widget" id="a11yWidget" role="region" aria-label="Widget de acessibilidade">
+        <div class="a11y-widget__panel" id="a11yWidgetPanel" role="group">
+            <div class="a11y-widget__title"><i class="fas fa-universal-access" aria-hidden="true"></i> Acessibilidade</div>
+            <button class="a11y-widget__btn" id="a11yBtnContrast" aria-pressed="false"><i class="fas fa-adjust" aria-hidden="true"></i> Alto Contraste</button>
+            <button class="a11y-widget__btn" id="a11yBtnLargeText" aria-pressed="false"><i class="fas fa-text-height" aria-hidden="true"></i> Texto Grande</button>
+            <button class="a11y-widget__btn" id="a11yBtnDark" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i> Modo Escuro</button>
+            <hr style="margin:.5rem 0">
+            <button class="a11y-widget__btn" id="a11yBtnReset"><i class="fas fa-undo" aria-hidden="true"></i> Restaurar Padrão</button>
+        </div>
+        <button class="a11y-widget__toggle" id="a11yWidgetToggle" aria-expanded="false" aria-controls="a11yWidgetPanel" aria-label="Abrir opções de acessibilidade"><i class="fas fa-universal-access" aria-hidden="true"></i></button>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+    <script>const footerYear=document.getElementById('footerYear');if(footerYear)footerYear.textContent=new Date().getFullYear();</script>
+    <script src="assets/js/global.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ab1b75ec32f44b9ba68648c534b79aea"}'></script>
+</body>
+</html>

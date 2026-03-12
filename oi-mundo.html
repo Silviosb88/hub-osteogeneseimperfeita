@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Osteogênese Imperfeita no mundo: epidemiologia global, classificação molecular, tratamentos internacionais, centros de excelência e perspectivas de cura.">
+    <meta name="robots" content="index, follow">
+    <title>OI no Mundo | Hub Osteogênese Imperfeita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body class="page-wrapper">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+    <header class="site-header" role="banner">
+        <div class="site-header__inner">
+            <button class="menu-toggle" id="menuToggle" aria-controls="hubSidebar" aria-expanded="false" aria-label="Abrir menu de navegação"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <a class="site-logo" href="index.html" aria-label="Hub Osteogênese Imperfeita — Página inicial">
+                <i class="fas fa-bone site-logo__icon" aria-hidden="true"></i>
+                <span class="site-logo__text">Hub Osteogênese Imperfeita<span>Centro de Conhecimento Técnico-Científico</span></span>
+            </a>
+            <div class="header-search" role="search">
+                <form class="header-search__form" id="headerSearchForm" action="busca.html" method="get">
+                    <label for="headerSearchInput" class="sr-only">Buscar no site</label>
+                    <input type="search" class="header-search__input" id="headerSearchInput" name="q" placeholder="Buscar..." autocomplete="off" aria-label="Buscar no Hub OI">
+                    <button type="submit" class="header-search__btn" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div class="header-a11y" role="group" aria-label="Acessibilidade">
+                <button class="header-a11y__btn" id="headerA11yContrast" aria-label="Alternar alto contraste" aria-pressed="false"><i class="fas fa-adjust" aria-hidden="true"></i></button>
+                <button class="header-a11y__btn" id="headerA11yLargeText" aria-label="Alternar texto grande" aria-pressed="false"><i class="fas fa-text-height" aria-hidden="true"></i></button>
+                <button class="header-a11y__btn" id="headerA11yDark" aria-label="Alternar modo escuro" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
+        <div class="sidebar-header">
+            <span class="sidebar-header__title"><i class="fas fa-sitemap" aria-hidden="true"></i> Navegação</span>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <nav class="sidebar-nav" role="navigation" aria-label="Menu principal">
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="index.html"><i class="fas fa-home sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Início</span></a></div>
+            <div class="sidebar-nav__item">
+                <div class="sidebar-nav__link"><i class="fas fa-pills sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Medicações de Uso</span>
+                    <button class="sidebar-submenu-toggle" id="toggle-medicacoes" data-submenu-toggle="submenu-medicacoes" aria-expanded="false" aria-controls="submenu-medicacoes" aria-label="Expandir Medicações"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+                </div>
+                <ul class="sidebar-submenu" id="submenu-medicacoes" role="list">
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="pamidronato.html"><i class="fas fa-star" style="color:#f39c12;font-size:.8em" aria-hidden="true"></i> Pamidronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="acido-zoledronico.html">Ácido Zoledrônico</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="alendronato.html">Alendronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="setrusumabe-resumo.html">Setrusumabe</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="denosumabe-resumo.html">Denosumabe</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="bibliografia-medicacoes.html"><i class="fas fa-book" aria-hidden="true"></i> Ver Todas</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="centros-referencia.html"><i class="fas fa-hospital sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Centros de Referência</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-brasil.html"><i class="fas fa-map-marked-alt sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Brasil</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link sidebar-nav__link--active" href="oi-mundo.html"><i class="fas fa-globe-americas sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Mundo</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="lista-exames-impressao.html"><i class="fas fa-book-medical sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Recursos e Exames</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="referencias.html"><i class="fas fa-bookmark sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Referências Bibliográficas</span></a></div>
+        </nav>
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+        <div class="container"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a class="breadcrumb__link" href="index.html">Início</a><span class="breadcrumb__separator" aria-hidden="true"><i class="fas fa-chevron-right"></i></span></li>
+<li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">OI no Mundo</span></li></ol></div>
+    </nav>
+    <main class="main-content" id="main-content" tabindex="-1">
+        <div class="page-hero" style="background:linear-gradient(135deg,var(--color-primary,#2c3e50) 0%,var(--color-secondary,#3498db) 100%);color:#fff;padding:3rem 0;">
+            <div class="container" style="text-align:center;">
+                <div style="font-size:3.5rem;margin-bottom:1rem;opacity:.9;" aria-hidden="true"><i class="fas fa-globe-americas"></i></div>
+                <h1 style="color:#fff;font-size:2.25rem;margin-bottom:.75rem;">Osteogênese Imperfeita no Mundo</h1>
+                <p style="color:rgba(255,255,255,.9);font-size:1.15rem;max-width:800px;margin:0 auto;">Epidemiologia global, classificação molecular, tratamentos internacionais, centros de excelência e fronteiras da pesquisa científica.</p>
+            </div>
+        </div>
+        <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+
+            <section class="content-section" style="margin-bottom:2rem;">
+                <div class="highlight-box"><i class="fas fa-globe"></i>
+                    <div><h2 style="margin-top:0;">Epidemiologia Global</h2>
+                    <p>A Osteogênese Imperfeita é uma condição genética rara de distribuição mundial, sem predominância étnica ou geográfica. A prevalência global estimada é de <strong>6 a 7 casos por 100.000 habitantes</strong>, totalizando aproximadamente <strong>500.000 a 700.000 pessoas</strong> vivendo com OI no mundo. A OIFE (Osteogenesis Imperfecta Federation Europe) estima que existam pelo menos <strong>50.000 pessoas com OI na Europa</strong> e a OI Foundation (EUA) calcula <strong>25.000 a 50.000 nos Estados Unidos</strong> <a href="https://oife.org" target="_blank" rel="noopener noreferrer">[1]</a><a href="https://oif.org" target="_blank" rel="noopener noreferrer">[2]</a>.</p>
+                    </div>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:2rem 0;">
+                    <div style="background:#f0f8ff;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #3498db;">
+                        <div style="font-size:1.8rem;font-weight:800;color:#2c3e50;">~700.000</div>
+                        <div style="font-size:.85rem;color:#555;">pessoas no mundo</div>
+                    </div>
+                    <div style="background:#f0fff4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #27ae60;">
+                        <div style="font-size:1.8rem;font-weight:800;color:#2c3e50;">1:15.000</div>
+                        <div style="font-size:.85rem;color:#555;">nascidos vivos (global)</div>
+                    </div>
+                    <div style="background:#fff8f0;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #f39c12;">
+                        <div style="font-size:1.8rem;font-weight:800;color:#2c3e50;">21+</div>
+                        <div style="font-size:.85rem;color:#555;">tipos moleculares descritos</div>
+                    </div>
+                    <div style="background:#fdf0ff;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #9b59b6;">
+                        <div style="font-size:1.8rem;font-weight:800;color:#2c3e50;">85%</div>
+                        <div style="font-size:.85rem;color:#555;">por mutação COL1A1/COL1A2</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-dna"></i> Genética e Tipos Moleculares</h2>
+                <p>A classificação molecular da OI expandiu-se significativamente desde Sillence (1979). Estudos do <strong>Groupe de Recherche en Génétique du Squelette (Canadá/França)</strong> e do <strong>Shriners Hospitals for Children</strong> identificaram os principais subtipos <a href="https://pubmed.ncbi.nlm.nih.gov/?term=osteogenesis+imperfecta+classification+molecular" target="_blank" rel="noopener noreferrer">[3]</a>:</p>
+                <div style="overflow-x:auto;margin-top:1rem;">
+                    <table style="width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07);">
+                        <thead style="background:#2c3e50;color:#fff;">
+                            <tr><th style="padding:.75rem 1rem;text-align:left;">Tipo</th><th style="padding:.75rem 1rem;text-align:left;">Gene</th><th style="padding:.75rem 1rem;text-align:left;">Gravidade</th><th style="padding:.75rem 1rem;text-align:left;">Frequência</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom:1px solid #eee;"><td style="padding:.75rem 1rem;"><strong>I</strong></td><td style="padding:.75rem 1rem;">COL1A1</td><td style="padding:.75rem 1rem;"><span style="background:#e8f5e9;color:#1b5e20;padding:.2rem .5rem;border-radius:4px;font-size:.85rem;">Leve</span></td><td style="padding:.75rem 1rem;">~50% dos casos</td></tr>
+                            <tr style="border-bottom:1px solid #eee;background:#fafafa;"><td style="padding:.75rem 1rem;"><strong>II</strong></td><td style="padding:.75rem 1rem;">COL1A1/COL1A2</td><td style="padding:.75rem 1rem;"><span style="background:#fce4ec;color:#b71c1c;padding:.2rem .5rem;border-radius:4px;font-size:.85rem;">Letal perinatal</span></td><td style="padding:.75rem 1rem;">~5-10%</td></tr>
+                            <tr style="border-bottom:1px solid #eee;"><td style="padding:.75rem 1rem;"><strong>III</strong></td><td style="padding:.75rem 1rem;">COL1A1/COL1A2</td><td style="padding:.75rem 1rem;"><span style="background:#fce4ec;color:#b71c1c;padding:.2rem .5rem;border-radius:4px;font-size:.85rem;">Grave progressivo</span></td><td style="padding:.75rem 1rem;">~20%</td></tr>
+                            <tr style="border-bottom:1px solid #eee;background:#fafafa;"><td style="padding:.75rem 1rem;"><strong>IV</strong></td><td style="padding:.75rem 1rem;">COL1A2</td><td style="padding:.75rem 1rem;"><span style="background:#fff3e0;color:#e65100;padding:.2rem .5rem;border-radius:4px;font-size:.85rem;">Moderado</span></td><td style="padding:.75rem 1rem;">~15-20%</td></tr>
+                            <tr style="border-bottom:1px solid #eee;"><td style="padding:.75rem 1rem;"><strong>V</strong></td><td style="padding:.75rem 1rem;">IFITM5</td><td style="padding:.75rem 1rem;"><span style="background:#fff3e0;color:#e65100;padding:.2rem .5rem;border-radius:4px;font-size:.85rem;">Moderado</span></td><td style="padding:.75rem 1rem;">~5%</td></tr>
+                            <tr style="background:#fafafa;"><td style="padding:.75rem 1rem;"><strong>VI–XXI</strong></td><td style="padding:.75rem 1rem;">SERPINF1, CRTAP, P3H1...</td><td style="padding:.75rem 1rem;"><span style="background:#f3e5f5;color:#4a148c;padding:.2rem .5rem;border-radius:4px;font-size:.85rem;">Variável</span></td><td style="padding:.75rem 1rem;">&lt;5% cada</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-flask"></i> Tratamentos Globais em 2026</h2>
+                <div style="display:flex;flex-direction:column;gap:1rem;">
+                    <div style="background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid #27ae60;">
+                        <h3 style="margin:0 0 .5rem;"><span style="background:#e8f5e9;color:#1b5e20;padding:.2rem .6rem;border-radius:4px;font-size:.8rem;">APROVADO</span> Bisfosfonatos IV/Oral</h3>
+                        <p style="margin:0;color:#555;font-size:.95rem;">Pamidronato, ácido zoledrônico e alendronato são os tratamentos padrão em praticamente todos os países com protocolos para OI. O ácido zoledrônico está aprovado na Europa (EMA) e EUA (FDA) para osteoporose em adultos, sendo usado off-label em OI pediátrica <a href="https://www.ema.europa.eu" target="_blank" rel="noopener noreferrer">[4]</a>.</p>
+                    </div>
+                    <div style="background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid #3498db;">
+                        <h3 style="margin:0 0 .5rem;"><span style="background:#e3f2fd;color:#0d47a1;padding:.2rem .6rem;border-radius:4px;font-size:.8rem;">FASE III — EUA/EUROPA</span> Setrusumabe (BPS-804)</h3>
+                        <p style="margin:0;color:#555;font-size:.95rem;">Anticorpo monoclonal anti-esclerostina em ensaio clínico de fase III (ASTEROID). Primeiros resultados publicados em 2021 mostram aumento de 8-10% na densidade mineral óssea em 1 ano. Desenvolvido pela Mereo BioPharma. <a href="https://clinicaltrials.gov/study/NCT03118570" target="_blank" rel="noopener noreferrer">[5]</a></p>
+                    </div>
+                    <div style="background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid #9b59b6;">
+                        <h3 style="margin:0 0 .5rem;"><span style="background:#f3e5f5;color:#4a148c;padding:.2rem .6rem;border-radius:4px;font-size:.8rem;">PESQUISA AVANÇADA</span> Terapia Celular (Células-Tronco)</h3>
+                        <p style="margin:0;color:#555;font-size:.95rem;">O Karolinska Institute (Suécia) realizou os primeiros transplantes de células-tronco mesenquimais intra-uterinos para OI grave. Resultados de longo prazo publicados em Lancet (2018) mostram benefício em redução de fraturas <a href="https://pubmed.ncbi.nlm.nih.gov/29429762/" target="_blank" rel="noopener noreferrer">[6]</a>.</p>
+                    </div>
+                    <div style="background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.07);border-left:4px solid #e74c3c;">
+                        <h3 style="margin:0 0 .5rem;"><span style="background:#fce4ec;color:#b71c1c;padding:.2rem .6rem;border-radius:4px;font-size:.8rem;">FASE I/II</span> Terapia Gênica</h3>
+                        <p style="margin:0;color:#555;font-size:.95rem;">Abordagens baseadas em CRISPR-Cas9 e RNA antisense (silenciamento do alelo mutante COL1A1) estão em desenvolvimento pré-clínico e fase I em centros dos EUA e Europa. Representam o futuro do tratamento curativo da OI <a href="https://pubmed.ncbi.nlm.nih.gov/?term=osteogenesis+imperfecta+gene+therapy" target="_blank" rel="noopener noreferrer">[7]</a>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" style="margin-bottom:2rem;">
+                <h2 class="section-title"><i class="fas fa-university"></i> Centros de Excelência Internacional</h2>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+                    <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+                        <div style="font-size:2rem;margin-bottom:.5rem;">🇨🇦</div>
+                        <h3 style="margin:0 0 .5rem;">Shriners Hospitals for Children — Montreal</h3>
+                        <p style="font-size:.9rem;color:#555;margin-bottom:.75rem;">Referência mundial em OI pediátrica. O Dr. Francis Glorieux publicou os estudos fundacionais sobre pamidronato em OI (1998). <a href="https://www.shrinerschildrens.org/en/locations/canada" target="_blank" rel="noopener noreferrer">[8]</a></p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+                        <div style="font-size:2rem;margin-bottom:.5rem;">🇺🇸</div>
+                        <h3 style="margin:0 0 .5rem;">NIH / NIAMS — Bethesda, Maryland</h3>
+                        <p style="font-size:.9rem;color:#555;margin-bottom:.75rem;">National Institute of Arthritis and Musculoskeletal and Skin Diseases. Financiador da maior rede de pesquisa em OI dos EUA. <a href="https://www.niams.nih.gov/health-topics/osteogenesis-imperfecta" target="_blank" rel="noopener noreferrer">[9]</a></p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+                        <div style="font-size:2rem;margin-bottom:.5rem;">🇸🇪</div>
+                        <h3 style="margin:0 0 .5rem;">Karolinska Institute — Estocolmo</h3>
+                        <p style="font-size:.9rem;color:#555;margin-bottom:.75rem;">Pioneiro em transplante intra-uterino de células-tronco para OI. Referência em pesquisa translacional de doenças genéticas raras. <a href="https://ki.se" target="_blank" rel="noopener noreferrer">[10]</a></p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+                        <div style="font-size:2rem;margin-bottom:.5rem;">🇬🇧</div>
+                        <h3 style="margin:0 0 .5rem;">Great Ormond Street Hospital — Londres</h3>
+                        <p style="font-size:.9rem;color:#555;margin-bottom:.75rem;">Principal centro pediátrico britânico para OI. Participa de ensaios clínicos internacionais e desenvolve protocolos multidisciplinares. <a href="https://www.gosh.nhs.uk" target="_blank" rel="noopener noreferrer">[11]</a></p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+                        <div style="font-size:2rem;margin-bottom:.5rem;">🇩🇪</div>
+                        <h3 style="margin:0 0 .5rem;">Charité — Universitätsmedizin Berlin</h3>
+                        <p style="font-size:.9rem;color:#555;margin-bottom:.75rem;">Centro europeu líder em pesquisa molecular da OI, especialmente tipagem genética e novas mutações identificadas em COL1A1/A2 e genes não-colágeno. <a href="https://www.charite.de" target="_blank" rel="noopener noreferrer">[12]</a></p>
+                    </div>
+                    <div style="background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+                        <div style="font-size:2rem;margin-bottom:.5rem;">🌍</div>
+                        <h3 style="margin:0 0 .5rem;">OIFE — Osteogenesis Imperfecta Federation Europe</h3>
+                        <p style="font-size:.9rem;color:#555;margin-bottom:.75rem;">Federação europeia que reúne associações de 28 países. Promove direitos, pesquisa e acesso a tratamento para pessoas com OI na Europa. <a href="https://oife.org" target="_blank" rel="noopener noreferrer">[1]</a></p>
+                        <a href="https://oife.org" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size:.85rem;padding:.4rem .9rem;"><i class="fas fa-external-link-alt"></i> oife.org</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" style="margin-bottom:1rem;">
+                <h2><i class="fas fa-bookmark"></i> Referências</h2>
+                <ol style="font-size:.9rem;line-height:1.8;color:#555;padding-left:1.5rem;">
+                    <li>OIFE. <em>Osteogenesis Imperfecta Federation Europe</em>. Disponível em: <a href="https://oife.org" target="_blank" rel="noopener noreferrer">oife.org</a></li>
+                    <li>OI Foundation. <em>Osteogenesis Imperfecta Foundation</em>. Disponível em: <a href="https://oif.org" target="_blank" rel="noopener noreferrer">oif.org</a></li>
+                    <li>Forlino A, Marini JC. <em>Osteogenesis imperfecta</em>. Lancet. 2016;387(10028):1657-1671. DOI: <a href="https://doi.org/10.1016/S0140-6736(15)00728-X" target="_blank" rel="noopener noreferrer">10.1016/S0140-6736(15)00728-X</a></li>
+                    <li>EMA. <em>Zoledronic acid — European Public Assessment Report</em>. Disponível em: <a href="https://www.ema.europa.eu" target="_blank" rel="noopener noreferrer">ema.europa.eu</a></li>
+                    <li>ClinicalTrials.gov. <em>ASTEROID Study — Setrusumabe in OI</em>. NCT03118570. Disponível em: <a href="https://clinicaltrials.gov/study/NCT03118570" target="_blank" rel="noopener noreferrer">clinicaltrials.gov</a></li>
+                    <li>Götherström C et al. <em>Fetal bone-marrow-derived mesenchymal stem cells for treatment of severe osteogenesis imperfecta</em>. Lancet. 2018. DOI: <a href="https://pubmed.ncbi.nlm.nih.gov/29429762/" target="_blank" rel="noopener noreferrer">29429762</a></li>
+                    <li>PubMed. <em>Gene therapy osteogenesis imperfecta</em>. Disponível em: <a href="https://pubmed.ncbi.nlm.nih.gov/?term=osteogenesis+imperfecta+gene+therapy" target="_blank" rel="noopener noreferrer">pubmed.ncbi.nlm.nih.gov</a></li>
+                    <li>Shriners Hospitals. Disponível em: <a href="https://www.shrinerschildrens.org" target="_blank" rel="noopener noreferrer">shrinerschildrens.org</a></li>
+                    <li>NIAMS/NIH. <em>Osteogenesis Imperfecta</em>. Disponível em: <a href="https://www.niams.nih.gov/health-topics/osteogenesis-imperfecta" target="_blank" rel="noopener noreferrer">niams.nih.gov</a></li>
+                    <li>Karolinska Institute. Disponível em: <a href="https://ki.se" target="_blank" rel="noopener noreferrer">ki.se</a></li>
+                    <li>Great Ormond Street Hospital. Disponível em: <a href="https://www.gosh.nhs.uk" target="_blank" rel="noopener noreferrer">gosh.nhs.uk</a></li>
+                    <li>Charité Berlin. Disponível em: <a href="https://www.charite.de" target="_blank" rel="noopener noreferrer">charite.de</a></li>
+                </ol>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-bone" aria-hidden="true"></i> Hub Osteogênese Imperfeita</h2>
+                    <p class="footer-section__text">Centro de conhecimento técnico-científico sobre OI para profissionais de saúde, pacientes e familiares.</p>
+                    <div class="footer-badges" role="list" aria-label="Selos de conformidade">
+                        <span class="footer-badge" role="listitem"><i class="fas fa-universal-access" aria-hidden="true"></i> WCAG 2.1 AA</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-shield-alt" aria-hidden="true"></i> LGPD</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-check-circle" aria-hidden="true"></i> e-MAG</span>
+                    </div>
+                </div>
+                <nav aria-label="Medicações">
+                    <h2 class="footer-section__title"><i class="fas fa-pills" aria-hidden="true"></i> Medicações</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="pamidronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Pamidronato</a></li>
+                        <li><a href="acido-zoledronico.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Ácido Zoledrônico</a></li>
+                        <li><a href="alendronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Alendronato</a></li>
+                        <li><a href="setrusumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Setrusumabe</a></li>
+                        <li><a href="denosumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Denosumabe</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Recursos">
+                    <h2 class="footer-section__title"><i class="fas fa-book-medical" aria-hidden="true"></i> Recursos</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="centros-referencia.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Centros de Referência</a></li>
+                        <li><a href="lista-exames-impressao.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Lista de Exames</a></li>
+                        <li><a href="referencias.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Referências</a></li>
+                        <li><a href="oi-brasil.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Brasil</a></li>
+                        <li><a href="oi-mundo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Mundo</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-info-circle" aria-hidden="true"></i> Internacional</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="https://www.gov.br/conitec" target="_blank" rel="noopener noreferrer">CONITEC — Min. Saúde</a></li>
+                        <li><a href="https://oif.org" target="_blank" rel="noopener noreferrer">OI Foundation (EUA)</a></li>
+                        <li><a href="https://oife.org" target="_blank" rel="noopener noreferrer">OIFE (Europa)</a></li>
+                        <li><a href="https://www.brittlebone.org" target="_blank" rel="noopener noreferrer">Brittle Bone Society</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-bottom__copy">&copy; <span id="footerYear">2026</span> Hub Osteogênese Imperfeita. Conteúdo educacional e técnico.</p>
+                <p style="font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.25rem;"><i class="fas fa-eye" aria-hidden="true"></i> <span id="visitorCount">—</span> visualizações registradas</p>
+                <p class="footer-bottom__disclaimer"><strong>Aviso Legal:</strong> Conteúdo informativo e educacional. Não substitui consulta médica profissional.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="a11y-widget" id="a11yWidget" role="region" aria-label="Widget de acessibilidade">
+        <div class="a11y-widget__panel" id="a11yWidgetPanel" role="group">
+            <div class="a11y-widget__title"><i class="fas fa-universal-access" aria-hidden="true"></i> Acessibilidade</div>
+            <button class="a11y-widget__btn" id="a11yBtnContrast" aria-pressed="false"><i class="fas fa-adjust" aria-hidden="true"></i> Alto Contraste</button>
+            <button class="a11y-widget__btn" id="a11yBtnLargeText" aria-pressed="false"><i class="fas fa-text-height" aria-hidden="true"></i> Texto Grande</button>
+            <button class="a11y-widget__btn" id="a11yBtnDark" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i> Modo Escuro</button>
+            <hr style="margin:.5rem 0">
+            <button class="a11y-widget__btn" id="a11yBtnReset"><i class="fas fa-undo" aria-hidden="true"></i> Restaurar Padrão</button>
+        </div>
+        <button class="a11y-widget__toggle" id="a11yWidgetToggle" aria-expanded="false" aria-controls="a11yWidgetPanel" aria-label="Abrir opções de acessibilidade"><i class="fas fa-universal-access" aria-hidden="true"></i></button>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+    <script>const footerYear=document.getElementById('footerYear');if(footerYear)footerYear.textContent=new Date().getFullYear();</script>
+    <script src="assets/js/global.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ab1b75ec32f44b9ba68648c534b79aea"}'></script>
+</body>
+</html>
