@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Busca no Hub Osteogênese Imperfeita — encontre informações sobre medicações, centros de referência, exames e políticas públicas para OI.">
+    <meta name="robots" content="noindex, follow">
+    <title>Busca | Hub Osteogênese Imperfeita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body class="page-wrapper">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+    <header class="site-header" role="banner">
+        <div class="site-header__inner">
+            <button class="menu-toggle" id="menuToggle" aria-controls="hubSidebar" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="site-logo" href="index.html" aria-label="Hub Osteogênese Imperfeita — Página inicial">
+                <i class="fas fa-bone site-logo__icon" aria-hidden="true"></i>
+                <span class="site-logo__text">Hub Osteogênese Imperfeita
+                    <span>Centro de Conhecimento Técnico-Científico</span>
+                </span>
+            </a>
+            <div class="header-search" role="search">
+                <form class="header-search__form" id="headerSearchForm" action="busca.html" method="get">
+                    <label for="headerSearchInput" class="sr-only">Buscar no site</label>
+                    <input type="search" class="header-search__input" id="headerSearchInput" name="q" placeholder="Buscar..." autocomplete="off" aria-label="Buscar no Hub OI">
+                    <button type="submit" class="header-search__btn" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div class="header-a11y" role="group" aria-label="Acessibilidade">
+                <button class="header-a11y__btn" id="headerA11yContrast" title="Alto contraste" aria-label="Alternar alto contraste" aria-pressed="false"><i class="fas fa-adjust" aria-hidden="true"></i></button>
+                <button class="header-a11y__btn" id="headerA11yLargeText" title="Texto grande" aria-label="Alternar texto grande" aria-pressed="false"><i class="fas fa-text-height" aria-hidden="true"></i></button>
+                <button class="header-a11y__btn" id="headerA11yDark" title="Modo escuro" aria-label="Alternar modo escuro" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
+        <div class="sidebar-header">
+            <span class="sidebar-header__title"><i class="fas fa-sitemap" aria-hidden="true"></i> Navegação</span>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+        </div>
+        <nav class="sidebar-nav" role="navigation" aria-label="Menu principal">
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="index.html">
+                    <i class="fas fa-home sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Início</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item">
+                <div class="sidebar-nav__link">
+                    <i class="fas fa-pills sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Medicações de Uso</span>
+                    <button class="sidebar-submenu-toggle" id="toggle-medicacoes" data-submenu-toggle="submenu-medicacoes" aria-expanded="false" aria-controls="submenu-medicacoes" aria-label="Expandir Medicações">
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="sidebar-submenu" id="submenu-medicacoes" role="list">
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="pamidronato.html"><i class="fas fa-star" style="color:#f39c12;font-size:.8em" aria-hidden="true"></i> Pamidronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="acido-zoledronico.html">Ácido Zoledrônico</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="alendronato.html">Alendronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="setrusumabe-resumo.html">Setrusumabe</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="denosumabe-resumo.html">Denosumabe</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="bibliografia-medicacoes.html"><i class="fas fa-book" aria-hidden="true"></i> Ver Todas</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="centros-referencia.html"><i class="fas fa-hospital sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Centros de Referência</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-brasil.html"><i class="fas fa-map-marked-alt sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Brasil</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-mundo.html"><i class="fas fa-globe-americas sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Mundo</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="lista-exames-impressao.html"><i class="fas fa-book-medical sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Recursos e Exames</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="referencias.html"><i class="fas fa-bookmark sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Referências Bibliográficas</span></a></div>
+        </nav>
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item"><a class="breadcrumb__link" href="index.html">Início</a><span class="breadcrumb__separator" aria-hidden="true"><i class="fas fa-chevron-right"></i></span></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">Busca</span></li>
+            </ol>
+        </div>
+    </nav>
+
+    <main class="main-content" id="main-content" tabindex="-1">
+        <div class="page-hero" style="background:linear-gradient(135deg,var(--color-primary,#2c3e50) 0%,var(--color-secondary,#3498db) 100%);color:#fff;padding:2.5rem 0;">
+            <div class="container" style="text-align:center;">
+                <div style="font-size:3rem;margin-bottom:.75rem;opacity:.9;" aria-hidden="true"><i class="fas fa-search"></i></div>
+                <h1 style="color:#fff;font-size:2rem;margin-bottom:.5rem;">Busca no Hub OI</h1>
+                <p style="color:rgba(255,255,255,.85);font-size:1rem;max-width:600px;margin:0 auto;">Encontre informações sobre medicações, centros de referência, exames e políticas públicas para Osteogênese Imperfeita.</p>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top:2rem;padding-bottom:3rem;max-width:860px;">
+
+            <!-- Caixa de busca principal -->
+            <section style="margin-bottom:2rem;">
+                <form id="searchForm" role="search" aria-label="Busca no Hub OI" style="display:flex;gap:.75rem;flex-wrap:wrap;">
+                    <label for="searchInput" class="sr-only">Termo de busca</label>
+                    <input type="search" id="searchInput" name="q"
+                        placeholder="Ex: pamidronato, fratura, CROI, colágeno..."
+                        autocomplete="off" aria-label="Buscar no Hub OI"
+                        style="flex:1;min-width:220px;padding:.85rem 1.1rem;border:2px solid #ddd;border-radius:10px;font-size:1rem;font-family:inherit;transition:border-color .2s;"
+                        onfocus="this.style.borderColor='#3498db'" onblur="this.style.borderColor='#ddd'">
+                    <button type="submit" style="padding:.85rem 1.5rem;background:#3498db;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:600;cursor:pointer;transition:background .2s;"
+                        onmouseover="this.style.background='#2980b9'" onmouseout="this.style.background='#3498db'">
+                        <i class="fas fa-search" aria-hidden="true"></i> Buscar
+                    </button>
+                </form>
+
+                <!-- Filtros rápidos -->
+                <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap;" role="group" aria-label="Filtros rápidos">
+                    <span style="font-size:.85rem;color:#666;align-self:center;">Filtros:</span>
+                    <button class="filter-btn" data-filter="medicacao" style="padding:.35rem .9rem;border:1px solid #3498db;color:#3498db;background:#fff;border-radius:20px;font-size:.85rem;cursor:pointer;transition:all .2s;">
+                        <i class="fas fa-pills" aria-hidden="true"></i> Medicações
+                    </button>
+                    <button class="filter-btn" data-filter="centro" style="padding:.35rem .9rem;border:1px solid #27ae60;color:#27ae60;background:#fff;border-radius:20px;font-size:.85rem;cursor:pointer;transition:all .2s;">
+                        <i class="fas fa-hospital" aria-hidden="true"></i> Centros
+                    </button>
+                    <button class="filter-btn" data-filter="legislacao" style="padding:.35rem .9rem;border:1px solid #9b59b6;color:#9b59b6;background:#fff;border-radius:20px;font-size:.85rem;cursor:pointer;transition:all .2s;">
+                        <i class="fas fa-gavel" aria-hidden="true"></i> Legislação
+                    </button>
+                    <button class="filter-btn" data-filter="exame" style="padding:.35rem .9rem;border:1px solid #f39c12;color:#f39c12;background:#fff;border-radius:20px;font-size:.85rem;cursor:pointer;transition:all .2s;">
+                        <i class="fas fa-flask" aria-hidden="true"></i> Exames
+                    </button>
+                    <button class="filter-btn" data-filter="all" style="padding:.35rem .9rem;border:1px solid #bbb;color:#666;background:#fff;border-radius:20px;font-size:.85rem;cursor:pointer;">
+                        <i class="fas fa-times" aria-hidden="true"></i> Limpar
+                    </button>
+                </div>
+            </section>
+
+            <!-- Área de resultados -->
+            <section id="searchResults" aria-live="polite" aria-label="Resultados da busca">
+                <!-- Resultados injetados por JS -->
+            </section>
+
+            <!-- Estado inicial — sugestões -->
+            <section id="searchSuggestions">
+                <h2 style="font-size:1.1rem;color:#555;font-weight:600;margin-bottom:1.25rem;"><i class="fas fa-lightbulb" style="color:#f39c12;"></i> Acesso Rápido</h2>
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;">
+                    <a href="pamidronato.html" class="search-card" style="display:block;background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,.07);text-decoration:none;border-left:4px solid #f39c12;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,.14)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,.07)'">
+                        <div style="display:flex;align-items:center;gap:.75rem;">
+                            <i class="fas fa-star" style="color:#f39c12;font-size:1.4rem;" aria-hidden="true"></i>
+                            <div>
+                                <div style="font-weight:700;color:#2c3e50;font-size:.95rem;">Pamidronato</div>
+                                <div style="color:#888;font-size:.8rem;">Padrão-ouro SUS</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="acido-zoledronico.html" class="search-card" style="display:block;background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,.07);text-decoration:none;border-left:4px solid #3498db;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,.14)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,.07)'">
+                        <div style="display:flex;align-items:center;gap:.75rem;">
+                            <i class="fas fa-vial" style="color:#3498db;font-size:1.4rem;" aria-hidden="true"></i>
+                            <div>
+                                <div style="font-weight:700;color:#2c3e50;font-size:.95rem;">Ácido Zoledrônico</div>
+                                <div style="color:#888;font-size:.8rem;">Bisfosfonato mais potente</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="alendronato.html" class="search-card" style="display:block;background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,.07);text-decoration:none;border-left:4px solid #27ae60;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,.14)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,.07)'">
+                        <div style="display:flex;align-items:center;gap:.75rem;">
+                            <i class="fas fa-capsules" style="color:#27ae60;font-size:1.4rem;" aria-hidden="true"></i>
+                            <div>
+                                <div style="font-weight:700;color:#2c3e50;font-size:.95rem;">Alendronato</div>
+                                <div style="color:#888;font-size:.8rem;">1ª linha oral adultos</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="centros-referencia.html" class="search-card" style="display:block;background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,.07);text-decoration:none;border-left:4px solid #e74c3c;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,.14)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,.07)'">
+                        <div style="display:flex;align-items:center;gap:.75rem;">
+                            <i class="fas fa-hospital" style="color:#e74c3c;font-size:1.4rem;" aria-hidden="true"></i>
+                            <div>
+                                <div style="font-weight:700;color:#2c3e50;font-size:.95rem;">Centros de Referência</div>
+                                <div style="color:#888;font-size:.8rem;">14 CROIs no Brasil</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="lista-exames-impressao.html" class="search-card" style="display:block;background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,.07);text-decoration:none;border-left:4px solid #9b59b6;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,.14)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,.07)'">
+                        <div style="display:flex;align-items:center;gap:.75rem;">
+                            <i class="fas fa-clipboard-list" style="color:#9b59b6;font-size:1.4rem;" aria-hidden="true"></i>
+                            <div>
+                                <div style="font-weight:700;color:#2c3e50;font-size:.95rem;">Lista de Exames</div>
+                                <div style="color:#888;font-size:.8rem;">Pré-dose • Imprimível</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="oi-brasil.html" class="search-card" style="display:block;background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,.07);text-decoration:none;border-left:4px solid #2c3e50;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,.14)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,.07)'">
+                        <div style="display:flex;align-items:center;gap:.75rem;">
+                            <i class="fas fa-map-marked-alt" style="color:#2c3e50;font-size:1.4rem;" aria-hidden="true"></i>
+                            <div>
+                                <div style="font-weight:700;color:#2c3e50;font-size:.95rem;">OI no Brasil</div>
+                                <div style="color:#888;font-size:.8rem;">Epidemiologia • Legislação</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="setrusumabe-resumo.html" class="search-card" style="display:block;background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,.07);text-decoration:none;border-left:4px solid #16a085;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,.14)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,.07)'">
+                        <div style="display:flex;align-items:center;gap:.75rem;">
+                            <i class="fas fa-dna" style="color:#16a085;font-size:1.4rem;" aria-hidden="true"></i>
+                            <div>
+                                <div style="font-weight:700;color:#2c3e50;font-size:.95rem;">Setrusumabe</div>
+                                <div style="color:#888;font-size:.8rem;">Anti-esclerostina • Fase III</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="referencias.html" class="search-card" style="display:block;background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,.07);text-decoration:none;border-left:4px solid #7f8c8d;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,.14)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,.07)'">
+                        <div style="display:flex;align-items:center;gap:.75rem;">
+                            <i class="fas fa-bookmark" style="color:#7f8c8d;font-size:1.4rem;" aria-hidden="true"></i>
+                            <div>
+                                <div style="font-weight:700;color:#2c3e50;font-size:.95rem;">Referências</div>
+                                <div style="color:#888;font-size:.8rem;">Bibliografia completa</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-bone" aria-hidden="true"></i> Hub Osteogênese Imperfeita</h2>
+                    <p class="footer-section__text">Centro de conhecimento técnico-científico sobre OI para profissionais de saúde, pacientes e familiares.</p>
+                    <div class="footer-badges" role="list" aria-label="Selos de conformidade">
+                        <span class="footer-badge" role="listitem"><i class="fas fa-universal-access" aria-hidden="true"></i> WCAG 2.1 AA</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-shield-alt" aria-hidden="true"></i> LGPD</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-check-circle" aria-hidden="true"></i> e-MAG</span>
+                    </div>
+                </div>
+                <nav aria-label="Medicações">
+                    <h2 class="footer-section__title"><i class="fas fa-pills" aria-hidden="true"></i> Medicações</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="pamidronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Pamidronato</a></li>
+                        <li><a href="acido-zoledronico.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Ácido Zoledrônico</a></li>
+                        <li><a href="alendronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Alendronato</a></li>
+                        <li><a href="setrusumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Setrusumabe</a></li>
+                        <li><a href="denosumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Denosumabe</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Recursos">
+                    <h2 class="footer-section__title"><i class="fas fa-book-medical" aria-hidden="true"></i> Recursos</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="centros-referencia.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Centros de Referência</a></li>
+                        <li><a href="lista-exames-impressao.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Lista de Exames</a></li>
+                        <li><a href="referencias.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Referências</a></li>
+                        <li><a href="oi-brasil.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Brasil</a></li>
+                        <li><a href="oi-mundo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Mundo</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-info-circle" aria-hidden="true"></i> Internacional</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="https://www.gov.br/conitec" target="_blank" rel="noopener noreferrer">CONITEC — Min. Saúde</a></li>
+                        <li><a href="https://oif.org" target="_blank" rel="noopener noreferrer">OI Foundation (EUA)</a></li>
+                        <li><a href="https://oife.org" target="_blank" rel="noopener noreferrer">OIFE (Europa)</a></li>
+                        <li><a href="https://www.brittlebone.org" target="_blank" rel="noopener noreferrer">Brittle Bone Society</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-bottom__copy">&copy; <span id="footerYear">2026</span> Hub Osteogênese Imperfeita. Conteúdo educacional e técnico.</p>
+                <p style="font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.25rem;">
+                    <i class="fas fa-eye" aria-hidden="true"></i> <span id="visitorCount">—</span> visualizações registradas
+                </p>
+                <p class="footer-bottom__disclaimer"><strong>Aviso Legal:</strong> Conteúdo informativo e educacional. Não substitui consulta médica profissional.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="a11y-widget" id="a11yWidget" role="region" aria-label="Widget de acessibilidade">
+        <div class="a11y-widget__panel" id="a11yWidgetPanel" role="group">
+            <div class="a11y-widget__title"><i class="fas fa-universal-access" aria-hidden="true"></i> Acessibilidade</div>
+            <button class="a11y-widget__btn" id="a11yBtnContrast" aria-pressed="false"><i class="fas fa-adjust" aria-hidden="true"></i> Alto Contraste</button>
+            <button class="a11y-widget__btn" id="a11yBtnLargeText" aria-pressed="false"><i class="fas fa-text-height" aria-hidden="true"></i> Texto Grande</button>
+            <button class="a11y-widget__btn" id="a11yBtnDark" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i> Modo Escuro</button>
+            <hr style="margin:.5rem 0">
+            <button class="a11y-widget__btn" id="a11yBtnReset"><i class="fas fa-undo" aria-hidden="true"></i> Restaurar Padrão</button>
+        </div>
+        <button class="a11y-widget__toggle" id="a11yWidgetToggle" aria-expanded="false" aria-controls="a11yWidgetPanel" aria-label="Abrir opções de acessibilidade">
+            <i class="fas fa-universal-access" aria-hidden="true"></i>
+        </button>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+
+    <script>const footerYear=document.getElementById('footerYear');if(footerYear)footerYear.textContent=new Date().getFullYear();</script>
+    <script src="assets/js/global.js"></script>
+
+    <!-- Lógica de busca local -->
+    <script>
+    (function(){
+        /* Índice completo do site */
+        const PAGES = [
+            { title:'Pamidronato Dissódico — Dossiê Técnico', url:'pamidronato.html', tags:['medicacao','bisfosfonato','iv','sus','pediatrico','croi'], desc:'Padrão-ouro SUS para OI moderada/grave em crianças. Bisfosfonato IV em ciclos trimestrais.' },
+            { title:'Ácido Zoledrônico — Dossiê Técnico', url:'acido-zoledronico.html', tags:['medicacao','bisfosfonato','iv','off-label','potente'], desc:'Bisfosfonato mais potente disponível. Uso off-label em OI. Não aprovado pelo CONITEC 2023.' },
+            { title:'Alendronato Sódico — Dossiê Técnico', url:'alendronato.html', tags:['medicacao','bisfosfonato','oral','adulto','sus'], desc:'1ª linha oral para adultos ≥18 anos com OI leve a moderada. Aprovado pelo PCDT/SUS 2022.' },
+            { title:'Setrusumabe (BPS-804) — Resumo', url:'setrusumabe-resumo.html', tags:['medicacao','anticorpo','anti-esclerostina','fase3','experimental'], desc:'Anticorpo monoclonal anti-esclerostina em ensaio clínico Fase III (ASTEROID). Mereo BioPharma.' },
+            { title:'Denosumabe — Resumo', url:'denosumabe-resumo.html', tags:['medicacao','anticorpo','anti-rankl','off-label'], desc:'Anticorpo anti-RANKL usado off-label em casos refratários a bisfosfonatos.' },
+            { title:'Centros de Referência em OI (CROIs)', url:'centros-referencia.html', tags:['centro','croi','sus','hospital','encaminhamento'], desc:'14 centros habilitados pelo Ministério da Saúde. Como ser encaminhado.' },
+            { title:'OI no Brasil — Epidemiologia e Políticas Públicas', url:'oi-brasil.html', tags:['brasil','epidemiologia','legislacao','abraoi','politica','pcdt'], desc:'~15.000 pacientes no Brasil. Portaria 2.305/2001, PCDT 2022, Lei Brasileira de Inclusão.' },
+            { title:'OI no Mundo — Genética e Tratamentos Globais', url:'oi-mundo.html', tags:['mundo','genetica','internacional','ensaio','terapia','classificacao'], desc:'Classificação molecular (21 tipos), centros internacionais e perspectivas de cura.' },
+            { title:'Lista de Exames Pré-Dose', url:'lista-exames-impressao.html', tags:['exame','laboratorio','renal','creatinina','calcio','impressao'], desc:'Checklist imprimível com exames obrigatórios e recomendados antes de cada infusão.' },
+            { title:'Referências Bibliográficas', url:'referencias.html', tags:['referencia','bibliografia','pubmed','conitec'], desc:'Referências completas organizadas por tema.' },
+            { title:'Bibliografias — Ácido Zoledrônico', url:'bibliografia-acido-zoledronico.html', tags:['referencia','acido-zoledronico'], desc:'Referências científicas sobre ácido zoledrônico em OI.' },
+            { title:'Bibliografias — Pamidronato', url:'bibliografia-pamidronato.html', tags:['referencia','pamidronato'], desc:'Referências científicas sobre pamidronato dissódico em OI.' },
+            { title:'Bibliografias — Alendronato', url:'bibliografia-alendronato.html', tags:['referencia','alendronato'], desc:'Referências científicas sobre alendronato sódico em OI.' },
+            { title:'Bibliografias — Setrusumabe', url:'bibliografia-setrusumabe.html', tags:['referencia','setrusumabe'], desc:'Referências científicas sobre setrusumabe (BPS-804).' },
+            { title:'Bibliografias — Denosumabe', url:'bibliografia-denosumabe.html', tags:['referencia','denosumabe'], desc:'Referências científicas sobre denosumabe em OI.' },
+        ];
+
+        const form        = document.getElementById('searchForm');
+        const input       = document.getElementById('searchInput');
+        const resultsEl   = document.getElementById('searchResults');
+        const suggestEl   = document.getElementById('searchSuggestions');
+        const filterBtns  = document.querySelectorAll('.filter-btn');
+        let   activeFilter = 'all';
+
+        /* Preenche campo com query da URL */
+        const urlQ = new URLSearchParams(window.location.search).get('q') || '';
+        if (urlQ) { input.value = urlQ; search(urlQ); }
+
+        form.addEventListener('submit', e => { e.preventDefault(); search(input.value.trim()); });
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                activeFilter = btn.dataset.filter;
+                filterBtns.forEach(b => b.style.fontWeight = '');
+                btn.style.fontWeight = '700';
+                if (input.value.trim()) search(input.value.trim());
+                else if (activeFilter !== 'all') search('');
+            });
+        });
+
+        function normalize(s){ return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+
+        function search(query){
+            const q = normalize(query);
+            let results = PAGES.filter(p => {
+                const inTitle = normalize(p.title).includes(q);
+                const inDesc  = normalize(p.desc).includes(q);
+                const inTags  = p.tags.some(t => normalize(t).includes(q));
+                const matchQ  = !q || inTitle || inDesc || inTags;
+                const matchF  = activeFilter === 'all' || p.tags.includes(activeFilter);
+                return matchQ && matchF;
+            });
+
+            suggestEl.style.display = 'none';
+            resultsEl.innerHTML = '';
+
+            if (!results.length) {
+                resultsEl.innerHTML = `
+                    <div style="text-align:center;padding:3rem 1rem;color:#888;">
+                        <i class="fas fa-search" style="font-size:3rem;margin-bottom:1rem;opacity:.3;display:block;" aria-hidden="true"></i>
+                        <p style="font-size:1.1rem;margin:0;">Nenhum resultado para <strong>"${query}"</strong></p>
+                        <p style="font-size:.9rem;margin-top:.5rem;">Tente palavras-chave como: pamidronato, CROI, fratura, colágeno, PCDT…</p>
+                    </div>`;
+                return;
+            }
+
+            resultsEl.innerHTML = `<p style="font-size:.9rem;color:#666;margin-bottom:1rem;">
+                <strong>${results.length}</strong> resultado${results.length>1?'s':''} encontrado${results.length>1?'s':''}
+                ${q ? ' para <em>"'+query+'"</em>' : ''}
+                ${activeFilter !== 'all' ? ' · filtro: <strong>'+activeFilter+'</strong>' : ''}
+            </p>` +
+            results.map(r => {
+                const tagColors = { medicacao:'#3498db', centro:'#27ae60', legislacao:'#9b59b6', exame:'#f39c12', referencia:'#7f8c8d', all:'#bbb' };
+                const mainTag   = r.tags[0];
+                const color     = tagColors[mainTag] || '#3498db';
+                const hl = t => q ? t.replace(new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi'), '<mark style="background:#fff176;padding:0 2px;border-radius:2px;">$1</mark>') : t;
+                return `
+                <a href="${r.url}" style="display:block;background:#fff;border-radius:12px;padding:1.25rem 1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.07);text-decoration:none;margin-bottom:.9rem;border-left:4px solid ${color};transition:box-shadow .2s;"
+                   onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,.14)'" onmouseout="this.style.boxShadow='0 2px 10px rgba(0,0,0,.07)'">
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                        <div>
+                            <div style="font-weight:700;color:#2c3e50;font-size:1rem;margin-bottom:.3rem;">${hl(r.title)}</div>
+                            <div style="color:#666;font-size:.875rem;line-height:1.5;">${hl(r.desc)}</div>
+                        </div>
+                        <i class="fas fa-chevron-right" style="color:${color};margin-top:.2rem;flex-shrink:0;" aria-hidden="true"></i>
+                    </div>
+                    <div style="margin-top:.6rem;display:flex;gap:.4rem;flex-wrap:wrap;">
+                        ${r.tags.slice(0,4).map(t=>`<span style="background:#f0f4f8;color:#555;padding:.15rem .55rem;border-radius:12px;font-size:.75rem;">${t}</span>`).join('')}
+                    </div>
+                </a>`;
+            }).join('');
+        }
+    })();
+    </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ab1b75ec32f44b9ba68648c534b79aea"}'></script>
+</body>
+</html>
