@@ -65,18 +65,22 @@ p {
    2. DESIGN TOKENS — fonte única de verdade
    ========================================================= */
 :root {
-    /* — Paleta principal — */
-    --color-primary:        #2c3e50; /* Azul escuro */
-    --color-primary-hover:  #34495e;
-    --color-secondary:      #2980b9; /* Azul médio acessível (contraste 4.7:1 em branco) */
-    --color-secondary-hover:#1a6fa4;
-    --color-accent:         #1a6fa4;
+    /* — Paleta amarelo canário — */
+    --color-primary:        #3d2800; /* Âmbar escuro — header/footer (14:1 branco) */
+    --color-primary-hover:  #5a3c00; /* Âmbar médio (10:1 branco) */
+    --color-secondary:      #7B5A00; /* Ouro escuro WCAG AA (6.4:1 branco) */
+    --color-secondary-hover:#5a3c00;
+    --color-accent:         #FFE302; /* Amarelo canário puro */
+    --color-accent-hover:   #F9C300; /* Canário escurecido */
+    --color-canary:         #FFE302; /* Amarelo canário */
+    --color-canary-light:   #FFF9C4; /* Canário muito claro */
+    --color-canary-dark:    #F9A825; /* Canário alaranjado */
     --color-success:        #1e7e34; /* Verde acessível */
-    --color-warning:        #856404; /* Amarelo escuro para texto */
-    --color-warning-bg:     #fff3cd;
+    --color-warning:        #7B5A00; /* Âmbar para texto de aviso */
+    --color-warning-bg:     #FFF9C4; /* Canário claro para fundo */
     --color-danger:         #c0392b;
-    --color-info:           #0c5460; /* Teal escuro acessível */
-    --color-info-bg:        #d1ecf1;
+    --color-info:           #5d4200; /* Âmbar profundo para info */
+    --color-info-bg:        #fff8e1;
 
     /* — Neutros — */
     --color-white:          #ffffff;
@@ -117,7 +121,7 @@ p {
     --shadow-sm:    0 1px 3px rgba(0,0,0,0.12);
     --shadow-md:    0 4px 12px rgba(0,0,0,0.10);
     --shadow-lg:    0 8px 24px rgba(0,0,0,0.12);
-    --shadow-focus: 0 0 0 3px rgba(41,128,185,0.4);
+    --shadow-focus: 0 0 0 3px rgba(255,227,2,0.6);
 
     /* — Espaçamento (escala × 1.5rem) — */
     --space-1:  0.375rem;  /*  6px */
@@ -189,6 +193,7 @@ p {
     box-shadow: var(--shadow-md);
     display: flex;
     align-items: center;
+    border-top: 4px solid var(--color-canary, #FFE302);
 }
 
 .site-header__inner {
@@ -217,7 +222,7 @@ p {
     font-size: 1.75rem;
     line-height: 1;
     flex-shrink: 0;
-    color: #7fb3d3;
+    color: #fdd835;
 }
 
 .site-logo__text {
@@ -575,11 +580,11 @@ p {
 
 /* Badge de data de atualização — aparece entre breadcrumb e main */
 .update-badge {
-    background: #f0f8ff;
-    border-bottom: 1px solid #dce8f5;
+    background: var(--color-canary-light, #FFF9C4);
+    border-bottom: 2px solid var(--color-canary-dark, #F9A825);
     padding: .35rem 0;
     font-size: .78rem;
-    color: #5a7a9a;
+    color: var(--color-primary);
     text-align: right;
 }
 .update-badge .container,
@@ -589,7 +594,7 @@ p {
 }
 .update-badge i {
     margin-right: .3rem;
-    color: #3498db;
+    color: var(--color-secondary);
 }
 @media (max-width: 768px) {
     .update-badge { text-align: center; padding-right: 0; }
@@ -797,6 +802,22 @@ a:focus-visible {
     min-height: 52px;
 }
 
+/* Botão Amarelo Canário */
+.btn-canary {
+    background: var(--color-canary);
+    color: var(--color-primary);
+    border-color: var(--color-canary);
+    font-weight: 700;
+}
+.btn-canary:hover {
+    background: var(--color-canary-dark);
+    border-color: var(--color-canary-dark);
+    color: var(--color-primary);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 /* =========================================================
    9. CARDS & COMPONENTES
    ========================================================= */
@@ -942,6 +963,7 @@ tbody tr:hover {
 .badge-primary   { background: var(--color-secondary); color: var(--text-on-dark); }
 .badge-success   { background: var(--color-success);   color: var(--text-on-dark); }
 .badge-warning   { background: #f39c12; color: var(--color-gray-900); }
+.badge-canary    { background: var(--color-canary);    color: var(--color-primary); font-weight: 800; }
 .badge-danger    { background: var(--color-danger);    color: var(--text-on-dark); }
 .badge-info      { background: var(--color-info);      color: var(--text-on-dark); }
 .badge-secondary { background: var(--color-gray-200);  color: var(--text-secondary); }
@@ -1003,18 +1025,18 @@ tbody tr:hover {
    10. HERO SECTIONS
    ========================================================= */
 .page-hero {
-    background: linear-gradient(135deg, var(--color-secondary) 0%, #16a085 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #5a3c00 100%);
     color: var(--text-on-dark);
     padding: var(--space-7) 0;
     text-align: center;
 }
 
 .page-hero--medication {
-    background: linear-gradient(135deg, #2980b9 0%, #1a6fa4 100%);
+    background: linear-gradient(135deg, #c8940a 0%, #a87800 100%);
 }
 
 .page-hero--home {
-    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-info) 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #7a5200 100%);
     padding: var(--space-7) 0 var(--space-6);
 }
 
@@ -1221,6 +1243,7 @@ tbody tr:hover {
     color: var(--text-on-dark);
     padding: var(--space-7) 0 var(--space-4);
     margin-top: auto;
+    border-top: 4px solid var(--color-canary, #FFE302);
 }
 
 .footer-grid {
@@ -1478,8 +1501,8 @@ tbody tr:hover {
 
 /* — Alto Contraste — */
 body.a11y-high-contrast {
-    --color-secondary:       #005b99;
-    --color-secondary-hover: #004477;
+    --color-secondary:       #5a3c00;
+    --color-secondary-hover: #3d2800;
     --text-primary:    #000000;
     --text-secondary:  #1a1a1a;
     --text-muted:      #2d2d2d;
@@ -1498,7 +1521,7 @@ body.a11y-high-contrast .card {
 
 body.a11y-high-contrast .badge-primary,
 body.a11y-high-contrast .btn-primary {
-    background: #005b99;
+    background: #7a5200;
     outline: 2px solid #000000;
 }
 

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://unidospelaoi.com.br/sitemap.xml
+
+# Disallow utility/helper files
+Disallow: /fix_all.py
+Disallow: /improve_all.py
+Disallow: /migrate_pages.py
+Disallow: /refactor_pages.py

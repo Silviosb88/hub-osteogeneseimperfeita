@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Hub Osteogênese Imperfeita — Centro de conhecimento técnico-científico sobre OI. Medicações, protocolos, centros de referência e recursos para profissionais de saúde, pacientes e familiares.">
+    <meta name="description" content="Centro de conhecimento técnico-científico sobre Osteogênese Imperfeita. Medicações, protocolos, centros de referência e recursos para profissionais de saúde, pacientes e familiares.">
     <meta name="keywords" content="osteogênese imperfeita, OI, ossos frágeis, pamidronato, ácido zoledrônico, bifosfonatos, centros de referência, CONITEC, SUS">
     <meta name="author" content="Hub Osteogênese Imperfeita">
     <meta name="robots" content="index, follow">
@@ -14,6 +14,7 @@
     <meta property="og:type"        content="website">
     <meta property="og:title"       content="Hub Osteogênese Imperfeita — Centro de Conhecimento">
     <meta property="og:description" content="Informações técnicas, protocolos de tratamento e recursos sobre OI para profissionais de saúde, pacientes e familiares.">
+    <meta property="og:image"       content="https://unidospelaoi.com.br/assets/img/og-hub-oi.png">
     <meta property="og:locale"      content="pt_BR">
 
     <!-- Schema.org -->
@@ -37,6 +38,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- CSS Global Unificado -->
+    <link rel="canonical" href="https://unidospelaoi.com.br">
     <link rel="stylesheet" href="assets/css/global.css">
 </head>
 <body class="page-wrapper">
@@ -139,7 +141,7 @@
     <!-- DATA DE ATUALIZAÇÃO -->
     <div class="update-badge" role="note" aria-label="Última atualização">
         <i class="fas fa-calendar-check" aria-hidden="true"></i>
-        Atualizado em: <time datetime="2026-03-12">2026-03-12</time>
+        Atualizado em: <time datetime="2026-03-23">2026-03-23</time>
     </div>
     <main class="main-content" id="main-content" tabindex="-1">
 
@@ -579,6 +581,39 @@
         if (footerYear) footerYear.textContent = new Date().getFullYear();
     </script>
     <script src="assets/js/global.js"></script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Hub Osteogênese Imperfeita",
+      "description": "Centro de conhecimento técnico-científico sobre Osteogênese Imperfeita. Medicações, protocolos, centros de referência e recursos.",
+      "url": "https://unidospelaoi.com.br/",
+      "inLanguage": "pt-BR",
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Osteogênese Imperfeita",
+        "alternateName": ["Doença dos Ossos de Vidro", "OI"],
+        "code": {
+          "@type": "MedicalCode",
+          "code": "Q78.0",
+          "codingSystem": "ICD-10"
+        },
+        "description": "Doença genética rara que afeta a formação do colágeno tipo I, resultando em fragilidade óssea. Prevalência: 1:15.000 a 1:20.000 nascimentos."
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hub Osteogênese Imperfeita",
+        "url": "https://unidospelaoi.com.br/"
+      },
+      "dateModified": "2026-03-23",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Profissionais de Saúde, Pacientes, Familiares"
+      }
+    }
+    </script>
 
     <!-- Cloudflare Web Analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ab1b75ec32f44b9ba68648c534b79aea"}'></script>
