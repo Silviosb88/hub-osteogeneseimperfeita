@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Centro de conhecimento técnico-científico sobre Osteogênese Imperfeita. Medicações, protocolos, centros de referência e recursos para profissionais de saúde, pacientes e familiares.">
+    <meta name="keywords" content="osteogênese imperfeita, OI, ossos frágeis, pamidronato, ácido zoledrônico, bifosfonatos, centros de referência, CONITEC, SUS">
+    <meta name="author" content="Hub Osteogênese Imperfeita">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="Hub Osteogênese Imperfeita — Centro de Conhecimento">
+    <meta property="og:description" content="Informações técnicas, protocolos de tratamento e recursos sobre OI para profissionais de saúde, pacientes e familiares.">
+    <meta property="og:image"       content="https://unidospelaoi.com.br/assets/img/og-hub-oi.png">
+    <meta property="og:locale"      content="pt_BR">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Hub Osteogênese Imperfeita",
+      "description": "Centro de conhecimento técnico-científico sobre Osteogênese Imperfeita",
+      "medicalAudience": ["Clinician", "Patient", "Caregiver"],
+      "inLanguage": "pt-BR"
+    }
+    </script>
+
+    <title>Hub Osteogênese Imperfeita — Centro de Conhecimento Técnico-Científico</title>
+
+    <!-- Fontes e Ícones -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Global Unificado -->
+    <link rel="canonical" href="https://unidospelaoi.com.br">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body class="page-wrapper">
+
+    <!-- ============ HEADER + SIDEBAR (componente global) ============ -->
+    <!-- SKIP LINK -->
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+    <!-- HEADER GLOBAL -->
+    <header class="site-header" role="banner">
+        <div class="site-header__inner">
+            <button class="menu-toggle" id="menuToggle"
+                aria-controls="hubSidebar" aria-expanded="false"
+                aria-label="Abrir menu de navegação">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <a class="site-logo" href="index.html" aria-label="Hub Osteogênese Imperfeita — Página inicial">
+                <i class="fas fa-bone site-logo__icon" aria-hidden="true"></i>
+                <span class="site-logo__text">
+                    Hub Osteogênese Imperfeita
+                    <span>Centro de Conhecimento Técnico-Científico</span>
+                </span>
+            </a>
+
+            <div class="header-search" role="search">
+                <form class="header-search__form" id="headerSearchForm" action="busca.html" method="get">
+                    <label for="headerSearchInput" class="sr-only">Buscar no site</label>
+                    <input type="search" class="header-search__input" id="headerSearchInput"
+                        name="q" placeholder="Buscar..." autocomplete="off"
+                        aria-label="Buscar no Hub OI">
+                    <button type="submit" class="header-search__btn" aria-label="Buscar">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="header-a11y" role="group" aria-label="Acessibilidade">
+                <button class="header-a11y__btn" id="headerA11yContrast" title="Alto contraste" aria-label="Alternar alto contraste" aria-pressed="false">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </button>
+                <button class="header-a11y__btn" id="headerA11yLargeText" title="Texto grande" aria-label="Alternar texto grande" aria-pressed="false">
+                    <i class="fas fa-text-height" aria-hidden="true"></i>
+                </button>
+                <button class="header-a11y__btn" id="headerA11yDark" title="Modo escuro" aria-label="Alternar modo escuro" aria-pressed="false">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
+        <div class="sidebar-header">
+            <span class="sidebar-header__title"><i class="fas fa-sitemap" aria-hidden="true"></i> Navegação</span>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav" role="navigation" aria-label="Menu principal">
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link is-active" href="index.html" aria-current="page">
+                    <i class="fas fa-home sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Início</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item">
+                <div class="sidebar-nav__link">
+                    <i class="fas fa-pills sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Medicações de Uso</span>
+                    <button class="sidebar-submenu-toggle" id="toggle-medicacoes"
+                        data-submenu-toggle="submenu-medicacoes"
+                        aria-expanded="false" aria-controls="submenu-medicacoes"
+                        aria-label="Expandir Medicações de Uso">
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="sidebar-submenu" id="submenu-medicacoes" role="list">
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="pamidronato.html"><i class="fas fa-star" style="color:#f39c12;font-size:.8em" aria-hidden="true"></i> Pamidronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="acido-zoledronico.html">Ácido Zoledrônico</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="alendronato.html">Alendronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="setrusumabe-resumo.html">Setrusumabe <span class="badge badge-warning" style="font-size:.65em">Exp.</span></a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="denosumabe-resumo.html">Denosumabe <span class="badge badge-warning" style="font-size:.65em">Exp.</span></a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="bibliografia-medicacoes.html"><i class="fas fa-book" aria-hidden="true"></i> Ver Todas</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="centros-referencia.html"><i class="fas fa-hospital sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Centros de Referência</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-brasil.html"><i class="fas fa-map-marked-alt sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Brasil</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-mundo.html"><i class="fas fa-globe-americas sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Mundo</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="lista-exames-impressao.html"><i class="fas fa-book-medical sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Recursos e Exames</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="busca.html"><i class="fas fa-search sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Busca</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="referencias.html"><i class="fas fa-bookmark sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Referências Bibliográficas</span></a></div>
+        </nav>
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+    <!-- ============ FIM HEADER + SIDEBAR ============ -->
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    
+    <!-- DATA DE ATUALIZAÇÃO -->
+    <div class="update-badge" role="note" aria-label="Última atualização">
+        <i class="fas fa-calendar-check" aria-hidden="true"></i>
+        Atualizado em: <time datetime="2026-05-04">2026-05-04</time>
+    </div>
+    <main class="main-content" id="main-content" tabindex="-1">
+
+        <!-- HERO -->
+        <section class="page-hero page-hero--home" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="page-hero__content">
+                    <div class="page-hero__badge">
+                        <i class="fas fa-bone" aria-hidden="true"></i>
+                        Centro de Conhecimento Científico
+                    </div>
+                    <h1 class="page-hero__title" id="hero-heading">
+                        Osteogênese Imperfeita
+                    </h1>
+                    <p class="page-hero__subtitle">
+                        Informações técnicas, protocolos de tratamento e recursos para
+                        profissionais de saúde, pacientes e familiares.
+                        Baseado em evidências científicas e diretrizes nacionais e internacionais.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="pamidronato.html" class="btn btn-white">
+                            <i class="fas fa-pills" aria-hidden="true"></i>
+                            Ver Medicações
+                        </a>
+                        <a href="centros-referencia.html" class="btn btn-secondary"
+                           style="border-color:rgba(255,255,255,0.6);color:white">
+                            <i class="fas fa-hospital" aria-hidden="true"></i>
+                            Centros de Referência
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESTAQUE PRINCIPAL: Medicações -->
+        <section class="page-body" aria-labelledby="medicacoes-heading">
+            <div class="container">
+
+                <!-- Card de Destaque -->
+                <div style="
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    padding: 2.5rem 3rem;
+                    border-radius: 16px;
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+                    margin-bottom: 3rem;
+                " role="region" aria-label="Destaque: Medicações">
+                    <i class="fas fa-syringe" style="font-size:4.5rem;opacity:.9;flex-shrink:0" aria-hidden="true"></i>
+                    <div>
+                        <h2 style="color:white;font-size:1.75rem;margin-bottom:.75rem" id="medicacoes-heading">
+                            Medicações para Osteogênese Imperfeita
+                        </h2>
+                        <p style="color:rgba(255,255,255,.92);font-size:1.05rem;margin-bottom:1.25rem;line-height:1.6">
+                            Dossiês completos sobre as principais medicações usadas no tratamento da OI:
+                            protocolos, comparativos, exames necessários e referências científicas.
+                        </p>
+                        <a href="bibliografia-medicacoes.html" class="btn btn-white" style="font-size:.95rem">
+                            Ver todas as medicações <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- O que é OI? -->
+                <h2 class="section-title" id="sobre-oi">
+                    <i class="fas fa-dna" aria-hidden="true"></i>
+                    O que é Osteogênese Imperfeita?
+                </h2>
+
+                <div class="cards-grid" role="list">
+
+                    <article class="card" role="listitem">
+                        <div class="card__icon" aria-hidden="true">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h3 class="card__title">Condição Genética</h3>
+                        <div class="card__body">
+                            <p>A OI é uma doença genética rara que afeta a formação do colágeno tipo I,
+                            resultando em fragilidade óssea e suscetibilidade a fraturas.</p>
+                            <p>Prevalência estimada: <strong>1:15.000 a 1:20.000 nascimentos</strong>.</p>
+                        </div>
+                    </article>
+
+                    <article class="card" role="listitem">
+                        <div class="card__icon" aria-hidden="true">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3 class="card__title">Tipos e Classificação</h3>
+                        <div class="card__body">
+                            <p>Classificada em tipos I a V segundo Sillence, com diferentes graus de
+                            severidade e características clínicas específicas.</p>
+                            <p>Tipo I (leve) ao Tipo III (grave, progressivo deformante).</p>
+                        </div>
+                    </article>
+
+                    <article class="card" role="listitem">
+                        <div class="card__icon" aria-hidden="true">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3 class="card__title">Tratamento Multidisciplinar</h3>
+                        <div class="card__body">
+                            <p>O tratamento envolve equipes multidisciplinares: ortopedistas, geneticistas,
+                            fisioterapeutas, nutricionistas e assistentes sociais.</p>
+                            <p>Objetivo: reduzir fraturas, aumentar DMO e qualidade de vida.</p>
+                        </div>
+                    </article>
+
+                </div><!-- /cards-grid -->
+
+            </div>
+        </section>
+
+        <!-- MEDICAÇÕES EM DESTAQUE -->
+        <section style="background:var(--color-gray-50);padding:3rem 0" aria-labelledby="medicacoes-destaques">
+            <div class="container">
+                <h2 class="section-title" id="medicacoes-destaques">
+                    <i class="fas fa-pills" aria-hidden="true"></i>
+                    Principais Medicações
+                </h2>
+
+                <div class="cards-grid" role="list">
+
+                    <article class="card" role="listitem">
+                        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem">
+                            <span class="badge badge-primary">SUS / PCDT</span>
+                            <span class="badge badge-success">Padrão-ouro Brasil</span>
+                        </div>
+                        <h3 class="card__title">
+                            <i class="fas fa-star" style="color:#f39c12" aria-hidden="true"></i>
+                            Pamidronato
+                        </h3>
+                        <div class="card__body">
+                            <p>Bisfosfonato de 2ª geração, principal medicação disponível no SUS.
+                            Administração intravenosa trimestral, protocolo Glorieux.</p>
+                        </div>
+                        <a href="pamidronato.html" class="btn btn-primary btn-sm" style="margin-top:1rem">
+                            Ver Dossiê <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="card" role="listitem">
+                        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem">
+                            <span class="badge badge-info">Gold Standard Internacional</span>
+                        </div>
+                        <h3 class="card__title">
+                            <i class="fas fa-gem" style="color:#3498db" aria-hidden="true"></i>
+                            Ácido Zoledrônico
+                        </h3>
+                        <div class="card__body">
+                            <p>Bisfosfonato de 3ª geração utilizado em alguns centros especializados off-label. O PCDT nacional não o preconiza para OI (infusão anual).
+                            Infusão anual, 10.000× mais potente que pamidronato.</p>
+                        </div>
+                        <a href="acido-zoledronico.html" class="btn btn-primary btn-sm" style="margin-top:1rem">
+                            Ver Dossiê <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="card" role="listitem">
+                        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem">
+                            <span class="badge badge-secondary">Via Oral</span>
+                        </div>
+                        <h3 class="card__title">
+                            <i class="fas fa-capsules" style="color:#6c757d" aria-hidden="true"></i>
+                            Alendronato
+                        </h3>
+                        <div class="card__body">
+                            <p>Bisfosfonato oral, alternativa para casos selecionados.
+                            Administração semanal, menor custo logístico.</p>
+                        </div>
+                        <a href="alendronato.html" class="btn btn-primary btn-sm" style="margin-top:1rem">
+                            Ver Dossiê <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CENTROS DE REFERÊNCIA -->
+        <section class="page-body" aria-labelledby="centros-heading">
+            <div class="container">
+                <h2 class="section-title" id="centros-heading">
+                    <i class="fas fa-hospital" aria-hidden="true"></i>
+                    Centros de Referência no Brasil
+                </h2>
+                <p style="color:var(--text-secondary);margin-bottom:2rem">
+                    Hospitais habilitados como Centros de Referência para Osteogênese Imperfeita (CROIs) pelo Ministério da Saúde.
+                </p>
+
+                <div class="cards-grid" role="list">
+
+                    <article class="card" role="listitem">
+                        <h3 class="card__title">
+                            <i class="fas fa-hospital" style="color:var(--color-secondary)" aria-hidden="true"></i>
+                            IFF/Fiocruz
+                        </h3>
+                        <div class="card__body">
+                            <p><strong>Rio de Janeiro, RJ</strong></p>
+                            <p>Instituto Nacional de Saúde da Mulher, da Criança e do Adolescente Fernandes Figueira.
+                            Coordenador nacional dos CROIs — pioneiro no protocolo Zoledrônico (2024).</p>
+                        </div>
+                        <span class="badge badge-success" style="margin-top:1rem">Coordenador Nacional</span>
+                    </article>
+
+                    <article class="card" role="listitem">
+                        <h3 class="card__title">
+                            <i class="fas fa-hospital" style="color:var(--color-secondary)" aria-hidden="true"></i>
+                            IOT/HCFMUSP
+                        </h3>
+                        <div class="card__body">
+                            <p><strong>São Paulo, SP</strong></p>
+                            <p>Instituto de Ortopedia e Traumatologia do Hospital das Clínicas da FMUSP.
+                            Referência nacional em ortopedia pediátrica e adulta.</p>
+                        </div>
+                        <span class="badge badge-primary" style="margin-top:1rem">Referência Ortopédica</span>
+                    </article>
+
+                    <article class="card" role="listitem">
+                        <h3 class="card__title">
+                            <i class="fas fa-hospital" style="color:var(--color-secondary)" aria-hidden="true"></i>
+                            HCPA
+                        </h3>
+                        <div class="card__body">
+                            <p><strong>Porto Alegre, RS</strong></p>
+                            <p>Hospital de Clínicas de Porto Alegre. Forte atuação em genética médica
+                            e diagnóstico molecular da OI.</p>
+                        </div>
+                        <span class="badge badge-info" style="margin-top:1rem">Genética Médica</span>
+                    </article>
+
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="centros-referencia.html" class="btn btn-secondary">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        Ver todos os 14 centros habilitados
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECURSOS E NAVEGAÇÃO -->
+        <section style="padding:3rem 0" aria-labelledby="recursos-heading">
+            <div class="container">
+                <h2 class="section-title" id="recursos-heading">
+                    <i class="fas fa-th-large" aria-hidden="true"></i>
+                    Recursos e Navegação
+                </h2>
+                <div class="cards-grid" role="list">
+
+                    <a href="centros-referencia.html" class="card" role="listitem" style="text-decoration:none;display:block;">
+                        <div class="card__icon" aria-hidden="true" style="color:#e74c3c;"><i class="fas fa-hospital"></i></div>
+                        <h3 class="card__title">Centros de Referência</h3>
+                        <p class="card__body">14 CROIs habilitados pelo Ministério da Saúde. Endereços, contatos e como ser encaminhado.</p>
+                    </a>
+
+                    <a href="oi-brasil.html" class="card" role="listitem" style="text-decoration:none;display:block;">
+                        <div class="card__icon" aria-hidden="true" style="color:#27ae60;"><i class="fas fa-map-marked-alt"></i></div>
+                        <h3 class="card__title">OI no Brasil</h3>
+                        <p class="card__body">Epidemiologia, marcos legais (PCDT 2022), associações de pacientes e pesquisa científica.</p>
+                    </a>
+
+                    <a href="oi-mundo.html" class="card" role="listitem" style="text-decoration:none;display:block;">
+                        <div class="card__icon" aria-hidden="true" style="color:#3498db;"><i class="fas fa-globe-americas"></i></div>
+                        <h3 class="card__title">OI no Mundo</h3>
+                        <p class="card__body">21 tipos moleculares, centros de excelência internacional e perspectivas de cura.</p>
+                    </a>
+
+                    <a href="lista-exames-impressao.html" class="card" role="listitem" style="text-decoration:none;display:block;">
+                        <div class="card__icon" aria-hidden="true" style="color:#9b59b6;"><i class="fas fa-clipboard-list"></i></div>
+                        <h3 class="card__title">Lista de Exames</h3>
+                        <p class="card__body">Checklist imprimível com exames obrigatórios e recomendados antes de cada infusão.</p>
+                    </a>
+
+                    <a href="busca.html" class="card" role="listitem" style="text-decoration:none;display:block;">
+                        <div class="card__icon" aria-hidden="true" style="color:#f39c12;"><i class="fas fa-search"></i></div>
+                        <h3 class="card__title">Busca</h3>
+                        <p class="card__body">Encontre rapidamente informações por palavra-chave com filtros por medicação, centro, legislação e exames.</p>
+                    </a>
+
+                    <a href="referencias.html" class="card" role="listitem" style="text-decoration:none;display:block;">
+                        <div class="card__icon" aria-hidden="true" style="color:#7f8c8d;"><i class="fas fa-bookmark"></i></div>
+                        <h3 class="card__title">Referências Bibliográficas</h3>
+                        <p class="card__body">Base bibliográfica completa com artigos científicos, portarias e diretrizes nacionais e internacionais.</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ASSOCIAÇÕES INTERNACIONAIS -->
+        <section style="background:var(--color-gray-50);padding:3rem 0" aria-labelledby="assoc-heading">
+            <div class="container">
+                <h2 class="section-title" id="assoc-heading">
+                    <i class="fas fa-globe-americas" aria-hidden="true"></i>
+                    Associações Internacionais
+                </h2>
+
+                <div class="cards-grid" role="list">
+                    <article class="card" role="listitem">
+                        <h3 class="card__title">🇺🇸 OI Foundation</h3>
+                        <p class="card__body">Principal organização dos EUA para OI. Pesquisa, suporte e advocacy.</p>
+                        <a href="https://oif.org" target="_blank" rel="noopener noreferrer"
+                           class="btn btn-secondary btn-sm mt-2" style="margin-top:1rem"
+                           aria-label="OI Foundation — abre em nova aba">
+                            oif.org <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                    <article class="card" role="listitem">
+                        <h3 class="card__title">🇪🇺 OIFE</h3>
+                        <p class="card__body">Federação Europeia de Osteogênese Imperfeita. Conecta associações de 27 países.</p>
+                        <a href="https://oife.org" target="_blank" rel="noopener noreferrer"
+                           class="btn btn-secondary btn-sm" style="margin-top:1rem"
+                           aria-label="OIFE — abre em nova aba">
+                            oife.org <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                    <article class="card" role="listitem">
+                        <h3 class="card__title">🇬🇧 Brittle Bone Society</h3>
+                        <p class="card__body">Organização britânica dedicada à OI, suporte e conscientização.</p>
+                        <a href="https://www.brittlebone.org" target="_blank" rel="noopener noreferrer"
+                           class="btn btn-secondary btn-sm" style="margin-top:1rem"
+                           aria-label="Brittle Bone Society — abre em nova aba">
+                            brittlebone.org <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- FIM CONTEÚDO PRINCIPAL -->
+
+    <!-- ============ FOOTER GLOBAL ============ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h2 class="footer-section__title">
+                        <i class="fas fa-bone" aria-hidden="true"></i>
+                        Hub Osteogênese Imperfeita
+                    </h2>
+                    <p class="footer-section__text">
+                        Centro de conhecimento técnico-científico sobre OI para profissionais
+                        de saúde, pacientes e familiares. Baseado em publicações da CONITEC,
+                        estudos revisados por pares e protocolos internacionais.
+                    </p>
+                    <div class="footer-badges" role="list" aria-label="Selos de conformidade">
+                        <span class="footer-badge" role="listitem"><i class="fas fa-universal-access" aria-hidden="true"></i> WCAG 2.1 AA</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-shield-alt" aria-hidden="true"></i> LGPD</span>
+                        <span class="footer-badge" role="listitem"><i class="fas fa-check-circle" aria-hidden="true"></i> e-MAG</span>
+                    </div>
+                </div>
+                <nav aria-label="Medicações">
+                    <h2 class="footer-section__title"><i class="fas fa-pills" aria-hidden="true"></i> Medicações</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="pamidronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Pamidronato</a></li>
+                        <li><a href="acido-zoledronico.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Ácido Zoledrônico</a></li>
+                        <li><a href="alendronato.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Alendronato</a></li>
+                        <li><a href="setrusumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Setrusumabe</a></li>
+                        <li><a href="denosumabe-resumo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Denosumabe</a></li>
+                        <li><a href="bibliografia-medicacoes.html"><i class="fas fa-book" aria-hidden="true"></i> Ver Todas</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Recursos">
+                    <h2 class="footer-section__title"><i class="fas fa-book-medical" aria-hidden="true"></i> Recursos</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="centros-referencia.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Centros de Referência</a></li>
+                        <li><a href="lista-exames-impressao.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Lista de Exames</a></li>
+                        <li><a href="referencias.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> Referências</a></li>
+                        <li><a href="oi-brasil.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Brasil</a></li>
+                        <li><a href="oi-mundo.html"><i class="fas fa-chevron-right" aria-hidden="true"></i> OI no Mundo</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-section">
+                    <h2 class="footer-section__title"><i class="fas fa-info-circle" aria-hidden="true"></i> Internacional</h2>
+                    <ul class="footer-section__links">
+                        <li><a href="https://www.gov.br/conitec" target="_blank" rel="noopener noreferrer" aria-label="CONITEC — nova aba">CONITEC — Min. Saúde</a></li>
+                        <li><a href="https://oif.org" target="_blank" rel="noopener noreferrer" aria-label="OI Foundation — nova aba">OI Foundation (EUA)</a></li>
+                        <li><a href="https://oife.org" target="_blank" rel="noopener noreferrer" aria-label="OIFE — nova aba">OIFE (Europa)</a></li>
+                        <li><a href="https://www.brittlebone.org" target="_blank" rel="noopener noreferrer" aria-label="Brittle Bone Society — nova aba">Brittle Bone Society</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-bottom__copy">
+                    &copy; <span id="footerYear">2026</span> Hub Osteogênese Imperfeita.
+                    Conteúdo educacional e técnico.
+                </p>
+                <p class="footer-bottom__visitors"><i class="fas fa-eye" aria-hidden="true"></i> <span id="visitorCount">—</span></p>
+                <p class="footer-bottom__disclaimer">
+                    <strong>Aviso Legal:</strong> Conteúdo para fins informativos e educacionais.
+                    Não substitui consulta médica. A decisão terapêutica cabe ao médico assistente.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WIDGET DE ACESSIBILIDADE FLUTUANTE -->
+    <div class="a11y-widget" id="a11yWidget" role="region" aria-label="Widget de acessibilidade">
+        <div class="a11y-widget__panel" id="a11yWidgetPanel" role="group">
+            <div class="a11y-widget__title">
+                <i class="fas fa-universal-access" aria-hidden="true"></i> Acessibilidade
+            </div>
+            <button class="a11y-widget__btn" id="a11yBtnContrast" aria-pressed="false">
+                <i class="fas fa-adjust" aria-hidden="true"></i> Alto Contraste
+            </button>
+            <button class="a11y-widget__btn" id="a11yBtnLargeText" aria-pressed="false">
+                <i class="fas fa-text-height" aria-hidden="true"></i> Texto Grande
+            </button>
+            <button class="a11y-widget__btn" id="a11yBtnDark" aria-pressed="false">
+                <i class="fas fa-moon" aria-hidden="true"></i> Modo Escuro
+            </button>
+            <hr class="divider" style="margin:.5rem 0">
+            <button class="a11y-widget__btn" id="a11yBtnReset">
+                <i class="fas fa-undo" aria-hidden="true"></i> Restaurar Padrão
+            </button>
+        </div>
+        <button class="a11y-widget__toggle" id="a11yWidgetToggle"
+            aria-expanded="false" aria-controls="a11yWidgetPanel"
+            aria-label="Abrir opções de acessibilidade">
+            <i class="fas fa-universal-access" aria-hidden="true"></i>
+            Acessibilidade
+        </button>
+    </div>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Script global -->
+    <script>
+        const footerYear = document.getElementById('footerYear');
+        if (footerYear) footerYear.textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/global.js"></script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Hub Osteogênese Imperfeita",
+      "description": "Centro de conhecimento técnico-científico sobre Osteogênese Imperfeita. Medicações, protocolos, centros de referência e recursos.",
+      "url": "https://unidospelaoi.com.br/",
+      "inLanguage": "pt-BR",
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Osteogênese Imperfeita",
+        "alternateName": ["Doença dos Ossos de Vidro", "OI"],
+        "code": {
+          "@type": "MedicalCode",
+          "code": "Q78.0",
+          "codingSystem": "ICD-10"
+        },
+        "description": "Doença genética rara que afeta a formação do colágeno tipo I, resultando em fragilidade óssea. Prevalência: 1:15.000 a 1:20.000 nascimentos."
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hub Osteogênese Imperfeita",
+        "url": "https://unidospelaoi.com.br/"
+      },
+      "dateModified": "2026-03-23",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Profissionais de Saúde, Pacientes, Familiares"
+      }
+    }
+    </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ab1b75ec32f44b9ba68648c534b79aea"}'></script>
+</body>
+</html>
