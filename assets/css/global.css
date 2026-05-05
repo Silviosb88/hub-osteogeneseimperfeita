@@ -1251,11 +1251,11 @@ tbody tr:hover {
    12. FOOTER GLOBAL — idêntico em todas as páginas
    ========================================================= */
 .site-footer {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+    background: linear-gradient(135deg, #1a5c1a 0%, #0f3d0f 100%); /* Verde bandeira */
     color: var(--text-on-dark);
     padding: var(--space-7) 0 var(--space-4);
     margin-top: auto;
-    border-top: 4px solid var(--color-canary, #FFE302);
+    border-top: 4px solid #FFE302;
 }
 
 .footer-grid {

@@ -100,29 +100,21 @@
             margin-bottom: 1rem;
         }
 
-        .home-hero__title {
+        /* Título acima do hero */
+        .home-page-title {
             font-size: 2rem;
             font-weight: 800;
-            color: #1a3a00;
+            color: #1a5c1a;
             line-height: 1.2;
-            margin-bottom: .75rem;
-        }
-
-        .home-hero__title span {
-            color: #7B5A00;
-        }
-
-        .home-hero__subtitle {
-            font-size: 1.05rem;
-            color: #1a3a00;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: .5rem;
+            border-bottom: 3px solid #1a5c1a;
         }
 
         /* Aviso 06 de Maio */
         .awareness-box {
             background: linear-gradient(135deg, #f5e96a 0%, #f0c92a 100%);
-            border-left: 5px solid #7B5A00;
+            border-left: 5px solid #1a5c1a;
             border-radius: 12px;
             padding: 1rem 1.25rem;
             margin-bottom: 1.5rem;
@@ -139,13 +131,18 @@
         .awareness-box__text strong {
             display: block;
             font-size: 1rem;
-            color: #3d2800;
+            color: #1a5c1a;
             font-weight: 700;
         }
 
-        .awareness-box__text span {
-            font-size: .9rem;
-            color: #3d2800;
+        /* Wishbone Day em destaque */
+        .wishbone-label {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1a5c1a;
+            margin-top: .4rem;
+            letter-spacing: .03em;
         }
 
         /* Botões de acesso rápido */
@@ -424,6 +421,9 @@
     <main class="main-content" id="main-content" tabindex="-1">
         <div class="home-wrapper">
 
+            <!-- Título acima do hero -->
+            <h1 class="home-page-title" id="home-heading">Unidos pela OI - Brasil</h1>
+
             <!-- HERO: imagem + texto -->
             <section class="home-hero" aria-labelledby="home-heading">
 
@@ -433,46 +433,16 @@
                      loading="eager">
 
                 <div class="home-hero__content">
-                    <div class="home-hero__badge">
-                        <i class="fas fa-ribbon" aria-hidden="true"></i>
-                        06 de Maio — Dia Internacional da OI
-                    </div>
-
-                    <h1 class="home-hero__title" id="home-heading">
-                        Unidos pela OI<br>
-                        <span>Brasil — 2026</span>
-                    </h1>
-
-                    <p class="home-hero__subtitle">
-                        Rede colaborativa de informação, apoio e conscientização sobre a
-                        <strong>Osteogênese Imperfeita</strong> no Brasil.
-                        Reunimos famílias, pacientes e profissionais desde 2014.
-                    </p>
 
                     <!-- Destaque 06 de Maio -->
                     <div class="awareness-box" role="note">
                         <span class="awareness-box__icon">🎗️</span>
                         <div class="awareness-box__text">
-                            <strong>06 de Maio — Dia Internacional de Conscientização sobre a OI</strong>
-                            <span>Compartilhe, informe e ajude mais famílias a chegarem até nós.</span>
+                            <strong>06 de Maio — Dia Internacional de Conscientização sobre a Osteogênese Imperfeita - OI</strong>
+                            <span class="wishbone-label">Wishbone Day</span>
                         </div>
                     </div>
 
-                    <!-- Botões de ação -->
-                    <div class="home-buttons">
-                        <a href="hub-index.html" class="home-btn home-btn--primary">
-                            <i class="fas fa-flask" aria-hidden="true"></i>
-                            Centro Técnico-Científico
-                        </a>
-                        <a href="https://facebook.com/unidospelaoi" target="_blank" rel="noopener noreferrer" class="home-btn home-btn--facebook">
-                            <i class="fab fa-facebook" aria-hidden="true"></i>
-                            Facebook
-                        </a>
-                        <a href="busca.html" class="home-btn home-btn--secondary">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                            Buscar no site
-                        </a>
-                    </div>
                 </div>
             </section>
 
@@ -581,10 +551,11 @@
                 <div class="footer-section">
                     <h3 class="footer-section__title">Navegação</h3>
                     <ul style="list-style:none;padding:0;margin:0;">
-                        <li style="margin-bottom:.4rem;"><a href="hub-index.html" style="color:var(--text-on-dark-muted);">Centro Técnico-Científico</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="hub-index.html" style="color:var(--text-on-dark-muted);"><i class="fas fa-flask" aria-hidden="true"></i> Centro Técnico-Científico</a></li>
                         <li style="margin-bottom:.4rem;"><a href="pamidronato.html" style="color:var(--text-on-dark-muted);">Medicações</a></li>
                         <li style="margin-bottom:.4rem;"><a href="centros-referencia.html" style="color:var(--text-on-dark-muted);">Centros de Referência</a></li>
-                        <li style="margin-bottom:.4rem;"><a href="busca.html" style="color:var(--text-on-dark-muted);">Busca</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="busca.html" style="color:var(--text-on-dark-muted);"><i class="fas fa-search" aria-hidden="true"></i> Buscar no site</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="https://facebook.com/unidospelaoi" target="_blank" rel="noopener noreferrer" style="color:var(--text-on-dark-muted);"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
