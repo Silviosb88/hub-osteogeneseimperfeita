@@ -66,10 +66,10 @@ p {
    ========================================================= */
 :root {
     /* — Paleta amarelo canário — */
-    --color-primary:        #3d2800; /* Âmbar escuro — header/footer (14:1 branco) */
-    --color-primary-hover:  #5a3c00; /* Âmbar médio (10:1 branco) */
-    --color-secondary:      #7B5A00; /* Ouro escuro WCAG AA (6.4:1 branco) */
-    --color-secondary-hover:#5a3c00;
+    --color-primary:        #1a5c1a; /* Verde bandeira — substitui marrom */
+    --color-primary-hover:  #0f3d0f; /* Verde escuro */
+    --color-secondary:      #1a5c1a; /* Verde bandeira */
+    --color-secondary-hover:#0f3d0f;
     --color-accent:         #FFE302; /* Amarelo canário puro */
     --color-accent-hover:   #F9C300; /* Canário escurecido */
     --color-canary:         #FFE302; /* Amarelo canário */
@@ -293,10 +293,10 @@ p {
 }
 
 .header-search__input {
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(26,92,26,0.08);
+    border: 1px solid #1a5c1a;
     border-radius: var(--border-radius-pill);
-    color: var(--text-on-dark);
+    color: #1a5c1a;
     padding: var(--space-1) var(--space-3);
     font-size: var(--font-size-sm);
     width: 180px;
@@ -304,21 +304,21 @@ p {
 }
 
 .header-search__input::placeholder {
-    color: rgba(255,255,255,0.6);
+    color: rgba(26,92,26,0.6);
 }
 
 .header-search__input:focus {
     outline: none;
-    background: rgba(255,255,255,0.25);
-    border-color: rgba(255,255,255,0.7);
+    background: rgba(26,92,26,0.12);
+    border-color: #1a5c1a;
     width: 220px;
-    box-shadow: var(--shadow-focus);
+    box-shadow: 0 0 0 3px rgba(26,92,26,0.2);
 }
 
 .header-search__btn {
     background: transparent;
     border: none;
-    color: var(--text-on-dark);
+    color: #1a5c1a;
     cursor: pointer;
     padding: var(--space-1);
     margin-left: -36px;
@@ -335,9 +335,9 @@ p {
 
 .header-a11y__btn {
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid #1a5c1a;
     border-radius: var(--border-radius);
-    color: var(--text-on-dark);
+    color: #1a5c1a;
     cursor: pointer;
     font-size: var(--font-size-xs);
     font-weight: 700;
@@ -353,10 +353,10 @@ p {
 
 .header-a11y__btn:hover,
 .header-a11y__btn:focus-visible {
-    background: rgba(255,255,255,0.2);
-    border-color: rgba(255,255,255,0.7);
+    background: rgba(26,92,26,0.12);
+    border-color: #0f3d0f;
     outline: none;
-    box-shadow: var(--shadow-focus);
+    box-shadow: 0 0 0 3px rgba(26,92,26,0.2);
 }
 
 /* =========================================================
