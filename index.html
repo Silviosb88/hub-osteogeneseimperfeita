@@ -49,13 +49,13 @@
         /* Banner de topo (imagem 1 — horizontal) */
         .home-banner {
             width: 100%;
-            max-height: 220px;
+            max-height: 260px;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             background: #f5e96a;
-            margin-top: 70px; /* altura do header fixo */
+            margin-top: 110px; /* altura do header verde */
         }
         .home-banner img {
             width: 100%;
@@ -307,7 +307,8 @@
         /* Responsivo */
         @media (max-width: 768px) {
             .home-banner {
-                max-height: 140px;
+                max-height: 160px;
+                margin-top: 90px; /* header menor no mobile */
             }
 
             .home-hero {
@@ -341,9 +342,9 @@
             </button>
 
             <a class="site-logo" href="index.html" aria-label="Unidos pela OI — Página inicial">
-                <i class="fas fa-bone site-logo__icon" aria-hidden="true"></i>
+                <img src="assets/img/logo-unidos.png" alt="Logo Unidos pela OI" class="site-logo__img" aria-hidden="true">
                 <span class="site-logo__text">
-                    Unidos pela OI
+                    Unidos pela OI - Brasil
                     <span>Hub Osteogênese Imperfeita</span>
                 </span>
             </a>
@@ -427,7 +428,7 @@
 
     <!-- ── BANNER DE TOPO (imagem horizontal) ── -->
     <div class="home-banner" role="img" aria-label="Unidos pela OI — Brasil 2026 — 06 de Maio, Dia Internacional de Conscientização sobre a Osteogênese Imperfeita">
-        <img src="assets/img/banner-header.jpg"
+        <img src="assets/img/banner-home.png"
              alt="Unidos pela OI Brasil 2026 — 06 de Maio, Dia Internacional de Conscientização sobre a Osteogênese Imperfeita"
              loading="eager">
     </div>
