@@ -1644,4 +1644,109 @@ body.a11y-dark-mode .breadcrumb {
     .footer-section__links a {
         color: #333;
     }
+
+    .quick-nav {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   16. MENU DIREITO FIXO — AJUDA RÁPIDA
+   ========================================================= */
+.quick-nav {
+    position: fixed;
+    top: calc(var(--header-height) + 24px);
+    right: 0;
+    width: 200px;
+    background: #fff;
+    border: 2px solid #1a5c1a;
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    box-shadow: -4px 4px 16px rgba(26,92,26,.13);
+    z-index: 900;
+    overflow: hidden;
+    /* Começa parcialmente visível — 36px da aba */
+    transform: translateX(calc(100% - 36px));
+    transition: transform 0.28s ease;
+}
+
+/* Expande ao passar o mouse */
+.quick-nav:hover {
+    transform: translateX(0);
+}
+
+.quick-nav__header {
+    background: #1a5c1a;
+    color: #FFE302;
+    font-size: .78rem;
+    font-weight: 800;
+    padding: .65rem .85rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    white-space: nowrap;
+    writing-mode: horizontal-tb;
+}
+
+.quick-nav__list {
+    list-style: none;
+    padding: .5rem 0;
+    margin: 0;
+}
+
+.quick-nav__list li {
+    margin: 0;
+}
+
+.quick-nav__list a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem .85rem;
+    font-size: .82rem;
+    color: #1a5c1a;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background .15s, color .15s;
+    border-left: 3px solid transparent;
+}
+
+.quick-nav__list a:hover {
+    background: #e8f5e9;
+    border-left-color: #FFE302;
+    color: #0f3d0f;
+}
+
+.quick-nav__list a i {
+    width: 14px;
+    text-align: center;
+    color: #1a5c1a;
+    font-size: .8rem;
+    flex-shrink: 0;
+}
+
+/* Aba visível quando recolhido — só o header fica exposto */
+.quick-nav::before {
+    content: '◀';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-100%);
+    background: #1a5c1a;
+    color: #FFE302;
+    font-size: .7rem;
+    padding: .4rem .25rem;
+    border-radius: 4px 0 0 4px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Em telas menores que 1300px, ocultar o menu direito para não sobrepor conteúdo */
+@media (max-width: 1300px) {
+    .quick-nav {
+        display: none;
+    }
 }

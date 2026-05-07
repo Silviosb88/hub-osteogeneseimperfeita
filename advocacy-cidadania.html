@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Direitos da Pessoa com Osteogênese Imperfeita — BPC, educação inclusiva, transporte, acessibilidade, CONITEC e cidadania. Unidos pela OI - Brasil.">
+    <meta name="keywords" content="direitos pessoa com deficiência, BPC, LOAS, educação inclusiva, transporte gratuito, acessibilidade, osteogênese imperfeita, LBI, Lei 13146">
+    <meta name="author" content="Unidos pela OI — Brasil">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Advocacy e Cidadania — Unidos pela OI - Brasil">
+    <meta property="og:description" content="Direitos da pessoa com OI: BPC, educação inclusiva, transporte, acessibilidade e participação na CONITEC.">
+    <meta property="og:url" content="https://unidospelaoi.com.br/advocacy-cidadania.html">
+    <meta property="og:locale" content="pt_BR">
+    <title>Advocacy e Cidadania — Unidos pela OI - Brasil</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="canonical" href="https://unidospelaoi.com.br/advocacy-cidadania.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #1a5c1a 0%, #0f3d0f 100%);
+            color: #fff;
+            padding: 2.5rem 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 4px solid #FFE302;
+        }
+        .page-hero__breadcrumb {
+            font-size: .8rem;
+            color: rgba(255,255,255,.7);
+            margin-bottom: .75rem;
+        }
+        .page-hero__breadcrumb a { color: rgba(255,255,255,.85); text-decoration: none; }
+        .page-hero__breadcrumb a:hover { color: #FFE302; }
+        .page-hero__title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0 0 .5rem;
+            line-height: 1.2;
+        }
+        .page-hero__subtitle {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,.85);
+            margin: 0;
+        }
+        .advocacy-toc {
+            background: #f9fbe7;
+            border: 2px solid #1a5c1a;
+            border-radius: 12px;
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+        }
+        .advocacy-toc h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1a5c1a;
+            margin-bottom: 1rem;
+        }
+        .advocacy-toc ol {
+            margin: 0; padding-left: 1.2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: .3rem .5rem;
+        }
+        .advocacy-toc li a {
+            color: #1a5c1a;
+            font-size: .9rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .advocacy-toc li a:hover { text-decoration: underline; }
+
+        .section-card {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-left: 6px solid #1a5c1a;
+            border-radius: 12px;
+            padding: 2rem 2rem 1.75rem;
+            margin-bottom: 2.5rem;
+            scroll-margin-top: 120px;
+        }
+        .section-card h2 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #1a5c1a;
+            margin-bottom: .5rem;
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+        .section-card h2 .icon-badge {
+            background: #FFE302;
+            color: #1a5c1a;
+            border-radius: 8px;
+            width: 40px; height: 40px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .section-card__legal {
+            background: #f9fbe7;
+            border-left: 4px solid #FFE302;
+            border-radius: 6px;
+            padding: .7rem 1rem;
+            font-size: .85rem;
+            color: #3d5a00;
+            margin-bottom: 1.25rem;
+        }
+        .section-card__legal strong { color: #1a5c1a; }
+        .section-card p {
+            color: #2d3a1a;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            font-size: .95rem;
+        }
+        .section-card ul, .section-card ol {
+            color: #2d3a1a;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: .95rem;
+            line-height: 1.75;
+        }
+        .section-card ul li, .section-card ol li { margin-bottom: .4rem; }
+        .section-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f3d0f;
+            margin: 1.5rem 0 .5rem;
+        }
+        .info-box {
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            font-size: .9rem;
+            color: #1b5e20;
+        }
+        .info-box i { margin-right: .4rem; }
+        .warn-box {
+            background: #fff9c4;
+            border: 1px solid #f9a825;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            font-size: .9rem;
+            color: #5d4200;
+        }
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .4rem;
+            background: #1a5c1a;
+            color: #FFE302;
+            padding: .55rem 1.1rem;
+            border-radius: 8px;
+            font-size: .88rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: .5rem;
+            transition: background .2s;
+        }
+        .btn-link:hover { background: #0f3d0f; color: #fff; }
+        .divider { border: none; border-top: 2px solid #e0e0e0; margin: 2.5rem 0; }
+        .disclaimer-box {
+            background: #fff9c4;
+            border: 2px solid #f9a825;
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            margin-top: 2.5rem;
+            font-size: .88rem;
+            color: #5d4200;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class="page-wrapper">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+    <!-- HEADER GLOBAL -->
+    <header class="site-header" role="banner">
+        <div class="site-header__inner">
+            <button class="menu-toggle" id="menuToggle"
+                aria-controls="hubSidebar" aria-expanded="false"
+                aria-label="Abrir menu de navegação">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="site-logo" href="index.html" aria-label="Unidos pela OI — Página inicial">
+                <img src="assets/img/logo-unidos.png" alt="Logo Unidos pela OI" class="site-logo__img" aria-hidden="true">
+                <span class="site-logo__text">
+                    Unidos pela OI - Brasil
+                    <span>Osteogênese Imperfeita</span>
+                </span>
+            </a>
+            <div class="header-search" role="search">
+                <form class="header-search__form" id="headerSearchForm" action="busca.html" method="get">
+                    <label for="headerSearchInput" class="sr-only">Buscar no site</label>
+                    <input type="search" class="header-search__input" id="headerSearchInput"
+                        name="q" placeholder="Buscar..." autocomplete="off" aria-label="Buscar no Hub OI">
+                    <button type="submit" class="header-search__btn" aria-label="Buscar">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="header-a11y" role="group" aria-label="Acessibilidade">
+                <button class="header-a11y__btn" id="headerA11yContrast" title="Alto contraste" aria-label="Alternar alto contraste" aria-pressed="false">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </button>
+                <button class="header-a11y__btn" id="headerA11yLargeText" title="Texto grande" aria-label="Alternar texto grande" aria-pressed="false">
+                    <i class="fas fa-text-height" aria-hidden="true"></i>
+                </button>
+                <button class="header-a11y__btn" id="headerA11yDark" title="Modo escuro" aria-label="Alternar modo escuro" aria-pressed="false">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR ESQUERDA -->
+    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
+        <div class="sidebar-header">
+            <span class="sidebar-header__title"><i class="fas fa-sitemap" aria-hidden="true"></i> Navegação</span>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav" role="navigation" aria-label="Menu principal">
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="index.html">
+                    <i class="fas fa-home sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Início</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="nossa-historia.html">
+                    <i class="fas fa-heart sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Nossa História</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="hub-index.html">
+                    <i class="fas fa-flask sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Centro Técnico-Científico</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item">
+                <div class="sidebar-nav__link">
+                    <i class="fas fa-pills sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Medicações de Uso</span>
+                    <button class="sidebar-submenu-toggle" id="toggle-medicacoes"
+                        data-submenu-toggle="submenu-medicacoes"
+                        aria-expanded="false" aria-controls="submenu-medicacoes"
+                        aria-label="Expandir Medicações de Uso">
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="sidebar-submenu" id="submenu-medicacoes" role="list">
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="pamidronato.html"><i class="fas fa-star" style="color:#f39c12;font-size:.8em" aria-hidden="true"></i> Pamidronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="acido-zoledronico.html">Ácido Zoledrônico</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="alendronato.html">Alendronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="setrusumabe-resumo.html">Setrusumabe <span class="badge badge-warning" style="font-size:.65em">Exp.</span></a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="denosumabe-resumo.html">Denosumabe <span class="badge badge-warning" style="font-size:.65em">Exp.</span></a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="bibliografia-medicacoes.html"><i class="fas fa-book" aria-hidden="true"></i> Ver Todas</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="centros-referencia.html"><i class="fas fa-hospital sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Centros de Referência</span></a></div>
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link is-active" href="advocacy-cidadania.html" aria-current="page">
+                    <i class="fas fa-balance-scale sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Advocacy e Cidadania</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="comunidade-apoio.html"><i class="fas fa-hands-helping sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Comunidade e Apoio</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="lista-exames-impressao.html"><i class="fas fa-book-medical sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Recursos e Exames</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-brasil.html"><i class="fas fa-map-marked-alt sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Brasil</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-mundo.html"><i class="fas fa-globe-americas sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Mundo</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="busca.html"><i class="fas fa-search sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Busca</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="referencias.html"><i class="fas fa-bookmark sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Referências Bibliográficas</span></a></div>
+        </nav>
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <!-- MENU DIREITO FIXO — AJUDA RÁPIDA -->
+    <aside class="quick-nav" id="quickNav" aria-label="Acesso rápido">
+        <div class="quick-nav__header">
+            <i class="fas fa-life-ring" aria-hidden="true"></i> Ajuda Rápida
+        </div>
+        <ul class="quick-nav__list">
+            <li><a href="comunidade-apoio.html#precisa-ajuda"><i class="fas fa-hands-helping"></i> Precisa de Ajuda?</a></li>
+            <li><a href="centros-referencia.html"><i class="fas fa-hospital"></i> Centros de Referência</a></li>
+            <li><a href="comunidade-apoio.html#grupos"><i class="fas fa-users"></i> Grupos de Apoio</a></li>
+            <li><a href="lista-exames-impressao.html"><i class="fas fa-file-medical"></i> Cartilhas e Exames</a></li>
+            <li><a href="advocacy-cidadania.html#direitos-pcd"><i class="fas fa-balance-scale"></i> Direitos PcD</a></li>
+            <li><a href="advocacy-cidadania.html#bpc"><i class="fas fa-hand-holding-usd"></i> BPC e Assistência</a></li>
+            <li><a href="advocacy-cidadania.html#educacao"><i class="fas fa-graduation-cap"></i> Educação Inclusiva</a></li>
+            <li><a href="advocacy-cidadania.html#transporte"><i class="fas fa-bus"></i> Transporte e Mobilidade</a></li>
+            <li><a href="advocacy-cidadania.html#conitec"><i class="fas fa-flask"></i> PCDT / CONITEC</a></li>
+            <li><a href="advocacy-cidadania.html#acessibilidade"><i class="fas fa-wheelchair"></i> Acessibilidade</a></li>
+        </ul>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content" id="main-content" tabindex="-1">
+        <div class="page-hero">
+            <p class="page-hero__breadcrumb">
+                <a href="index.html">Início</a> › Advocacy e Cidadania
+            </p>
+            <h1 class="page-hero__title">
+                <i class="fas fa-balance-scale" aria-hidden="true"></i>
+                Advocacy e Cidadania
+            </h1>
+            <p class="page-hero__subtitle">
+                Seus direitos como pessoa com Osteogênese Imperfeita — informação, amparo legal e participação social
+            </p>
+        </div>
+
+        <div class="container">
+
+            <!-- Índice da página -->
+            <nav class="advocacy-toc" aria-label="Índice de tópicos">
+                <h2><i class="fas fa-list-ul" aria-hidden="true"></i> Nesta página você encontra:</h2>
+                <ol>
+                    <li><a href="#direitos-pcd">Direitos da Pessoa com Deficiência (LBI)</a></li>
+                    <li><a href="#bpc">BPC — Benefício de Prestação Continuada</a></li>
+                    <li><a href="#educacao">Educação Inclusiva</a></li>
+                    <li><a href="#transporte">Transporte e Mobilidade</a></li>
+                    <li><a href="#conitec">PCDT e Participação na CONITEC</a></li>
+                    <li><a href="#acessibilidade">Acessibilidade Arquitetônica e Digital</a></li>
+                    <li><a href="#outros-direitos">Outros Direitos Relevantes</a></li>
+                </ol>
+            </nav>
+
+            <!-- 1. DIREITOS PCD -->
+            <article class="section-card" id="direitos-pcd">
+                <h2>
+                    <span class="icon-badge"><i class="fas fa-balance-scale" aria-hidden="true"></i></span>
+                    Direitos da Pessoa com Deficiência — LBI
+                </h2>
+                <div class="section-card__legal">
+                    <strong>Base legal:</strong> Lei Brasileira de Inclusão da Pessoa com Deficiência — <strong>Lei nº 13.146/2015</strong> (Estatuto da Pessoa com Deficiência)
+                </div>
+                <p>
+                    A <strong>Lei Brasileira de Inclusão (LBI)</strong> é o principal instrumento jurídico de proteção das pessoas com deficiência no Brasil. Ela assegura igualdade de condições e oportunidades em todos os âmbitos da vida — saúde, educação, trabalho, moradia, esporte, lazer e participação na vida pública.
+                </p>
+                <p>
+                    Para a pessoa com <strong>Osteogênese Imperfeita (OI)</strong>, a LBI é especialmente relevante por garantir acesso prioritário a serviços públicos, adaptações razoáveis nos ambientes de trabalho e estudo, e proteção contra discriminação.
+                </p>
+                <h3>Principais direitos assegurados pela LBI</h3>
+                <ul>
+                    <li><strong>Acesso à saúde:</strong> atendimento prioritário no SUS; fornecimento de medicamentos, órteses, próteses e equipamentos de reabilitação sem custo.</li>
+                    <li><strong>Habilitação e reabilitação:</strong> serviços especializados ofertados pelo SUS e pela rede de reabilitação do Ministério da Saúde.</li>
+                    <li><strong>Trabalho:</strong> proibição de discriminação; direito a adaptação razoável no ambiente de trabalho; cotas em empresas com mais de 100 empregados (Lei nº 8.213/1991).</li>
+                    <li><strong>Moradia:</strong> reserva de unidades adaptadas em programas habitacionais do governo federal (mínimo 3%).</li>
+                    <li><strong>Participação na vida pública:</strong> direito de votar e ser votado; acessibilidade em locais de votação.</li>
+                    <li><strong>Proteção contra violência e abuso:</strong> medidas especiais de proteção previstas na LBI.</li>
+                </ul>
+                <div class="info-box">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>CID-10:</strong> A Osteogênese Imperfeita é classificada no CID-10 como <strong>Q78.0</strong>. Para fins de reconhecimento como pessoa com deficiência, o laudo médico deve descrever os <em>impedimentos funcionais</em> decorrentes da condição, não apenas o diagnóstico.
+                </div>
+                <a class="btn-link" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i> Lei 13.146/2015 — Texto integral (Planalto)
+                </a>
+            </article>
+
+            <hr class="divider">
+
+            <!-- 2. BPC -->
+            <article class="section-card" id="bpc">
+                <h2>
+                    <span class="icon-badge"><i class="fas fa-hand-holding-usd" aria-hidden="true"></i></span>
+                    BPC — Benefício de Prestação Continuada
+                </h2>
+                <div class="section-card__legal">
+                    <strong>Base legal:</strong> Lei Orgânica da Assistência Social — <strong>LOAS (Lei nº 8.742/1993)</strong>, Art. 20; Lei Brasileira de Inclusão (Lei nº 13.146/2015)
+                </div>
+                <p>
+                    O <strong>Benefício de Prestação Continuada (BPC)</strong> garante <strong>1 salário mínimo mensal</strong> à pessoa com deficiência de qualquer idade que não possa prover sua própria manutenção nem tê-la provida por sua família. É um direito social — não exige contribuição ao INSS e não gera direito a 13º salário.
+                </p>
+                <h3>Critérios de elegibilidade (2025)</h3>
+                <ul>
+                    <li><strong>Deficiência:</strong> impedimentos de natureza física, mental, intelectual ou sensorial de longo prazo, avaliados por equipe da Previdência Social por meio da avaliação biopsicossocial.</li>
+                    <li><strong>Renda familiar per capita:</strong> igual ou inferior a <strong>¼ do salário mínimo</strong> (regra principal). Nova legislação de 2025 permite análise do histórico de 12 meses para proteção em casos de variação de renda.</li>
+                    <li><strong>Cadastro Único (CadÚnico):</strong> obrigatório para solicitação; manter o cadastro atualizado evita suspensões.</li>
+                </ul>
+                <h3>Como solicitar</h3>
+                <ol>
+                    <li>Atualize o <strong>CadÚnico</strong> no CRAS (Centro de Referência de Assistência Social) do seu município.</li>
+                    <li>Agende atendimento pelo <strong>Meu INSS</strong> (gov.br/meu-inss) ou ligue <strong>135</strong>.</li>
+                    <li>Prepare documentos: RG, CPF, comprovante de renda familiar, laudos e relatórios médicos descrevendo os impedimentos funcionais da OI.</li>
+                    <li>Passe pela avaliação médica e social da Previdência Social (avaliação biopsicossocial).</li>
+                </ol>
+                <div class="warn-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Atenção — reavaliação periódica:</strong> A partir de 2025, o INSS passou a realizar reavaliações de BPC com novas regras. Mantenha laudos atualizados e o CadÚnico em dia para evitar suspensão indevida do benefício.
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <strong>Dica prática:</strong> Caso o BPC seja negado administrativamente, é possível recorrer junto ao INSS (recurso ao CRPS) ou ingressar com ação judicial. Consulte a Defensoria Pública do seu estado — o atendimento é gratuito.
+                </div>
+                <a class="btn-link" href="https://www.gov.br/mds/pt-br/acoes-e-programas/suas/beneficios-assistenciais/beneficio-assistencial-ao-idoso-e-a-pessoa-com-deficiencia-bpc" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i> BPC no Portal Gov.br
+                </a>
+            </article>
+
+            <hr class="divider">
+
+            <!-- 3. EDUCAÇÃO -->
+            <article class="section-card" id="educacao">
+                <h2>
+                    <span class="icon-badge"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+                    Educação Inclusiva
+                </h2>
+                <div class="section-card__legal">
+                    <strong>Base legal:</strong> <strong>Lei nº 13.146/2015</strong> — Arts. 27 a 30; <strong>Lei de Diretrizes e Bases (LDB)</strong> — Lei nº 9.394/1996; Decreto nº 7.611/2011
+                </div>
+                <p>
+                    A LBI assegura que toda criança e adolescente com deficiência tem direito à <strong>educação inclusiva em todos os níveis</strong> — educação infantil, ensino fundamental, médio, técnico e superior — em escola regular. A negativa de matrícula por causa da deficiência é <strong>crime</strong>, com pena de reclusão de 2 a 5 anos (Art. 8º da Lei nº 7.853/1989).
+                </p>
+                <h3>Direitos do aluno com OI na escola</h3>
+                <ul>
+                    <li><strong>Matrícula obrigatória:</strong> nenhuma escola pública ou privada pode recusar matrícula sob alegação de deficiência ou doença.</li>
+                    <li><strong>Adaptações curriculares:</strong> provas adaptadas, prazo adicional, uso de recursos tecnológicos de apoio.</li>
+                    <li><strong>Profissional de apoio / acompanhante terapêutico:</strong> quando necessário, deve ser disponibilizado pela escola (LBI, Art. 28, XVII).</li>
+                    <li><strong>Acessibilidade física:</strong> a escola deve garantir acesso a cadeirantes e pessoas com mobilidade reduzida — rampas, elevadores, banheiros adaptados.</li>
+                    <li><strong>Atendimento Educacional Especializado (AEE):</strong> deve ser ofertado no contraturno, de forma complementar.</li>
+                    <li><strong>Transporte escolar adaptado:</strong> direito ao transporte público escolar adaptado às necessidades do aluno.</li>
+                </ul>
+                <h3>Educação superior e ENEM</h3>
+                <ul>
+                    <li>Candidatos com deficiência têm direito a <strong>atendimento especializado</strong> no ENEM (tempo adicional, ledor, transcritor, provas em Braille, etc.).</li>
+                    <li>Cotas para pessoas com deficiência estão previstas na Lei de Cotas para o Ensino Superior (Lei nº 12.711/2012, com atualizações da Lei nº 13.409/2016).</li>
+                    <li>Universidades devem dispor de <strong>Núcleo de Acessibilidade</strong> para apoio acadêmico.</li>
+                </ul>
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <strong>Onde denunciar violação:</strong> Conselho Tutelar (crianças e adolescentes), Ministério Público, Secretaria Municipal ou Estadual de Educação, ou o canal Ouvidoria do MEC: 0800-616161.
+                </div>
+            </article>
+
+            <hr class="divider">
+
+            <!-- 4. TRANSPORTE -->
+            <article class="section-card" id="transporte">
+                <h2>
+                    <span class="icon-badge"><i class="fas fa-bus" aria-hidden="true"></i></span>
+                    Transporte e Mobilidade
+                </h2>
+                <div class="section-card__legal">
+                    <strong>Base legal:</strong> <strong>Lei nº 8.899/1994</strong> (Passe Livre); <strong>Decreto nº 3.691/2000</strong>; <strong>Lei nº 13.146/2015</strong> — Arts. 46 a 54; Resolução ANAC nº 280/2013
+                </div>
+                <p>
+                    Pessoas com deficiência têm direito a condições especiais de transporte, que variam de acordo com a modalidade. Conheça os principais benefícios.
+                </p>
+                <h3>Passe Livre Interestadual</h3>
+                <p>
+                    A <strong>Lei nº 8.899/1994</strong> garante <strong>gratuidade no transporte interestadual</strong> (ônibus, trem e barco) para pessoas com deficiência <em>comprovadamente carentes</em>. A partir de 2022, o benefício passou a ser digital.
+                </p>
+                <ul>
+                    <li>Modalidades cobertas: ônibus convencional, executivo, leito, semiurbano e ferroviário.</li>
+                    <li>Dois assentos reservados por veículo para beneficiários e acompanhante (quando necessário).</li>
+                    <li>Solicitação pelo <strong>Portal Gov.br</strong> — serviço "Obter Passe Livre Interestadual Digital".</li>
+                    <li>Requisitos: ser pessoa com deficiência reconhecida, ter renda familiar per capita de até 2 salários mínimos e estar inscrito no CadÚnico.</li>
+                </ul>
+                <h3>Transporte Aéreo</h3>
+                <p>
+                    A <strong>Resolução ANAC nº 280/2013</strong> e a LBI estabelecem que:
+                </p>
+                <ul>
+                    <li>Companhias aéreas devem oferecer assistência especial a passageiros com deficiência ou mobilidade reduzida — auxílio no embarque/desembarque, cadeira de rodas no aeroporto, transporte de cadeira de rodas elétrica.</li>
+                    <li>Em 2023, o Senado Federal avançou na aprovação de legislação que prevê <strong>gratuidade em voos domésticos</strong> para pessoas com deficiência e acompanhante, em dois assentos por voo — aguarda regulamentação plena.</li>
+                    <li>Solicite assistência especial no momento da compra da passagem ou com antecedência mínima de 48 horas.</li>
+                </ul>
+                <h3>Transporte Urbano</h3>
+                <ul>
+                    <li>A maioria dos municípios garante gratuidade no transporte público urbano para pessoas com deficiência — consulte a legislação municipal.</li>
+                    <li>A LBI exige que 100% da frota de transporte público coletivo seja acessível (prazo progressivo de adaptação).</li>
+                    <li>Vagas reservadas nos estacionamentos públicos e privados (sinalização com símbolo internacional de acesso — SIA).</li>
+                </ul>
+                <div class="info-box">
+                    <i class="fas fa-external-link-alt"></i>
+                    <strong>Passe Livre Digital:</strong>
+                    <a href="https://www.gov.br/pt-br/servicos/obter-passe-livre-interestadual-digital" target="_blank" rel="noopener noreferrer" style="color:#1a5c1a;font-weight:600;">
+                        gov.br — Solicitar Passe Livre Interestadual
+                    </a>
+                </div>
+            </article>
+
+            <hr class="divider">
+
+            <!-- 5. CONITEC -->
+            <article class="section-card" id="conitec">
+                <h2>
+                    <span class="icon-badge"><i class="fas fa-flask" aria-hidden="true"></i></span>
+                    PCDT e Participação na CONITEC
+                </h2>
+                <div class="section-card__legal">
+                    <strong>Base legal:</strong> <strong>Lei nº 12.401/2011</strong>; <strong>Decreto nº 7.508/2011</strong>; Portaria MS nº 2.009/2012 (regimento CONITEC)
+                </div>
+                <p>
+                    A <strong>CONITEC</strong> (Comissão Nacional de Incorporação de Tecnologias no SUS) é o órgão do Ministério da Saúde responsável por recomendar a incorporação, exclusão ou alteração de medicamentos, procedimentos e tecnologias no SUS — incluindo a elaboração e revisão dos <strong>Protocolos Clínicos e Diretrizes Terapêuticas (PCDT)</strong>.
+                </p>
+                <h3>PCDT da Osteogênese Imperfeita</h3>
+                <p>
+                    O <strong>PCDT/OI 2022</strong> (publicado via Portaria SCTIE/MS após a Consulta Pública nº 32/2022) é o protocolo oficial do SUS para diagnóstico e tratamento da OI. Ele define:
+                </p>
+                <ul>
+                    <li>Critérios de diagnóstico e elegibilidade para tratamento medicamentoso no SUS.</li>
+                    <li>Medicamentos cobertos: Pamidronato, Ácido Zoledrônico e Alendronato.</li>
+                    <li>Fluxo de atendimento, monitoramento e pontos de atenção especializados.</li>
+                </ul>
+                <h3>Como participar das consultas públicas da CONITEC</h3>
+                <p>
+                    Pacientes, familiares e sociedade civil podem contribuir com novas evidências, relatos de experiência e dados clínicos durante as <strong>consultas públicas</strong> abertas pela CONITEC.
+                </p>
+                <ol>
+                    <li>Acesse o <strong>Portal Participa + Brasil</strong> (participamaisbrasil.gov.br) e busque por "CONITEC".</li>
+                    <li>Ou acesse diretamente o site da CONITEC (conitec.saude.gov.br) para ver consultas abertas.</li>
+                    <li>Envie contribuições por escrito dentro do prazo estabelecido. Não é necessário ser especialista — relatos de pacientes e familiares têm valor técnico reconhecido.</li>
+                </ol>
+                <div class="info-box">
+                    <i class="fas fa-lightbulb"></i>
+                    O Setrusumabe e o Denosumabe são exemplos de terapias em avaliação pela CONITEC. A participação ativa da comunidade Unidos pela OI nas consultas públicas é fundamental para inclusão de novas tecnologias no SUS.
+                </div>
+                <a class="btn-link" href="https://www.gov.br/conitec/pt-br" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i> CONITEC — Portal Oficial
+                </a>
+                <a class="btn-link" href="https://www.gov.br/conitec/pt-br/midias/protocolos/20220926_pcdt_osteogenese_imperfeita.pdf/view" target="_blank" rel="noopener noreferrer" style="margin-left:.5rem;background:#0f3d0f;">
+                    <i class="fas fa-file-pdf"></i> PCDT OI 2022 — PDF Oficial
+                </a>
+            </article>
+
+            <hr class="divider">
+
+            <!-- 6. ACESSIBILIDADE -->
+            <article class="section-card" id="acessibilidade">
+                <h2>
+                    <span class="icon-badge"><i class="fas fa-wheelchair" aria-hidden="true"></i></span>
+                    Acessibilidade Arquitetônica e Digital
+                </h2>
+                <div class="section-card__legal">
+                    <strong>Base legal:</strong> <strong>Lei nº 13.146/2015</strong> — Arts. 55 a 73; <strong>ABNT NBR 9050:2020</strong>; <strong>Lei nº 10.098/2000</strong>; Decreto nº 5.296/2004
+                </div>
+                <p>
+                    A acessibilidade é um direito fundamental que garante à pessoa com deficiência autonomia e participação plena na vida em sociedade. A LBI e a norma técnica ABNT NBR 9050:2020 estabelecem parâmetros obrigatórios para construção, reforma e adequação de edificações e espaços públicos.
+                </p>
+                <h3>Acessibilidade arquitetônica</h3>
+                <ul>
+                    <li><strong>Edificações públicas e privadas de uso coletivo:</strong> obrigadas a garantir acesso universal — rampas, elevadores, piso tátil, banheiros adaptados, vagas de estacionamento reservadas.</li>
+                    <li><strong>Calçadas e vias públicas:</strong> municípios têm obrigação de manter calçadas acessíveis (piso antiderrapante, sem obstáculos, rampas nos rebaixamentos).</li>
+                    <li><strong>Prioridade de atendimento:</strong> bancos, repartições públicas, comércio e serviços em geral devem oferecer atendimento prioritário.</li>
+                    <li><strong>ABNT NBR 9050:2020:</strong> norma técnica de referência que define medidas e padrões construtivos de acessibilidade. Exigível em projetos de construção civil.</li>
+                </ul>
+                <h3>Acessibilidade digital</h3>
+                <ul>
+                    <li>Sítios eletrônicos do governo federal devem seguir as diretrizes do <strong>eMAG</strong> (Modelo de Acessibilidade em Governo Eletrônico) e as recomendações <strong>WCAG 2.1</strong> nível AA.</li>
+                    <li>Conteúdos audiovisuais em TV aberta devem ter audiodescrição, legenda e LIBRAS.</li>
+                    <li>Deficientes têm direito a atendimento por meios alternativos (LIBRAS, texto ampliado, voz) em repartições públicas.</li>
+                </ul>
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <strong>Central de Atendimento à Pessoa com Deficiência:</strong> ligue <strong>136</strong> (gratuito, funciona 24h) para informações sobre direitos, serviços e para registrar denúncias.
+                </div>
+                <a class="btn-link" href="https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/NBR9050_20.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf"></i> ABNT NBR 9050:2020 — Norma de Acessibilidade
+                </a>
+            </article>
+
+            <hr class="divider">
+
+            <!-- 7. OUTROS DIREITOS -->
+            <article class="section-card" id="outros-direitos">
+                <h2>
+                    <span class="icon-badge"><i class="fas fa-star" aria-hidden="true"></i></span>
+                    Outros Direitos Relevantes
+                </h2>
+                <h3>Saúde — acesso prioritário ao SUS</h3>
+                <ul>
+                    <li>Atendimento prioritário em filas e serviços de saúde (Lei nº 10.048/2000).</li>
+                    <li>Fornecimento gratuito de medicamentos do PCDT, órteses e próteses pelo SUS.</li>
+                    <li>Direito à segunda opinião médica em diagnósticos graves (LBI, Art. 22).</li>
+                </ul>
+                <h3>Isenção de tributos</h3>
+                <ul>
+                    <li><strong>IPI e ICMS:</strong> isenção na compra de automóvel adaptado (legislação federal e estadual; consulte a SEFAZ do seu estado).</li>
+                    <li><strong>IPVA:</strong> isenção para veículo adaptado para condução por pessoa com deficiência — consulte o estado.</li>
+                    <li><strong>IR:</strong> aposentados com doença grave (incluindo casos previstos em lei) podem ter isenção de Imposto de Renda sobre proventos.</li>
+                </ul>
+                <h3>Proteção trabalhista</h3>
+                <ul>
+                    <li>Estabilidade provisória em caso de doença grave que torna o empregado inapto — jurisprudência do TST reconhece direito à reintegração.</li>
+                    <li>Lei de Cotas (Lei nº 8.213/1991): empresas com 100 ou mais empregados devem reservar de 2% a 5% das vagas para pessoas com deficiência habilitadas ou reabilitadas.</li>
+                </ul>
+                <h3>Lazer, cultura e esporte</h3>
+                <ul>
+                    <li>Meia-entrada em eventos culturais, esportivos e de lazer para pessoas com deficiência (Lei nº 12.933/2013).</li>
+                    <li>Espaços de lazer públicos devem ser acessíveis (LBI, Arts. 42 a 45).</li>
+                </ul>
+                <div class="info-box">
+                    <i class="fas fa-book"></i>
+                    <strong>Cartilha de Direitos:</strong> O Ministério dos Direitos Humanos disponibiliza materiais educativos gratuitos sobre os direitos das pessoas com deficiência em
+                    <a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/pessoa-com-deficiencia" target="_blank" rel="noopener noreferrer" style="color:#1a5c1a;font-weight:600;">gov.br/mdh</a>.
+                </div>
+            </article>
+
+            <!-- AVISO LEGAL -->
+            <div class="disclaimer-box" role="note">
+                <strong>⚠️ Aviso:</strong> As informações deste site têm caráter informativo e não substituem orientação jurídica profissional. Para situações específicas, consulte um advogado, a Defensoria Pública ou o Ministério Público do seu estado. Última atualização: Maio de 2026 — Redação e Revisão: Unidos pela OI - Brasil.
+            </div>
+
+        </div><!-- /.container -->
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-section__title">Unidos pela OI</h3>
+                    <p class="footer-section__text">
+                        Rede colaborativa de informação, apoio e conscientização sobre
+                        Osteogênese Imperfeita no Brasil — desde 2014.
+                    </p>
+                    <a href="https://facebook.com/unidospelaoi" target="_blank" rel="noopener noreferrer"
+                       style="color:var(--text-on-dark);font-size:.9rem;">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                        facebook.com/unidospelaoi
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-section__title">Navegação</h3>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li style="margin-bottom:.4rem;"><a href="hub-index.html" style="color:var(--text-on-dark-muted);">Centro Técnico-Científico</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="pamidronato.html" style="color:var(--text-on-dark-muted);">Medicações</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="centros-referencia.html" style="color:var(--text-on-dark-muted);">Centros de Referência</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="advocacy-cidadania.html" style="color:var(--text-on-dark-muted);">Advocacy e Cidadania</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="comunidade-apoio.html" style="color:var(--text-on-dark-muted);">Comunidade e Apoio</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="busca.html" style="color:var(--text-on-dark-muted);"><i class="fas fa-search" aria-hidden="true"></i> Buscar no site</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-section__title">Data especial</h3>
+                    <p class="footer-section__text">
+                        <strong style="color:#FFE302;">06 de Maio</strong><br>
+                        Dia Internacional de Conscientização sobre a<br>
+                        <strong>Osteogênese Imperfeita — OI</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© <span id="footerYear"></span> Unidos pela OI — Brasil</p>
+                <p class="footer-disclaimer">
+                    As informações deste site têm caráter informativo e não substituem avaliação médica ou jurídica profissional.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <script>
+        const footerYear = document.getElementById('footerYear');
+        if (footerYear) footerYear.textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/global.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ab1b75ec32f44b9ba68648c534b79aea"}'></script>
+</body>
+</html>

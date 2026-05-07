@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nossa História — Unidos pela OI Brasil. A trajetória do movimento social desde 2014 em construção.">
+    <meta name="keywords" content="nossa história, unidos pela OI, movimento social, osteogênese imperfeita, 2014">
+    <meta name="author" content="Unidos pela OI — Brasil">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nossa História — Unidos pela OI - Brasil">
+    <meta property="og:description" content="A trajetória do movimento social Unidos pela OI desde 2014.">
+    <meta property="og:url" content="https://unidospelaoi.com.br/nossa-historia.html">
+    <meta property="og:locale" content="pt_BR">
+    <title>Nossa História — Unidos pela OI - Brasil</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="canonical" href="https://unidospelaoi.com.br/nossa-historia.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #1a5c1a 0%, #0f3d0f 100%);
+            color: #fff;
+            padding: 2.5rem 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 4px solid #FFE302;
+        }
+        .page-hero__breadcrumb { font-size:.8rem; color:rgba(255,255,255,.7); margin-bottom:.75rem; }
+        .page-hero__breadcrumb a { color:rgba(255,255,255,.85); text-decoration:none; }
+        .page-hero__breadcrumb a:hover { color:#FFE302; }
+        .page-hero__title { font-size:2rem; font-weight:800; margin:0 0 .5rem; line-height:1.2; }
+        .page-hero__subtitle { font-size:1.05rem; color:rgba(255,255,255,.85); margin:0; }
+
+        /* Bloco "Em Construção" */
+        .construction-block {
+            max-width: 680px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #fff;
+            border: 2px dashed #1a5c1a;
+            border-radius: 20px;
+        }
+        .construction-block__icon {
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+        .construction-block h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1a5c1a;
+            margin-bottom: .75rem;
+        }
+        .construction-block p {
+            font-size: 1rem;
+            color: #3d4a00;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .construction-block p:last-child { margin-bottom: 0; }
+        .tag-2014 {
+            display: inline-block;
+            background: #FFE302;
+            color: #1a5c1a;
+            font-weight: 800;
+            font-size: 1.1rem;
+            padding: .4rem 1.2rem;
+            border-radius: 50px;
+            margin-bottom: 1.25rem;
+        }
+        .btn-contact {
+            display: inline-flex; align-items:center; gap:.5rem;
+            background: #1a5c1a; color: #FFE302;
+            padding: .65rem 1.4rem; border-radius: 8px;
+            font-size: .95rem; font-weight: 700;
+            text-decoration: none; margin-top: 1.5rem;
+            transition: background .2s;
+        }
+        .btn-contact:hover { background: #0f3d0f; color: #fff; }
+
+        /* Linha do tempo placeholder */
+        .timeline-preview {
+            max-width: 680px;
+            margin: 0 auto 2.5rem;
+        }
+        .timeline-preview h3 {
+            font-size: 1.1rem; font-weight: 800; color: #1a5c1a;
+            margin-bottom: 1.25rem;
+            text-align: center;
+        }
+        .timeline-item {
+            display: flex; gap: 1rem; align-items: flex-start;
+            margin-bottom: 1.25rem;
+        }
+        .timeline-item__year {
+            background: #1a5c1a; color: #FFE302;
+            font-weight: 800; font-size: .9rem;
+            padding: .35rem .7rem; border-radius: 6px;
+            min-width: 60px; text-align: center;
+            flex-shrink: 0;
+        }
+        .timeline-item__content {
+            background: #f9fbe7;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            padding: .75rem 1rem;
+            font-size: .9rem; color: #2d3a1a;
+            flex: 1;
+            line-height: 1.6;
+        }
+        .timeline-item__content strong { color: #1a5c1a; }
+        .timeline-placeholder {
+            background: #f5f5f5; border: 2px dashed #ccc;
+            border-radius: 8px; padding: .75rem 1rem;
+            font-size: .9rem; color: #888; font-style: italic; flex: 1;
+        }
+    </style>
+</head>
+<body class="page-wrapper">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+    <!-- HEADER GLOBAL -->
+    <header class="site-header" role="banner">
+        <div class="site-header__inner">
+            <button class="menu-toggle" id="menuToggle"
+                aria-controls="hubSidebar" aria-expanded="false"
+                aria-label="Abrir menu de navegação">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="site-logo" href="index.html" aria-label="Unidos pela OI — Página inicial">
+                <img src="assets/img/logo-unidos.png" alt="Logo Unidos pela OI" class="site-logo__img" aria-hidden="true">
+                <span class="site-logo__text">
+                    Unidos pela OI - Brasil
+                    <span>Osteogênese Imperfeita</span>
+                </span>
+            </a>
+            <div class="header-search" role="search">
+                <form class="header-search__form" id="headerSearchForm" action="busca.html" method="get">
+                    <label for="headerSearchInput" class="sr-only">Buscar no site</label>
+                    <input type="search" class="header-search__input" id="headerSearchInput"
+                        name="q" placeholder="Buscar..." autocomplete="off" aria-label="Buscar no Hub OI">
+                    <button type="submit" class="header-search__btn" aria-label="Buscar">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="header-a11y" role="group" aria-label="Acessibilidade">
+                <button class="header-a11y__btn" id="headerA11yContrast" title="Alto contraste" aria-label="Alternar alto contraste" aria-pressed="false">
+                    <i class="fas fa-adjust" aria-hidden="true"></i>
+                </button>
+                <button class="header-a11y__btn" id="headerA11yLargeText" title="Texto grande" aria-label="Alternar texto grande" aria-pressed="false">
+                    <i class="fas fa-text-height" aria-hidden="true"></i>
+                </button>
+                <button class="header-a11y__btn" id="headerA11yDark" title="Modo escuro" aria-label="Alternar modo escuro" aria-pressed="false">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR ESQUERDA -->
+    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
+        <div class="sidebar-header">
+            <span class="sidebar-header__title"><i class="fas fa-sitemap" aria-hidden="true"></i> Navegação</span>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav" role="navigation" aria-label="Menu principal">
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="index.html">
+                    <i class="fas fa-home sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Início</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link is-active" href="nossa-historia.html" aria-current="page">
+                    <i class="fas fa-heart sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Nossa História</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item">
+                <a class="sidebar-nav__link" href="hub-index.html">
+                    <i class="fas fa-flask sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Centro Técnico-Científico</span>
+                </a>
+            </div>
+            <div class="sidebar-nav__item">
+                <div class="sidebar-nav__link">
+                    <i class="fas fa-pills sidebar-nav__icon" aria-hidden="true"></i>
+                    <span class="sidebar-nav__text">Medicações de Uso</span>
+                    <button class="sidebar-submenu-toggle" id="toggle-medicacoes"
+                        data-submenu-toggle="submenu-medicacoes"
+                        aria-expanded="false" aria-controls="submenu-medicacoes"
+                        aria-label="Expandir Medicações de Uso">
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="sidebar-submenu" id="submenu-medicacoes" role="list">
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="pamidronato.html"><i class="fas fa-star" style="color:#f39c12;font-size:.8em" aria-hidden="true"></i> Pamidronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="acido-zoledronico.html">Ácido Zoledrônico</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="alendronato.html">Alendronato</a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="setrusumabe-resumo.html">Setrusumabe <span class="badge badge-warning" style="font-size:.65em">Exp.</span></a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="denosumabe-resumo.html">Denosumabe <span class="badge badge-warning" style="font-size:.65em">Exp.</span></a></li>
+                    <li class="sidebar-submenu__item"><a class="sidebar-submenu__link" href="bibliografia-medicacoes.html"><i class="fas fa-book" aria-hidden="true"></i> Ver Todas</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="centros-referencia.html"><i class="fas fa-hospital sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Centros de Referência</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="advocacy-cidadania.html"><i class="fas fa-balance-scale sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Advocacy e Cidadania</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="comunidade-apoio.html"><i class="fas fa-hands-helping sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Comunidade e Apoio</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="lista-exames-impressao.html"><i class="fas fa-book-medical sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Recursos e Exames</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-brasil.html"><i class="fas fa-map-marked-alt sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Brasil</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="oi-mundo.html"><i class="fas fa-globe-americas sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">OI no Mundo</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="busca.html"><i class="fas fa-search sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Busca</span></a></div>
+            <div class="sidebar-nav__item"><a class="sidebar-nav__link" href="referencias.html"><i class="fas fa-bookmark sidebar-nav__icon" aria-hidden="true"></i><span class="sidebar-nav__text">Referências Bibliográficas</span></a></div>
+        </nav>
+    </nav>
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <!-- MENU DIREITO FIXO — AJUDA RÁPIDA -->
+    <aside class="quick-nav" id="quickNav" aria-label="Acesso rápido">
+        <div class="quick-nav__header">
+            <i class="fas fa-life-ring" aria-hidden="true"></i> Ajuda Rápida
+        </div>
+        <ul class="quick-nav__list">
+            <li><a href="comunidade-apoio.html#precisa-ajuda"><i class="fas fa-hands-helping"></i> Precisa de Ajuda?</a></li>
+            <li><a href="centros-referencia.html"><i class="fas fa-hospital"></i> Centros de Referência</a></li>
+            <li><a href="comunidade-apoio.html#grupos"><i class="fas fa-users"></i> Grupos de Apoio</a></li>
+            <li><a href="lista-exames-impressao.html"><i class="fas fa-file-medical"></i> Cartilhas e Exames</a></li>
+            <li><a href="advocacy-cidadania.html#direitos-pcd"><i class="fas fa-balance-scale"></i> Direitos PcD</a></li>
+            <li><a href="advocacy-cidadania.html#bpc"><i class="fas fa-hand-holding-usd"></i> BPC e Assistência</a></li>
+            <li><a href="advocacy-cidadania.html#educacao"><i class="fas fa-graduation-cap"></i> Educação Inclusiva</a></li>
+            <li><a href="advocacy-cidadania.html#transporte"><i class="fas fa-bus"></i> Transporte e Mobilidade</a></li>
+            <li><a href="advocacy-cidadania.html#conitec"><i class="fas fa-flask"></i> PCDT / CONITEC</a></li>
+            <li><a href="advocacy-cidadania.html#acessibilidade"><i class="fas fa-wheelchair"></i> Acessibilidade</a></li>
+        </ul>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content" id="main-content" tabindex="-1">
+        <div class="page-hero">
+            <p class="page-hero__breadcrumb">
+                <a href="index.html">Início</a> › Nossa História
+            </p>
+            <h1 class="page-hero__title">
+                <i class="fas fa-heart" aria-hidden="true"></i>
+                Nossa História
+            </h1>
+            <p class="page-hero__subtitle">
+                A trajetória da Unidos pela OI — do grupo de apoio ao movimento social nacional
+            </p>
+        </div>
+
+        <div class="container">
+
+            <!-- Bloco Em Construção -->
+            <div class="construction-block" role="region" aria-label="Página em construção">
+                <span class="construction-block__icon" aria-hidden="true">🚧</span>
+                <span class="tag-2014">Desde 2014</span>
+                <h2>Página em Construção</h2>
+                <p>
+                    Estamos reunindo registros, fotos, relatos e documentos para contar, com o cuidado que merece,
+                    a história da <strong>Unidos pela OI</strong> — um movimento construído por famílias,
+                    pessoas com OI e voluntários ao longo de mais de uma década.
+                </p>
+                <p>
+                    Em breve você encontrará aqui nossa linha do tempo, os marcos da comunidade,
+                    relatos de quem faz parte dessa história e os bastidores de como chegamos até aqui.
+                </p>
+                <p>
+                    Se você tem fotos, relatos ou memórias que gostaria de compartilhar,
+                    entre em contato pelo nosso Facebook — cada história importa.
+                </p>
+                <a class="btn-contact" href="https://facebook.com/unidospelaoi" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                    Contribuir com nossa história
+                </a>
+            </div>
+
+            <!-- Linha do tempo — marcos conhecidos -->
+            <div class="timeline-preview">
+                <h3><i class="fas fa-history" aria-hidden="true"></i> Marcos da nossa trajetória</h3>
+
+                <div class="timeline-item">
+                    <div class="timeline-item__year">2014</div>
+                    <div class="timeline-item__content">
+                        <strong>Origem:</strong> Formação do primeiro grupo de apoio entre famílias e pessoas com Osteogênese Imperfeita no Brasil — o embrião da Unidos pela OI.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-item__year">2022</div>
+                    <div class="timeline-item__content">
+                        <strong>PCDT/OI:</strong> Participação ativa na Consulta Pública CONITEC nº 32/2022, contribuindo com a revisão do Protocolo Clínico e Diretrizes Terapêuticas da Osteogênese Imperfeita pelo Ministério da Saúde.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-item__year">2026</div>
+                    <div class="timeline-item__content">
+                        <strong>Hub Unidos pela OI:</strong> Lançamento do portal informativo unidospelaoi.com.br, reunindo informações técnico-científicas, direitos, comunidade e advocacy em um único espaço digital.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-item__year">...</div>
+                    <div class="timeline-placeholder">
+                        Mais marcos em breve — aguarde os próximos capítulos desta história.
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.container -->
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-section__title">Unidos pela OI</h3>
+                    <p class="footer-section__text">
+                        Rede colaborativa de informação, apoio e conscientização sobre
+                        Osteogênese Imperfeita no Brasil — desde 2014.
+                    </p>
+                    <a href="https://facebook.com/unidospelaoi" target="_blank" rel="noopener noreferrer"
+                       style="color:var(--text-on-dark);font-size:.9rem;">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                        facebook.com/unidospelaoi
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-section__title">Navegação</h3>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li style="margin-bottom:.4rem;"><a href="hub-index.html" style="color:var(--text-on-dark-muted);">Centro Técnico-Científico</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="pamidronato.html" style="color:var(--text-on-dark-muted);">Medicações</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="centros-referencia.html" style="color:var(--text-on-dark-muted);">Centros de Referência</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="advocacy-cidadania.html" style="color:var(--text-on-dark-muted);">Advocacy e Cidadania</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="comunidade-apoio.html" style="color:var(--text-on-dark-muted);">Comunidade e Apoio</a></li>
+                        <li style="margin-bottom:.4rem;"><a href="busca.html" style="color:var(--text-on-dark-muted);"><i class="fas fa-search" aria-hidden="true"></i> Buscar no site</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-section__title">Data especial</h3>
+                    <p class="footer-section__text">
+                        <strong style="color:#FFE302;">06 de Maio</strong><br>
+                        Dia Internacional de Conscientização sobre a<br>
+                        <strong>Osteogênese Imperfeita — OI</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© <span id="footerYear"></span> Unidos pela OI — Brasil</p>
+                <p class="footer-disclaimer">
+                    As informações deste site têm caráter informativo e não substituem avaliação médica profissional.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    <script>
+        const footerYear = document.getElementById('footerYear');
+        if (footerYear) footerYear.textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/global.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ab1b75ec32f44b9ba68648c534b79aea"}'></script>
+</body>
+</html>
