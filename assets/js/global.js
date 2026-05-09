@@ -65,7 +65,7 @@ const HubSidebar = {
         this.overlay?.classList.add('is-active');
         this.toggle?.setAttribute('aria-expanded', 'true');
         this.sidebar.setAttribute('aria-hidden', 'false');
-        this.sidebar.removeAttribute('inert'); /* Permite foco nos elementos internos */
+        /* CSS já cuida de pointer-events/visibility via .is-open */
         /* Foco no primeiro elemento focável */
         const firstFocusable = this.sidebar.querySelector(this.focusableSelectors);
         firstFocusable?.focus();
@@ -78,7 +78,7 @@ const HubSidebar = {
         this.overlay?.classList.remove('is-active');
         this.toggle?.setAttribute('aria-expanded', 'false');
         this.sidebar.setAttribute('aria-hidden', 'true');
-        this.sidebar.setAttribute('inert', ''); /* Bloqueia foco quando fechado */
+        /* CSS já cuida de pointer-events/visibility via ausência de .is-open */
         this.toggle?.focus();
         document.body.style.overflow = '';
     },
@@ -408,57 +408,80 @@ const HubVisitorCount = {
 
 /* ==========================================================
    8. HubQuickNav — Menu direito fixo "Ajuda Rápida"
+      + Painel mobile (bottom sheet) para telas < 900px
    ========================================================== */
 const HubQuickNav = {
-    nav: null,
+    nav:             null,
+    fab:             null,
+    mobilePanel:     null,
+    mobileOverlay:   null,
 
     init() {
-        this.nav = document.getElementById('quickNav');
-        if (!this.nav) return;
+        this.nav           = document.getElementById('quickNav');
+        this.fab           = document.getElementById('quickNavFab');
+        this.mobilePanel   = document.getElementById('quickNavMobilePanel');
+        this.mobileOverlay = document.getElementById('quickNavMobileOverlay');
 
-        /* Clique/toque no próprio menu para abrir/fechar */
-        this.nav.addEventListener('click', (e) => {
-            /* Se clicou num link, deixa navegar normalmente */
-            if (e.target.closest('a')) return;
-            this.toggle();
-        });
-
-        /* Fechar ao clicar fora */
-        document.addEventListener('click', (e) => {
-            if (this.nav && !this.nav.contains(e.target)) {
-                this.close();
-            }
-        });
-
-        /* Fechar com ESC */
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') this.close();
-        });
-
-        /* Fechar ao clicar num link dentro do menu */
-        this.nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                setTimeout(() => this.close(), 150);
+        /* ── Menu desktop (hover + clique para abrir/fechar) ── */
+        if (this.nav) {
+            this.nav.addEventListener('click', (e) => {
+                if (e.target.closest('a')) return; /* link: navega normalmente */
+                this.toggleDesktop();
             });
+            document.addEventListener('click', (e) => {
+                if (!this.nav.contains(e.target)) this.closeDesktop();
+            });
+            this.nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => setTimeout(() => this.closeDesktop(), 150));
+            });
+        }
+
+        /* ── Botão flutuante mobile ── */
+        if (this.fab) {
+            this.fab.addEventListener('click', () => this.openMobile());
+        }
+
+        /* ── Fechar painel mobile ── */
+        if (this.mobilePanel) {
+            const closeBtn = this.mobilePanel.querySelector('.quick-nav-mobile-panel__close');
+            closeBtn?.addEventListener('click', () => this.closeMobile());
+            this.mobilePanel.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => setTimeout(() => this.closeMobile(), 150));
+            });
+        }
+        if (this.mobileOverlay) {
+            this.mobileOverlay.addEventListener('click', () => this.closeMobile());
+        }
+
+        /* Fechar tudo com ESC */
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') { this.closeDesktop(); this.closeMobile(); }
         });
     },
 
-    toggle() {
-        if (this.nav.classList.contains('is-open')) {
-            this.close();
-        } else {
-            this.open();
-        }
+    /* ── Desktop ── */
+    toggleDesktop() {
+        this.nav.classList.contains('is-open') ? this.closeDesktop() : this.openDesktop();
+    },
+    openDesktop() {
+        this.nav?.classList.add('is-open');
+        this.nav?.setAttribute('aria-expanded', 'true');
+    },
+    closeDesktop() {
+        this.nav?.classList.remove('is-open');
+        this.nav?.setAttribute('aria-expanded', 'false');
     },
 
-    open() {
-        this.nav.classList.add('is-open');
-        this.nav.setAttribute('aria-expanded', 'true');
+    /* ── Mobile (bottom sheet) ── */
+    openMobile() {
+        this.mobilePanel?.classList.add('is-open');
+        this.mobileOverlay?.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
     },
-
-    close() {
-        this.nav.classList.remove('is-open');
-        this.nav.setAttribute('aria-expanded', 'false');
+    closeMobile() {
+        this.mobilePanel?.classList.remove('is-open');
+        this.mobileOverlay?.classList.remove('is-active');
+        document.body.style.overflow = '';
     }
 };
 

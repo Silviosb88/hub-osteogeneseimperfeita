@@ -383,6 +383,14 @@ p {
     /* Barra de rolagem fina */
     scrollbar-width: thin;
     scrollbar-color: var(--color-gray-300) transparent;
+    /* Quando fechada: não captura eventos de toque/clique */
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.site-sidebar.is-open {
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .site-sidebar::-webkit-scrollbar {
@@ -396,6 +404,7 @@ p {
 .site-sidebar.is-open {
     left: 0;
 }
+
 
 .sidebar-overlay {
     position: fixed;
@@ -1761,4 +1770,127 @@ body.a11y-dark-mode .breadcrumb {
 /* Estado aberto via JS (clique/toque) */
 .quick-nav.is-open {
     transform: translateX(0) !important;
+}
+
+/* =========================================================
+   17. BOTÃO FLUTUANTE AJUDA RÁPIDA — mobile (< 900px)
+   ========================================================= */
+.quick-nav-fab {
+    display: none; /* Oculto por padrão */
+}
+
+@media (max-width: 900px) {
+    .quick-nav-fab {
+        display: flex;
+        position: fixed;
+        bottom: 80px;
+        right: 16px;
+        z-index: 980;
+        background: #1a5c1a;
+        color: #FFE302;
+        border: none;
+        border-radius: 50px;
+        padding: .6rem 1rem;
+        font-size: .82rem;
+        font-weight: 700;
+        cursor: pointer;
+        align-items: center;
+        gap: .45rem;
+        box-shadow: 0 4px 14px rgba(26,92,26,.35);
+        text-decoration: none;
+        letter-spacing: .02em;
+        white-space: nowrap;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        transition: background .15s, transform .15s;
+    }
+    .quick-nav-fab:active {
+        background: #0f3d0f;
+        transform: scale(.97);
+    }
+
+    /* Painel do quick-nav em mobile — slide up */
+    .quick-nav-mobile-panel {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 3px solid #1a5c1a;
+        border-radius: 16px 16px 0 0;
+        z-index: 1050;
+        max-height: 70vh;
+        overflow-y: auto;
+        padding-bottom: env(safe-area-inset-bottom, 12px);
+        box-shadow: 0 -4px 24px rgba(0,0,0,.18);
+        transform: translateY(100%);
+        transition: transform .3s ease;
+    }
+    .quick-nav-mobile-panel.is-open {
+        display: block;
+        transform: translateY(0);
+    }
+    .quick-nav-mobile-panel__header {
+        background: #1a5c1a;
+        color: #FFE302;
+        font-size: .9rem;
+        font-weight: 800;
+        padding: .85rem 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+    }
+    .quick-nav-mobile-panel__close {
+        background: none;
+        border: none;
+        color: #FFE302;
+        font-size: 1.3rem;
+        cursor: pointer;
+        padding: 0 .3rem;
+        line-height: 1;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .quick-nav-mobile-panel__list {
+        list-style: none;
+        padding: .5rem 0 1rem;
+        margin: 0;
+    }
+    .quick-nav-mobile-panel__list li {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .quick-nav-mobile-panel__list a {
+        display: flex;
+        align-items: center;
+        gap: .65rem;
+        padding: .85rem 1.2rem;
+        font-size: .95rem;
+        color: #1a5c1a;
+        font-weight: 600;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+    .quick-nav-mobile-panel__list a:active {
+        background: #e8f5e9;
+    }
+    .quick-nav-mobile-panel__list a i {
+        width: 18px;
+        text-align: center;
+        color: #1a5c1a;
+        flex-shrink: 0;
+    }
+    /* Overlay escuro atrás do painel */
+    .quick-nav-mobile-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,.45);
+        z-index: 1049;
+    }
+    .quick-nav-mobile-overlay.is-active {
+        display: block;
+    }
 }
