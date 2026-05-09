@@ -49,8 +49,14 @@
                 <button class="header-a11y__btn" id="headerA11yContrast" aria-label="Alternar alto contraste" aria-pressed="false"><i class="fas fa-adjust" aria-hidden="true"></i></button>
                 <button class="header-a11y__btn" id="headerA11yLargeText" aria-label="Alternar texto grande" aria-pressed="false"><i class="fas fa-text-height" aria-hidden="true"></i></button>
                 <button class="header-a11y__btn" id="headerA11yDark" aria-label="Alternar modo escuro" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i></button>
-            </div>
+            
+            <button class="menu-toggle quick-nav-toggle" id="quickNavToggle"
+                aria-controls="quickNavSidebar" aria-expanded="false"
+                aria-label="Abrir menu Ajuda Rápida">
+                <i class="fas fa-life-ring" aria-hidden="true"></i>
+            </button>
         </div>
+    </div>
     </header>
     <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
         <div class="sidebar-header">
@@ -83,51 +89,7 @@
         </nav>
     </nav>
     <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
-    <!-- MENU DIREITO FIXO — AJUDA RÁPIDA -->
-    <aside class="quick-nav" id="quickNav" aria-label="Acesso rápido" aria-expanded="false">
-        <div class="quick-nav__header">
-            <i class="fas fa-life-ring" aria-hidden="true"></i> Ajuda Rápida
-        </div>
-        <ul class="quick-nav__list">
-            <li><a href="comunidade-apoio.html#precisa-ajuda"><i class="fas fa-hands-helping"></i> Precisa de Ajuda?</a></li>
-            <li><a href="comunidade-apoio.html#grupos"><i class="fas fa-users"></i> Grupos de Apoio</a></li>
-            <li><a href="advocacy-cidadania.html#direitos-pcd"><i class="fas fa-balance-scale"></i> Direitos PcD</a></li>
-            <li><a href="advocacy-cidadania.html#bpc"><i class="fas fa-hand-holding-usd"></i> BPC e Assistência</a></li>
-            <li><a href="advocacy-cidadania.html#educacao"><i class="fas fa-graduation-cap"></i> Educação Inclusiva</a></li>
-            <li><a href="advocacy-cidadania.html#transporte"><i class="fas fa-bus"></i> Transporte e Mobilidade</a></li>
-            <li><a href="advocacy-cidadania.html#conitec"><i class="fas fa-flask"></i> PCDT / CONITEC</a></li>
-            <li><a href="advocacy-cidadania.html#acessibilidade"><i class="fas fa-wheelchair"></i> Acessibilidade</a></li>
-            <li><a href="advocacy-cidadania.html#outros-direitos"><i class="fas fa-star"></i> Outros Direitos</a></li>
-            <li><a href="comunidade-apoio.html#saude-mental"><i class="fas fa-heart"></i> Apoio Emocional</a></li>
-        </ul>
-    </aside>
-
-    <!-- BOTÃO FLUTUANTE AJUDA RÁPIDA — mobile < 900px -->
-    <button class="quick-nav-fab" id="quickNavFab" aria-label="Abrir menu Ajuda Rápida" aria-haspopup="dialog">
-        <i class="fas fa-life-ring" aria-hidden="true"></i> Ajuda Rápida
-    </button>
-
-    <!-- PAINEL MOBILE (bottom sheet) -->
-    <div class="quick-nav-mobile-overlay" id="quickNavMobileOverlay" aria-hidden="true"></div>
-    <div class="quick-nav-mobile-panel" id="quickNavMobilePanel" role="dialog" aria-label="Ajuda Rápida" aria-modal="true">
-        <div class="quick-nav-mobile-panel__header">
-            <span><i class="fas fa-life-ring" aria-hidden="true"></i> Ajuda Rápida</span>
-            <button class="quick-nav-mobile-panel__close" aria-label="Fechar menu Ajuda Rápida">&#10005;</button>
-        </div>
-        <ul class="quick-nav-mobile-panel__list">
-            <li><a href="comunidade-apoio.html#precisa-ajuda"><i class="fas fa-hands-helping"></i> Precisa de Ajuda?</a></li>
-            <li><a href="comunidade-apoio.html#grupos"><i class="fas fa-users"></i> Grupos de Apoio</a></li>
-            <li><a href="advocacy-cidadania.html#direitos-pcd"><i class="fas fa-balance-scale"></i> Direitos PcD</a></li>
-            <li><a href="advocacy-cidadania.html#bpc"><i class="fas fa-hand-holding-usd"></i> BPC e Assistência</a></li>
-            <li><a href="advocacy-cidadania.html#educacao"><i class="fas fa-graduation-cap"></i> Educação Inclusiva</a></li>
-            <li><a href="advocacy-cidadania.html#transporte"><i class="fas fa-bus"></i> Transporte e Mobilidade</a></li>
-            <li><a href="advocacy-cidadania.html#conitec"><i class="fas fa-flask"></i> PCDT / CONITEC</a></li>
-            <li><a href="advocacy-cidadania.html#acessibilidade"><i class="fas fa-wheelchair"></i> Acessibilidade</a></li>
-            <li><a href="advocacy-cidadania.html#outros-direitos"><i class="fas fa-star"></i> Outros Direitos</a></li>
-            <li><a href="comunidade-apoio.html#saude-mental"><i class="fas fa-heart"></i> Apoio Emocional</a></li>
-        </ul>
-    </div>
-    <nav class="breadcrumb" aria-label="Navegação estrutural">
+<nav class="breadcrumb" aria-label="Navegação estrutural">
         <div class="container"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a class="breadcrumb__link" href="index.html">Início</a><span class="breadcrumb__separator" aria-hidden="true"><i class="fas fa-chevron-right"></i></span></li>
 <li class="breadcrumb__item"><span class="breadcrumb__current" aria-current="page">OI no Mundo</span></li></ol></div>
     </nav>

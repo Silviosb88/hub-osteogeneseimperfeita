@@ -407,81 +407,71 @@ const HubVisitorCount = {
 };
 
 /* ==========================================================
-   8. HubQuickNav — Menu direito fixo "Ajuda Rápida"
-      + Painel mobile (bottom sheet) para telas < 900px
+   8. HubQuickNav — Sidebar direito "Ajuda Rápida"
+      Abre da direita, igual ao sidebar esquerdo abre da esquerda
    ========================================================== */
 const HubQuickNav = {
-    nav:             null,
-    fab:             null,
-    mobilePanel:     null,
-    mobileOverlay:   null,
+    sidebar:  null,
+    overlay:  null,
+    toggle:   null,
+    closeBtn: null,
+    focusableSelectors:
+        'a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])',
 
     init() {
-        this.nav           = document.getElementById('quickNav');
-        this.fab           = document.getElementById('quickNavFab');
-        this.mobilePanel   = document.getElementById('quickNavMobilePanel');
-        this.mobileOverlay = document.getElementById('quickNavMobileOverlay');
+        this.sidebar  = document.getElementById('quickNavSidebar');
+        this.overlay  = document.getElementById('sidebarOverlay'); /* Reutiliza o mesmo overlay */
+        this.toggle   = document.getElementById('quickNavToggle');
+        this.closeBtn = document.getElementById('quickNavClose');
 
-        /* ── Menu desktop (hover + clique para abrir/fechar) ── */
-        if (this.nav) {
-            this.nav.addEventListener('click', (e) => {
-                if (e.target.closest('a')) return; /* link: navega normalmente */
-                this.toggleDesktop();
-            });
-            document.addEventListener('click', (e) => {
-                if (!this.nav.contains(e.target)) this.closeDesktop();
-            });
-            this.nav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => setTimeout(() => this.closeDesktop(), 150));
-            });
-        }
+        if (!this.sidebar) return;
 
-        /* ── Botão flutuante mobile ── */
-        if (this.fab) {
-            this.fab.addEventListener('click', () => this.openMobile());
-        }
+        this.toggle?.addEventListener('click', () => this.open());
+        this.closeBtn?.addEventListener('click', () => this.close());
 
-        /* ── Fechar painel mobile ── */
-        if (this.mobilePanel) {
-            const closeBtn = this.mobilePanel.querySelector('.quick-nav-mobile-panel__close');
-            closeBtn?.addEventListener('click', () => this.closeMobile());
-            this.mobilePanel.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => setTimeout(() => this.closeMobile(), 150));
-            });
-        }
-        if (this.mobileOverlay) {
-            this.mobileOverlay.addEventListener('click', () => this.closeMobile());
-        }
+        /* Fechar ao clicar no overlay (mesmo do sidebar esquerdo) */
+        this.overlay?.addEventListener('click', () => {
+            if (this.isOpen()) this.close();
+        });
 
-        /* Fechar tudo com ESC */
+        /* Fechar com ESC */
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') { this.closeDesktop(); this.closeMobile(); }
+            if (e.key === 'Escape' && this.isOpen()) this.close();
+        });
+
+        /* Fechar ao clicar em link (mobile) */
+        this.sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) this.close();
+                else this.close();
+            });
         });
     },
 
-    /* ── Desktop ── */
-    toggleDesktop() {
-        this.nav.classList.contains('is-open') ? this.closeDesktop() : this.openDesktop();
-    },
-    openDesktop() {
-        this.nav?.classList.add('is-open');
-        this.nav?.setAttribute('aria-expanded', 'true');
-    },
-    closeDesktop() {
-        this.nav?.classList.remove('is-open');
-        this.nav?.setAttribute('aria-expanded', 'false');
-    },
+    open() {
+        /* Fecha sidebar esquerdo se estiver aberto */
+        if (HubSidebar.isOpen()) HubSidebar.close();
 
-    /* ── Mobile (bottom sheet) ── */
-    openMobile() {
-        this.mobilePanel?.classList.add('is-open');
-        this.mobileOverlay?.classList.add('is-active');
+        this.sidebar.classList.add('is-open');
+        this.overlay?.classList.add('is-active');
+        this.toggle?.setAttribute('aria-expanded', 'true');
+        this.sidebar.setAttribute('aria-hidden', 'false');
+        const firstFocusable = this.sidebar.querySelector(this.focusableSelectors);
+        firstFocusable?.focus();
         document.body.style.overflow = 'hidden';
     },
-    closeMobile() {
-        this.mobilePanel?.classList.remove('is-open');
-        this.mobileOverlay?.classList.remove('is-active');
+
+    close() {
+        this.sidebar.classList.remove('is-open');
+        this.overlay?.classList.remove('is-active');
+        this.toggle?.setAttribute('aria-expanded', 'false');
+        this.sidebar.setAttribute('aria-hidden', 'true');
+        this.toggle?.focus();
         document.body.style.overflow = '';
+    },
+
+    isOpen() {
+        return this.sidebar.classList.contains('is-open');
     }
 };
 
