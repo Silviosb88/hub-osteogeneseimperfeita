@@ -393,16 +393,17 @@ p {
     visibility: visible;
 }
 
+/* left:0 só para o sidebar ESQUERDO — não afeta o sidebar direito (.quick-nav-sidebar) */
+.site-sidebar.is-open:not(.quick-nav-sidebar) {
+    left: 0;
+}
+
 .site-sidebar::-webkit-scrollbar {
     width: 5px;
 }
 .site-sidebar::-webkit-scrollbar-thumb {
     background: var(--color-gray-300);
     border-radius: 3px;
-}
-
-.site-sidebar.is-open {
-    left: 0;
 }
 
 

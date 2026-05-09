@@ -473,8 +473,11 @@ const HubQuickNav = {
 
 /* ==========================================================
    9. HubInit — Bootstrap geral
+      Aguarda 'partials:ready' (disparado por hub-partials.js após injetar
+      header/sidebars). Se hub-partials.js não estiver presente na página
+      (fallback), usa DOMContentLoaded normalmente.
    ========================================================== */
-document.addEventListener('DOMContentLoaded', () => {
+function hubInit() {
     HubSidebar.init();
     HubA11y.init();
     HubPageIndex.init();
@@ -498,6 +501,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Adicionar classe js-loaded para progressive enhancement */
     document.documentElement.classList.add('js-loaded');
+}
+
+/* Escuta 'partials:ready' (páginas com hub-partials.js)
+   OU DOMContentLoaded (fallback para páginas sem partials) */
+document.addEventListener('partials:ready', hubInit, { once: true });
+document.addEventListener('DOMContentLoaded', () => {
+    /* Se partials:ready já disparou antes do DOMContentLoaded (improvável mas seguro),
+       ou se hub-partials.js não existe nesta página, inicializa direto */
+    if (!document.documentElement.classList.contains('js-loaded')) {
+        /* Só roda se hubInit ainda não foi chamado via partials:ready */
+        document.removeEventListener('partials:ready', hubInit);
+        hubInit();
+    }
 });
 
 /* Compatibilidade: expor toggleSubmenu globalmente (legado) */
