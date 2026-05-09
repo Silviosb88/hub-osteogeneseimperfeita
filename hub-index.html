@@ -37,7 +37,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- CSS Global Unificado -->
     <link rel="canonical" href="https://unidospelaoi.com.br">
@@ -59,7 +60,7 @@
             </button>
 
             <a class="site-logo" href="index.html" aria-label="Unidos pela OI — Página inicial">
-                <img src="assets/img/logo-unidos.png" alt="Logo Unidos pela OI" class="site-logo__img" aria-hidden="true">
+                <img src="assets/img/logo-unidos.png" alt="" class="site-logo__img" width="47" height="60" aria-hidden="true" loading="lazy" decoding="async">
                 <span class="site-logo__text">
                     Unidos pela OI - Brasil
                     <span>Osteogênese Imperfeita</span>
@@ -93,7 +94,7 @@
     </header>
 
     <!-- SIDEBAR NAVIGATION -->
-    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
+    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true" inert>
         <div class="sidebar-header">
             <span class="sidebar-header__title"><i class="fas fa-sitemap" aria-hidden="true"></i> Navegação</span>
             <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu">
@@ -145,15 +146,15 @@
         </div>
         <ul class="quick-nav__list">
             <li><a href="comunidade-apoio.html#precisa-ajuda"><i class="fas fa-hands-helping"></i> Precisa de Ajuda?</a></li>
-            <li><a href="centros-referencia.html"><i class="fas fa-hospital"></i> Centros de Referência</a></li>
             <li><a href="comunidade-apoio.html#grupos"><i class="fas fa-users"></i> Grupos de Apoio</a></li>
-            <li><a href="lista-exames-impressao.html"><i class="fas fa-file-medical"></i> Cartilhas e Exames</a></li>
             <li><a href="advocacy-cidadania.html#direitos-pcd"><i class="fas fa-balance-scale"></i> Direitos PcD</a></li>
             <li><a href="advocacy-cidadania.html#bpc"><i class="fas fa-hand-holding-usd"></i> BPC e Assistência</a></li>
             <li><a href="advocacy-cidadania.html#educacao"><i class="fas fa-graduation-cap"></i> Educação Inclusiva</a></li>
             <li><a href="advocacy-cidadania.html#transporte"><i class="fas fa-bus"></i> Transporte e Mobilidade</a></li>
             <li><a href="advocacy-cidadania.html#conitec"><i class="fas fa-flask"></i> PCDT / CONITEC</a></li>
             <li><a href="advocacy-cidadania.html#acessibilidade"><i class="fas fa-wheelchair"></i> Acessibilidade</a></li>
+            <li><a href="advocacy-cidadania.html#outros-direitos"><i class="fas fa-star"></i> Outros Direitos</a></li>
+            <li><a href="comunidade-apoio.html#saude-mental"><i class="fas fa-heart"></i> Apoio Emocional</a></li>
         </ul>
     </aside>
     <!-- ============ FIM HEADER + SIDEBAR ============ -->

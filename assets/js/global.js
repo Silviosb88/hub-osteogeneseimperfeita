@@ -64,6 +64,7 @@ const HubSidebar = {
         this.overlay?.classList.add('is-active');
         this.toggle?.setAttribute('aria-expanded', 'true');
         this.sidebar.setAttribute('aria-hidden', 'false');
+        this.sidebar.removeAttribute('inert'); /* Permite foco nos elementos internos */
         /* Foco no primeiro elemento focável */
         const firstFocusable = this.sidebar.querySelector(this.focusableSelectors);
         firstFocusable?.focus();
@@ -76,6 +77,7 @@ const HubSidebar = {
         this.overlay?.classList.remove('is-active');
         this.toggle?.setAttribute('aria-expanded', 'false');
         this.sidebar.setAttribute('aria-hidden', 'true');
+        this.sidebar.setAttribute('inert', ''); /* Bloqueia foco quando fechado */
         this.toggle?.focus();
         document.body.style.overflow = '';
     },

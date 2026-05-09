@@ -31,11 +31,16 @@
     <link rel="icon" type="image/png"    href="assets/img/favicon.png">
     <link rel="canonical" href="https://unidospelaoi.com.br/">
 
+    <!-- Preload LCP image -->
+    <link rel="preload" as="image" href="assets/img/capa-home.jpg" fetchpriority="high">
+
     <!-- Fontes e Ícones -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome: carregamento assíncrono para não bloquear renderização -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- CSS Global -->
     <link rel="stylesheet" href="assets/css/global.css">
@@ -63,12 +68,13 @@
             margin: 0 auto;
             padding: .5rem 1.25rem 3rem;
             margin-top: 95px; /* espaço do header */
+            overflow-x: hidden; /* Previne vazamento horizontal */
         }
 
         /* Seção hero com imagem quadrada + texto */
         .home-hero {
             display: grid;
-            grid-template-columns: 360px 1fr;
+            grid-template-columns: minmax(0, 360px) 1fr; /* minmax(0) evita overflow */
             gap: 2.5rem;
             align-items: start;
             margin-bottom: 2.5rem;
@@ -76,9 +82,12 @@
 
         .home-hero__image {
             width: 100%;
+            max-width: 100%; /* Garante que não ultrapasse o container */
+            height: auto;
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(61,40,0,.18);
             border: 4px solid #f0c92a;
+            aspect-ratio: 720 / 730; /* Reserva espaço antes do carregamento — reduz CLS */
         }
 
         .home-hero__content {
@@ -302,17 +311,36 @@
             }
 
             .home-hero {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Uma coluna no mobile */
+                gap: 1.5rem;
             }
 
             .home-hero__image {
-                max-width: 320px;
+                max-width: 100%; /* Ocupa toda a largura disponível */
+                width: 100%;
                 margin: 0 auto;
                 display: block;
             }
 
             .home-hero__title {
                 font-size: 1.55rem;
+            }
+
+            .home-wrapper {
+                padding: .5rem .75rem 2rem; /* Menos padding lateral no mobile */
+            }
+
+            /* Evita que cards de seções causem overflow */
+            .home-sections {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .home-section-card,
+            .awareness-box {
+                word-break: break-word; /* Evita texto vazando */
+                overflow-wrap: break-word;
             }
         }
     </style>
@@ -332,7 +360,7 @@
             </button>
 
             <a class="site-logo" href="index.html" aria-label="Unidos pela OI — Página inicial">
-                <img src="assets/img/logo-unidos.png" alt="Logo Unidos pela OI" class="site-logo__img" aria-hidden="true">
+                <img src="assets/img/logo-unidos.png" alt="" class="site-logo__img" width="47" height="60" aria-hidden="true" loading="lazy" decoding="async">
                 <span class="site-logo__text">
                     Unidos pela OI - Brasil
                     <span>Osteogênese Imperfeita</span>
@@ -366,7 +394,7 @@
     </header>
 
     <!-- SIDEBAR NAVIGATION -->
-    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true">
+    <nav class="site-sidebar" id="hubSidebar" aria-label="Menu de navegação principal" aria-hidden="true" inert>
         <div class="sidebar-header">
             <span class="sidebar-header__title"><i class="fas fa-sitemap" aria-hidden="true"></i> Navegação</span>
             <button class="sidebar-close" id="sidebarClose" aria-label="Fechar menu">
@@ -424,15 +452,15 @@
         </div>
         <ul class="quick-nav__list">
             <li><a href="comunidade-apoio.html#precisa-ajuda"><i class="fas fa-hands-helping"></i> Precisa de Ajuda?</a></li>
-            <li><a href="centros-referencia.html"><i class="fas fa-hospital"></i> Centros de Referência</a></li>
             <li><a href="comunidade-apoio.html#grupos"><i class="fas fa-users"></i> Grupos de Apoio</a></li>
-            <li><a href="lista-exames-impressao.html"><i class="fas fa-file-medical"></i> Cartilhas e Exames</a></li>
             <li><a href="advocacy-cidadania.html#direitos-pcd"><i class="fas fa-balance-scale"></i> Direitos PcD</a></li>
             <li><a href="advocacy-cidadania.html#bpc"><i class="fas fa-hand-holding-usd"></i> BPC e Assistência</a></li>
             <li><a href="advocacy-cidadania.html#educacao"><i class="fas fa-graduation-cap"></i> Educação Inclusiva</a></li>
             <li><a href="advocacy-cidadania.html#transporte"><i class="fas fa-bus"></i> Transporte e Mobilidade</a></li>
             <li><a href="advocacy-cidadania.html#conitec"><i class="fas fa-flask"></i> PCDT / CONITEC</a></li>
             <li><a href="advocacy-cidadania.html#acessibilidade"><i class="fas fa-wheelchair"></i> Acessibilidade</a></li>
+            <li><a href="advocacy-cidadania.html#outros-direitos"><i class="fas fa-star"></i> Outros Direitos</a></li>
+            <li><a href="comunidade-apoio.html#saude-mental"><i class="fas fa-heart"></i> Apoio Emocional</a></li>
         </ul>
     </aside>
 
@@ -451,7 +479,10 @@
                 <img src="assets/img/capa-home.jpg"
                      alt="Unidos pela OI Brasil 2026 — Dia Internacional de Conscientização sobre a Osteogênese Imperfeita"
                      class="home-hero__image"
-                     loading="eager">
+                     width="720" height="730"
+                     fetchpriority="high"
+                     loading="eager"
+                     decoding="async">
 
                 <div class="home-hero__content">
 
