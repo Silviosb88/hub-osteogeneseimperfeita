@@ -466,7 +466,7 @@ const HubQuickNav = {
         this.overlay?.classList.remove('is-active');
         this.toggle?.setAttribute('aria-expanded', 'false');
         this.sidebar.setAttribute('aria-hidden', 'true');
-        this.toggle?.focus();
+        /* NÃO chamar focus() aqui — evita re-disparar click no toggle */
         document.body.style.overflow = '';
     },
 

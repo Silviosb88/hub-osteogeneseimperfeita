@@ -1677,9 +1677,9 @@ body.a11y-dark-mode .breadcrumb {
 
 /* Sidebar direito: abre da direita para a esquerda */
 .quick-nav-sidebar {
-    left: auto !important;      /* Cancela o left do sidebar esquerdo */
-    right: -320px;              /* Começa fora da tela pela direita */
-    transition: right var(--transition-base) !important;
+    left: unset !important;
+    right: -320px;
+    transition: right var(--transition-base), visibility var(--transition-base) !important;
     pointer-events: none;
     visibility: hidden;
 }
