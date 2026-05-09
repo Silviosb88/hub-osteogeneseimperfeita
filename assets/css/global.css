@@ -1751,9 +1751,14 @@ body.a11y-dark-mode .breadcrumb {
     pointer-events: none;
 }
 
-/* Em telas menores que 1300px, ocultar o menu direito para não sobrepor conteúdo */
-@media (max-width: 1300px) {
+/* Em telas menores que 900px, ocultar o menu direito para não sobrepor conteúdo */
+@media (max-width: 900px) {
     .quick-nav {
         display: none;
     }
+}
+
+/* Estado aberto via JS (clique/toque) */
+.quick-nav.is-open {
+    transform: translateX(0) !important;
 }

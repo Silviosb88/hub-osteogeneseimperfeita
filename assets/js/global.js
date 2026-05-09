@@ -1,6 +1,6 @@
 /**
  * Hub Osteogênese Imperfeita — JavaScript Global Unificado
- * Versão 2.1 | Arquitetura de Componentes | WCAG 2.1 AA
+ * Versão 2.2 | Arquitetura de Componentes | WCAG 2.1 AA
  *
  * Módulos:
  * 1. HubSidebar      — Controle do menu lateral
@@ -10,7 +10,8 @@
  * 5. HubSmoothScroll — Scroll suave
  * 6. HubSearch       — Busca no header
  * 7. HubVisitorCount — Contador de visitas (localStorage)
- * 8. HubInit         — Bootstrap geral
+ * 8. HubQuickNav     — Menu direito fixo Ajuda Rápida (clique/toque)
+ * 9. HubInit         — Bootstrap geral
  */
 
 'use strict';
@@ -406,7 +407,63 @@ const HubVisitorCount = {
 };
 
 /* ==========================================================
-   8. HubInit — Bootstrap geral
+   8. HubQuickNav — Menu direito fixo "Ajuda Rápida"
+   ========================================================== */
+const HubQuickNav = {
+    nav: null,
+
+    init() {
+        this.nav = document.getElementById('quickNav');
+        if (!this.nav) return;
+
+        /* Clique/toque no próprio menu para abrir/fechar */
+        this.nav.addEventListener('click', (e) => {
+            /* Se clicou num link, deixa navegar normalmente */
+            if (e.target.closest('a')) return;
+            this.toggle();
+        });
+
+        /* Fechar ao clicar fora */
+        document.addEventListener('click', (e) => {
+            if (this.nav && !this.nav.contains(e.target)) {
+                this.close();
+            }
+        });
+
+        /* Fechar com ESC */
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') this.close();
+        });
+
+        /* Fechar ao clicar num link dentro do menu */
+        this.nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                setTimeout(() => this.close(), 150);
+            });
+        });
+    },
+
+    toggle() {
+        if (this.nav.classList.contains('is-open')) {
+            this.close();
+        } else {
+            this.open();
+        }
+    },
+
+    open() {
+        this.nav.classList.add('is-open');
+        this.nav.setAttribute('aria-expanded', 'true');
+    },
+
+    close() {
+        this.nav.classList.remove('is-open');
+        this.nav.setAttribute('aria-expanded', 'false');
+    }
+};
+
+/* ==========================================================
+   9. HubInit — Bootstrap geral
    ========================================================== */
 document.addEventListener('DOMContentLoaded', () => {
     HubSidebar.init();
@@ -416,6 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
     HubSmoothScroll.init();
     HubSearch.init();
     HubVisitorCount.init();
+    HubQuickNav.init();
 
     /* Fechar widget de acessibilidade ao clicar fora */
     document.addEventListener('click', (e) => {

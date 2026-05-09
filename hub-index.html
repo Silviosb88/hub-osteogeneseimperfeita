@@ -140,7 +140,7 @@
     </nav>
     <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
     <!-- MENU DIREITO FIXO — AJUDA RÁPIDA -->
-    <aside class="quick-nav" id="quickNav" aria-label="Acesso rápido">
+    <aside class="quick-nav" id="quickNav" aria-label="Acesso rápido" aria-expanded="false">
         <div class="quick-nav__header">
             <i class="fas fa-life-ring" aria-hidden="true"></i> Ajuda Rápida
         </div>
@@ -208,20 +208,22 @@
                 <div style="
                     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                     color: white;
-                    padding: 2.5rem 3rem;
+                    padding: 2rem 2.5rem;
                     border-radius: 16px;
                     display: flex;
+                    flex-wrap: wrap;
                     align-items: center;
-                    gap: 2rem;
+                    gap: 1.5rem;
                     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
                     margin-bottom: 3rem;
+                    overflow: hidden;
                 " role="region" aria-label="Destaque: Medicações">
-                    <i class="fas fa-syringe" style="font-size:4.5rem;opacity:.9;flex-shrink:0" aria-hidden="true"></i>
-                    <div>
-                        <h2 style="color:white;font-size:1.75rem;margin-bottom:.75rem" id="medicacoes-heading">
+                    <i class="fas fa-syringe" style="font-size:3rem;opacity:.9;flex-shrink:0;min-width:0" aria-hidden="true"></i>
+                    <div style="flex:1;min-width:0">
+                        <h2 style="color:white;font-size:1.5rem;margin-bottom:.75rem;word-break:break-word" id="medicacoes-heading">
                             Medicações para Osteogênese Imperfeita
                         </h2>
-                        <p style="color:rgba(255,255,255,.92);font-size:1.05rem;margin-bottom:1.25rem;line-height:1.6">
+                        <p style="color:rgba(255,255,255,.92);font-size:1rem;margin-bottom:1.25rem;line-height:1.6">
                             Dossiês completos sobre as principais medicações usadas no tratamento da OI:
                             protocolos, comparativos, exames necessários e referências científicas.
                         </p>
