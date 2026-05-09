@@ -420,31 +420,30 @@ const HubQuickNav = {
 
     init() {
         this.sidebar  = document.getElementById('quickNavSidebar');
-        this.overlay  = document.getElementById('sidebarOverlay'); /* Reutiliza o mesmo overlay */
+        this.overlay  = document.getElementById('quickNavOverlay'); /* Overlay próprio — não compartilha com sidebar esquerdo */
         this.toggle   = document.getElementById('quickNavToggle');
         this.closeBtn = document.getElementById('quickNavClose');
 
-        if (!this.sidebar) return;
+        if (!this.sidebar || !this.toggle) return;
 
-        this.toggle?.addEventListener('click', () => this.open());
+        /* Usa addEventListener com { once: false } mas remove antes de adicionar
+           para garantir que nunca há listeners duplicados */
+        this._onToggleClick = () => this.toggle.getAttribute('aria-expanded') === 'true'
+            ? this.close()
+            : this.open();
+
+        this.toggle.addEventListener('click', this._onToggleClick);
         this.closeBtn?.addEventListener('click', () => this.close());
-
-        /* Fechar ao clicar no overlay (mesmo do sidebar esquerdo) */
-        this.overlay?.addEventListener('click', () => {
-            if (this.isOpen()) this.close();
-        });
+        this.overlay?.addEventListener('click', () => this.close());
 
         /* Fechar com ESC */
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.isOpen()) this.close();
         });
 
-        /* Fechar ao clicar em link (mobile) */
+        /* Fechar ao clicar em link — sem preventDefault, deixa a navegação acontecer */
         this.sidebar.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) this.close();
-                else this.close();
-            });
+            link.addEventListener('click', () => this.close());
         });
     },
 
@@ -454,10 +453,8 @@ const HubQuickNav = {
 
         this.sidebar.classList.add('is-open');
         this.overlay?.classList.add('is-active');
-        this.toggle?.setAttribute('aria-expanded', 'true');
+        this.toggle.setAttribute('aria-expanded', 'true');
         this.sidebar.setAttribute('aria-hidden', 'false');
-        const firstFocusable = this.sidebar.querySelector(this.focusableSelectors);
-        firstFocusable?.focus();
         document.body.style.overflow = 'hidden';
     },
 
@@ -466,12 +463,11 @@ const HubQuickNav = {
         this.overlay?.classList.remove('is-active');
         this.toggle?.setAttribute('aria-expanded', 'false');
         this.sidebar.setAttribute('aria-hidden', 'true');
-        /* NÃO chamar focus() aqui — evita re-disparar click no toggle */
         document.body.style.overflow = '';
     },
 
     isOpen() {
-        return this.sidebar.classList.contains('is-open');
+        return this.sidebar?.classList.contains('is-open') ?? false;
     }
 };
 
