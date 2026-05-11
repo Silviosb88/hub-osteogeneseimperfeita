@@ -24,6 +24,7 @@ const HubSidebar = {
     overlay: null,
     toggle: null,
     closeBtn: null,
+    lastFocus: null,
     focusableSelectors:
         'a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])',
 
@@ -39,9 +40,11 @@ const HubSidebar = {
         this.closeBtn?.addEventListener('click', () => this.close());
         this.overlay?.addEventListener('click', () => this.close());
 
-        /* Fechar com ESC */
+        /* ESC fecha + Tab fica preso dentro do sidebar (trap focus) */
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.isOpen()) this.close();
+            if (!this.isOpen()) return;
+            if (e.key === 'Escape') { this.close(); return; }
+            if (e.key === 'Tab') this._trapFocus(e);
         });
 
         /* Submenus */
@@ -60,16 +63,29 @@ const HubSidebar = {
         });
     },
 
+    _trapFocus(e) {
+        const focusables = Array.from(
+            this.sidebar.querySelectorAll(this.focusableSelectors)
+        ).filter(el => !el.closest('[aria-hidden="true"]'));
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last  = focusables[focusables.length - 1];
+        if (e.shiftKey) {
+            if (document.activeElement === first) { last.focus(); e.preventDefault(); }
+        } else {
+            if (document.activeElement === last)  { first.focus(); e.preventDefault(); }
+        }
+    },
+
     open() {
+        this.lastFocus = document.activeElement;   /* guarda foco anterior */
         this.sidebar.classList.add('is-open');
         this.overlay?.classList.add('is-active');
         this.toggle?.setAttribute('aria-expanded', 'true');
         this.sidebar.setAttribute('aria-hidden', 'false');
-        /* CSS já cuida de pointer-events/visibility via .is-open */
-        /* Foco no primeiro elemento focável */
+        /* Foco no primeiro elemento focável dentro do sidebar */
         const firstFocusable = this.sidebar.querySelector(this.focusableSelectors);
         firstFocusable?.focus();
-        /* Evitar scroll do body */
         document.body.style.overflow = 'hidden';
     },
 
@@ -78,8 +94,8 @@ const HubSidebar = {
         this.overlay?.classList.remove('is-active');
         this.toggle?.setAttribute('aria-expanded', 'false');
         this.sidebar.setAttribute('aria-hidden', 'true');
-        /* CSS já cuida de pointer-events/visibility via ausência de .is-open */
-        this.toggle?.focus();
+        /* Devolve foco ao elemento que abriu o menu */
+        (this.lastFocus || this.toggle)?.focus();
         document.body.style.overflow = '';
     },
 
@@ -415,19 +431,18 @@ const HubQuickNav = {
     overlay:  null,
     toggle:   null,
     closeBtn: null,
+    lastFocus: null,
     focusableSelectors:
         'a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])',
 
     init() {
         this.sidebar  = document.getElementById('quickNavSidebar');
-        this.overlay  = document.getElementById('quickNavOverlay'); /* Overlay próprio — não compartilha com sidebar esquerdo */
+        this.overlay  = document.getElementById('quickNavOverlay');
         this.toggle   = document.getElementById('quickNavToggle');
         this.closeBtn = document.getElementById('quickNavClose');
 
         if (!this.sidebar || !this.toggle) return;
 
-        /* Usa addEventListener com { once: false } mas remove antes de adicionar
-           para garantir que nunca há listeners duplicados */
         this._onToggleClick = () => this.toggle.getAttribute('aria-expanded') === 'true'
             ? this.close()
             : this.open();
@@ -436,25 +451,43 @@ const HubQuickNav = {
         this.closeBtn?.addEventListener('click', () => this.close());
         this.overlay?.addEventListener('click', () => this.close());
 
-        /* Fechar com ESC */
+        /* ESC fecha + Tab fica preso dentro do sidebar (trap focus) */
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.isOpen()) this.close();
+            if (!this.isOpen()) return;
+            if (e.key === 'Escape') { this.close(); return; }
+            if (e.key === 'Tab') this._trapFocus(e);
         });
 
-        /* Fechar ao clicar em link — sem preventDefault, deixa a navegação acontecer */
+        /* Fechar ao clicar em link */
         this.sidebar.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => this.close());
         });
     },
 
-    open() {
-        /* Fecha sidebar esquerdo se estiver aberto */
-        if (HubSidebar.isOpen()) HubSidebar.close();
+    _trapFocus(e) {
+        const focusables = Array.from(
+            this.sidebar.querySelectorAll(this.focusableSelectors)
+        ).filter(el => !el.closest('[aria-hidden="true"]'));
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last  = focusables[focusables.length - 1];
+        if (e.shiftKey) {
+            if (document.activeElement === first) { last.focus(); e.preventDefault(); }
+        } else {
+            if (document.activeElement === last)  { first.focus(); e.preventDefault(); }
+        }
+    },
 
+    open() {
+        if (HubSidebar.isOpen()) HubSidebar.close();
+        this.lastFocus = document.activeElement;   /* guarda foco anterior */
         this.sidebar.classList.add('is-open');
         this.overlay?.classList.add('is-active');
         this.toggle.setAttribute('aria-expanded', 'true');
         this.sidebar.setAttribute('aria-hidden', 'false');
+        /* Foco no primeiro elemento focável dentro do sidebar */
+        const firstFocusable = this.sidebar.querySelector(this.focusableSelectors);
+        firstFocusable?.focus();
         document.body.style.overflow = 'hidden';
     },
 
@@ -463,6 +496,8 @@ const HubQuickNav = {
         this.overlay?.classList.remove('is-active');
         this.toggle?.setAttribute('aria-expanded', 'false');
         this.sidebar.setAttribute('aria-hidden', 'true');
+        /* Devolve foco ao elemento que abriu o menu */
+        (this.lastFocus || this.toggle)?.focus();
         document.body.style.overflow = '';
     },
 
