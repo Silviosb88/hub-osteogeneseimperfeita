@@ -503,18 +503,10 @@ function hubInit() {
     document.documentElement.classList.add('js-loaded');
 }
 
-/* Escuta 'partials:ready' (páginas com hub-partials.js)
-   OU DOMContentLoaded (fallback para páginas sem partials) */
+/* Inicializa apenas uma vez, via partials:ready (disparado por hub-partials.js).
+   hub-partials.js SEMPRE dispara partials:ready após injetar — ou imediatamente
+   se não houver placeholders. { once:true } garante que hubInit roda só uma vez. */
 document.addEventListener('partials:ready', hubInit, { once: true });
-document.addEventListener('DOMContentLoaded', () => {
-    /* Se partials:ready já disparou antes do DOMContentLoaded (improvável mas seguro),
-       ou se hub-partials.js não existe nesta página, inicializa direto */
-    if (!document.documentElement.classList.contains('js-loaded')) {
-        /* Só roda se hubInit ainda não foi chamado via partials:ready */
-        document.removeEventListener('partials:ready', hubInit);
-        hubInit();
-    }
-});
 
 /* Compatibilidade: expor toggleSubmenu globalmente (legado) */
 window.toggleSubmenu = function(id) {
