@@ -536,6 +536,34 @@ function hubInit() {
 
     /* Adicionar classe js-loaded para progressive enhancement */
     document.documentElement.classList.add('js-loaded');
+
+    /* ── Acessibilidade: links target="_blank" ─────────────────────────────
+       Avisa leitores de tela que o link abre em nova aba.
+       Adiciona aria-label enriquecido e span .sr-only em todos os links
+       com target="_blank" que ainda não tenham o aviso.              */
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+        /* Evita duplicar se já foi processado */
+        if (link.dataset.a11yNewTab) return;
+        link.dataset.a11yNewTab = '1';
+
+        /* Garante rel="noopener noreferrer" por segurança */
+        link.setAttribute('rel', 'noopener noreferrer');
+
+        /* Texto visível atual do link */
+        const visibleText = link.textContent.trim();
+
+        /* Atualiza aria-label para incluir o aviso */
+        const currentLabel = link.getAttribute('aria-label') || visibleText;
+        if (currentLabel && !currentLabel.includes('nova aba')) {
+            link.setAttribute('aria-label', currentLabel + ' (abre em nova aba)');
+        }
+
+        /* Insere span invisível dentro do link — lido pelo screen reader */
+        const srSpan = document.createElement('span');
+        srSpan.className = 'sr-only';
+        srSpan.textContent = ' (abre em nova aba)';
+        link.appendChild(srSpan);
+    });
 }
 
 /* Inicializa apenas uma vez, via partials:ready (disparado por hub-partials.js).
